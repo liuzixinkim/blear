@@ -1,7 +1,6 @@
 # blearjs
 
-这是一个很小的 js 组织。现在它开始启动了，希望你不要恶意占用它的名字。
-相信，不就你就会见到它的全貌。
+前后端通用脚本库。
 
 blearjs 将会以 commonJS 的形式发布，大部分模块都适用于浏览器和 NodeJS 端。
 
@@ -23,6 +22,8 @@ blearjs 将会以 commonJS 的形式发布，大部分模块都适用于浏览�
 - `blear.ui` 浏览器 UI 类
 - `blear.polyfill` 浏览器补平函数
 - `blear.shims` 浏览器扩展函数
+- `blear.node` Node 端独有
+- `blear.express` express 中间件
 
 
 

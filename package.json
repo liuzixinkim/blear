@@ -1,7 +1,7 @@
 {
   "name": "xiao",
   "version": "0.0.1",
-  "description": "这是一个很小的 js 组织",
+  "description": "前后端通用脚本库",
   "scripts": {
 
   },
