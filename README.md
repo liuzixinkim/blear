@@ -4,6 +4,8 @@
 
 ## 组织规范
 - 全部小写，语义化
+- `blear.css` 样式类
+- `blear.scss` SCSS mixin、function 等
 - `blear.core` 浏览器核心函数
 - `blear.utils` 工具函数
 - `blear.classes` 通用类
