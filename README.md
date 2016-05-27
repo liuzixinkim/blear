@@ -19,12 +19,19 @@
 - 模板
     - [blear](https://github.com/blearjs/blear)
     - [blear.__template__](https://github.com/blearjs/blear.__template__)
+- 样式 css
+    - [blear.css.reset](https://github.com/blearjs/blear.css.reset)
+    - [blear.css.function](https://github.com/blearjs/blear.css.function)
+- 样式预处理器 scss
+    - [blear.scss.clearfix](https://github.com/blearjs/blear.scss.clearfix)
+    - [blear.scss.flexible](https://github.com/blearjs/blear.scss.flexible)
 - 浏览器核心 core
     - [blear.core.ajax](https://github.com/blearjs/blear.core.ajax)
     - [blear.core.animation](https://github.com/blearjs/blear.core.animation)
     - [blear.core.attribute](https://github.com/blearjs/blear.core.attribute)
     - [blear.core.cookie](https://github.com/blearjs/blear.core.cookie)
     - [blear.core.event](https://github.com/blearjs/blear.core.event)
+    - [blear.core.flexible](https://github.com/blearjs/blear.core.flexible)
     - [blear.core.hashbang](https://github.com/blearjs/blear.core.hashbang)
     - [blear.core.jsonp](https://github.com/blearjs/blear.core.jsonp)
     - [blear.core.keyframe](https://github.com/blearjs/blear.core.keyframe)
@@ -64,6 +71,7 @@
     - [blear.utils.uri](https://github.com/blearjs/blear.utils.uri)
     - [blear.utils.url](https://github.com/blearjs/blear.utils.url)
     - [blear.utils.validator](https://github.com/blearjs/blear.utils.validator)
+    - [blear.utils.weixin](https://github.com/blearjs/blear.utils.weixin)
 - 通用类 classes
     - [blear.classes.animation](https://github.com/blearjs/blear.classes.animation)
     - [blear.classes.cache](https://github.com/blearjs/blear.classes.cache)
@@ -73,6 +81,7 @@
     - [blear.classes.router](https://github.com/blearjs/blear.classes.router)
     - [blear.classes.scrollable](https://github.com/blearjs/blear.classes.scrollable)
     - [blear.classes.social-share](https://github.com/blearjs/blear.classes.social-share)
+    - [blear.classes.switchable](https://github.com/blearjs/blear.classes.switchable)
     - [blear.classes.template](https://github.com/blearjs/blear.classes.template)
     - [blear.classes.touchable](https://github.com/blearjs/blear.classes.touchable)
     - [blear.classes.validation](https://github.com/blearjs/blear.classes.validation)
@@ -115,7 +124,6 @@
     - [blear.polyfills.time](https://github.com/blearjs/blear.polyfills.time)
 - 浏览器扩展函数 shims
     - [blear.shims.bezier](https://github.com/blearjs/blear.shims.bezier)
-    - [blear.shims.fastclick](https://github.com/blearjs/blear.shims.fastclick)
     - [blear.shims.lexer](https://github.com/blearjs/blear.shims.lexer)
     - [blear.shims.morphdom](https://github.com/blearjs/blear.shims.morphdom)
 - Node 端独有 node
