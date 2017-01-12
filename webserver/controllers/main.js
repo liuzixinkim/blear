@@ -32,7 +32,7 @@ var buildController = function (name, uri, data) {
             });
         }
 
-        res.render('book.html', data);
+        res.render('index.html', data);
     };
 };
 

@@ -104,7 +104,7 @@ var fixHref = function (content, srcFile) {
         return '<a' + prev + attr + ' href="' +
             href
                 .replace(REG_MD, '/')
-                .replace(REG_EXTEND, '/') +
+                .replace(REG_EXTEND, '') +
             '">';
     });
 };
@@ -143,7 +143,7 @@ exports.buildRouters = function (router, controller, bookroot) {
         uri = path.join('/', uri);
         uri = uri
             .replace(REG_MD, '/')
-            .replace(REG_EXTEND, '/');
+            .replace(REG_EXTEND, '');
         var ret = contentMD.render(content);
         var toc = ret.toc;
 

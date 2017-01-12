@@ -35,5 +35,8 @@ module.exports = function (next) {
     app.set('json spaces', 'local' === configs.env ? 4 : 0);
     app.set('view cache', 'local' !== configs.env);
 
+    // 信任代理
+    app.enable('trust proxy');
+
     next(null, app);
 };
