@@ -1,0 +1,13 @@
+[{
+  "category": "ui",
+  "list": [
+    {
+      "name": "blear.ui.application",
+      "env": "browser",
+      "source": [
+        "index.js",
+        "_view.js"
+      ]
+    }
+  ]
+}]

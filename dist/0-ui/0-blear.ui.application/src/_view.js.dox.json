@@ -1,0 +1,506 @@
+[
+  {
+    "tags": [
+      {
+        "type": "author",
+        "string": "ydr.me",
+        "html": "<p>ydr.me</p>"
+      },
+      {
+        "type": "create",
+        "string": "2016-05-05 19:07",
+        "html": "<p>2016-05-05 19:07</p>"
+      }
+    ],
+    "description": {
+      "full": "<p>视图</p>",
+      "summary": "<p>视图</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 1,
+    "codeStart": 9,
+    "code": "'use strict';\n\nvar UI = require('blear.ui');\nvar modification = require('blear.core.modification');\nvar selector = require('blear.core.selector');\nvar layout = require('blear.core.layout');\nvar attribute = require('blear.core.attribute');\nvar morphDom = require('blear.shims.morphdom');\nvar fun = require('blear.utils.function');\nvar time = require('blear.utils.time');\nvar scopeCSS = require('blear.utils.scope-css');\n\n\nvar htmlView = require('./view.html', 'html');\n\n\nvar namespace = UI.UI_CLASS + '-application';\nvar viewId = 0;\nvar win = window;\nvar doc = win.document;\nvar docTitle = doc.title;\nvar FAVICON = location.origin + '/favicon.ico';\nvar isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);\n\n\nvar View = UI.extend({\n    class: 'View',\n    constructor: function (app, options, route) {\n        var view = this;\n        var viewEl = modification.parse(htmlView);\n        var styleEl = modification.create('style');\n        var viewsEl = app.getViewsElement();\n\n        View.parent(view);\n        view.app = app;\n        view.options = options;\n        view.route = route;\n        view.route.view = view;\n        view.controller = route.controller;\n        view.id = route.id;\n        viewEl.id = namespace + '-' + route.id + '-' + (viewId++);\n        styleEl.id = namespace + '-' + route.id + '-' + (viewId++);\n        view.viewEl = modification.insert(viewEl, viewsEl);\n        view.el = selector.children(viewEl)[0];\n        view.styleEl = modification.insert(styleEl, viewsEl);\n        view.visible = false;\n        view.decorated = false;\n        view.destroyed = false;\n        view.state = {\n            scrollTop: 0\n        };\n\n    },",
+    "ctx": false
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "html",
+        "name": "html",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>html</p>"
+      }
+    ],
+    "description": {
+      "full": "<p>注入结构</p>",
+      "summary": "<p>注入结构</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 64,
+    "codeStart": 68,
+    "code": "html: function (html) {\n    var view = this;\n\n    if (view.destroyed) {\n        return;\n    }\n\n    morphDom(view.el, '<div>' + html + '</div>', {\n        childrenOnly: true\n    });\n\n    return view;\n},",
+    "ctx": {
+      "type": "method",
+      "name": "html",
+      "string": "html()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "style",
+        "name": "style",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>style</p>"
+      },
+      {
+        "type": "param",
+        "string": "[_global] {Boolean} 是否为全局样式",
+        "name": "[_global]",
+        "description": "<p>{Boolean} 是否为全局样式</p>",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false
+      }
+    ],
+    "description": {
+      "full": "<p>注入样式</p>",
+      "summary": "<p>注入样式</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 82,
+    "codeStart": 87,
+    "code": "style: function (style, _global) {\n    var view = this;\n\n    if (view.destroyed) {\n        return;\n    }\n\n    if (!_global) {\n        style = scopeCSS(style, '#' + view.viewEl.id);\n    }\n\n    modification.importStyle(style, view.styleEl, true);\n    return view;\n},",
+    "ctx": {
+      "type": "method",
+      "name": "style",
+      "string": "style()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "title",
+        "name": "title",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>title</p>"
+      },
+      {
+        "type": "returns",
+        "string": "{View}",
+        "types": [
+          "View"
+        ],
+        "typesDescription": "<a href=\"View.html\">View</a>",
+        "optional": false,
+        "nullable": false,
+        "nonNullable": false,
+        "variable": false,
+        "description": "",
+        "html": "<p>{View}</p>"
+      }
+    ],
+    "description": {
+      "full": "<p>修改文档标题</p>",
+      "summary": "<p>修改文档标题</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 103,
+    "codeStart": 108,
+    "code": "title: function (title) {\n    var view = this;\n    doc.title = title || docTitle;\n\n    if (!isIOS) {\n        return view;\n    }\n\n    var faviconIframe = modification.create('iframe', {\n        style: {\n            display: 'none'\n        },\n        src: FAVICON\n    });\n    faviconIframe.onload = function () {\n        time.nextTick(function () {\n            modification.remove(faviconIframe);\n        });\n    };\n    modification.insert(faviconIframe);\n    return view;\n},",
+    "ctx": {
+      "type": "method",
+      "name": "title",
+      "string": "title()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "size",
+        "name": "size",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>size</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>设置 view 尺寸</p>",
+      "summary": "<p>设置 view 尺寸</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 132,
+    "codeStart": 137,
+    "code": "_size: function (size) {\n    attribute.style(this.viewEl, size);\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_size",
+      "string": "_size()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "route",
+        "name": "route",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>route</p>"
+      },
+      {
+        "type": "param",
+        "string": "next",
+        "name": "next",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>next</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>进入视图</p>",
+      "summary": "<p>进入视图</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 142,
+    "codeStart": 148,
+    "code": "_enter: function (route, next) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    next = fun.noop(next);\n\n    var callback = function (boolean) {\n        next(boolean);\n        view.title(controller.title);\n    };\n\n    if (view.destroyed) {\n        return callback(true);\n    }\n\n    var enter = fun.noop(controller.enter);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n\n    // async enter\n    // enter(app, route, next);\n    if (enter.length === 3) {\n        enter(view, route, callback);\n    }\n    // sync enter\n    // enter(app, route);\n    else {\n        enter(view, route);\n        callback(true);\n    }\n\n    return view;\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_enter",
+      "string": "_enter()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "route",
+        "name": "route",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>route</p>"
+      },
+      {
+        "type": "param",
+        "string": "next",
+        "name": "next",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>next</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>更新视图</p>",
+      "summary": "<p>更新视图</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 186,
+    "codeStart": 192,
+    "code": "_update: function (route, next) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    next = fun.noop(next);\n\n    if (view.destroyed) {\n        return next(true);\n    }\n\n    var callback = function (boolean) {\n        next(boolean);\n        view.title(controller.title);\n    };\n\n    var update = fun.noop(controller.update);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    // async update\n    // update(app, route, next);\n    if (update.length === 3) {\n        update(view, route, callback);\n    }\n    // sync update\n    // update(app, route);\n    else {\n        update(view, route);\n        callback(true);\n    }\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_update",
+      "string": "_update()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "route",
+        "name": "route",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>route</p>"
+      },
+      {
+        "type": "param",
+        "string": "callback",
+        "name": "callback",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>callback</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>视图离开</p>",
+      "summary": "<p>视图离开</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 227,
+    "codeStart": 233,
+    "code": "_leave: function (route, callback) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    callback = fun.noop(callback);\n\n    if (!view.visible || view.destroyed) {\n        return callback(true);\n    }\n\n    var next = function next(can) {\n        // 当前 view 拒绝离开\n        if (!can) {\n            return callback(can);\n        }\n\n        view.state.scrollTop = layout.scrollTop(view.viewEl);\n        callback(can);\n    };\n    var leave = fun.noop(controller.leave);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    // async leave\n    // leave(app, route, next);\n    if (leave.length === 3) {\n        leave(view, route, next);\n    }\n    // sync leave\n    // leave(app, route);\n    else {\n        leave(view, route);\n        next(true);\n    }\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_leave",
+      "string": "_leave()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "callback",
+        "name": "callback",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>callback</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>视图显示</p>",
+      "summary": "<p>视图显示</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 272,
+    "codeStart": 277,
+    "code": "_show: function (callback) {\n    var view = this;\n    var controller = view.controller;\n    var options = view.options;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (view.destroyed || view.visible) {\n        return callback(true);\n    }\n\n    var show = fun.noop(controller.show);\n    var viewOptions = view[_getViewOptions](true);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = true;\n    options.showAnimation(view.viewEl, viewOptions, function () {\n        time.nextFrame(function () {\n            layout.scrollTop(view.viewEl, view.state.scrollTop);\n            show(view, route);\n            callback(true);\n        });\n    });\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_show",
+      "string": "_show()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "string": "callback",
+        "name": "callback",
+        "description": "",
+        "types": [],
+        "typesDescription": "",
+        "variable": false,
+        "nonNullable": false,
+        "nullable": false,
+        "optional": false,
+        "html": "<p>callback</p>"
+      },
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>视图隐藏</p>",
+      "summary": "<p>视图隐藏</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 305,
+    "codeStart": 310,
+    "code": "_hide: function (callback) {\n    var view = this;\n    var options = view.options;\n    var controller = view.controller;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (!view.visible || view.destroyed) {\n        return callback(true);\n    }\n\n    var hide = fun.noop(controller.hide);\n    var viewOptions = view[_getViewOptions](false);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = false;\n\n    var next = function () {\n        options.hideAnimation(view.viewEl, viewOptions, function () {\n            callback(true);\n        });\n    };\n\n    if (hide.length === 3) {\n        hide(view, route, next);\n    } else {\n        hide(view, route);\n        next();\n    }\n},",
+    "ctx": {
+      "type": "method",
+      "name": "_hide",
+      "string": "_hide()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "private",
+        "string": "",
+        "visibility": "private",
+        "html": ""
+      }
+    ],
+    "description": {
+      "full": "<p>视图销毁</p>",
+      "summary": "<p>视图销毁</p>",
+      "body": ""
+    },
+    "isPrivate": true,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 344,
+    "codeStart": 348,
+    "code": "_destroy: function () {\n    var view = this;\n    var controller = view.controller;\n    var route = view.route;\n\n    if (view.destroyed) {\n        return;\n    }\n\n    view.visible = false;\n    view.decorated = false;\n    view.destroyed = true;\n\n    var next = function next() {\n        modification.remove(view.viewEl);\n        modification.remove(view.styleEl);\n        view.app = view.viewEl = view.options\n            = view.styleEl = view.route\n            = view.controller = view.route.view\n            = null;\n        View.invoke('destroy', view);\n    };\n\n    var destroy = fun.noop(controller.destroy);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n\n    // async destroy\n    // destroy(view, route, next);\n    if (destroy.length === 3) {\n        destroy(view, route, next);\n    }\n    // sync destroy\n    // destroy(app, route);\n    else {\n        destroy(view, route);\n        next(true);\n    }\n}\n});\nvar _getViewOptions = View.sole();\nvar pro = View.prototype;",
+    "ctx": {
+      "type": "method",
+      "name": "_destroy",
+      "string": "_destroy()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "returns",
+        "string": "{{}}",
+        "types": [
+          {}
+        ],
+        "typesDescription": "{  }",
+        "optional": false,
+        "nullable": false,
+        "nonNullable": false,
+        "variable": false,
+        "description": "",
+        "html": "<p>{{}}</p>"
+      }
+    ],
+    "description": {
+      "full": "<p>获取视图的配置</p>",
+      "summary": "<p>获取视图的配置</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "isConstructor": false,
+    "isClass": false,
+    "isEvent": false,
+    "ignore": false,
+    "line": 393,
+    "codeStart": 397,
+    "code": "pro[_getViewOptions] = function (isShow) {\n    var view = this;\n    var route = view.route;\n    var relativedRoute = isShow ? route.prev : route.next;\n    var aniOptions = {};\n\n    if (relativedRoute) {\n        var relativedTime = relativedRoute.state.timeStamp;\n        var thisTime = route.state.timeStamp;\n        aniOptions.direction = ( isShow ? thisTime > relativedTime : thisTime < relativedTime )\n            ? 'forward' : 'back';\n    } else {\n        aniOptions.direction = 'none';\n    }\n\n    return aniOptions;\n};\n\n\nmodule.exports = View;",
+    "ctx": false
+  }
+]

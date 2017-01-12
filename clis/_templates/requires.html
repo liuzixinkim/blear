@@ -1,0 +1,9 @@
+<div class="moduleRequires">
+    <div class="moduleRequires-title">依赖</div>
+    <ul class="moduleRequires-list">
+        <li @for="require in requires">
+            <a @if="require.href" href="{{=require.href}}">{{=require.name}}</a>
+            <span @else>{{=require.name}}</span>
+        </li>
+    </ul>
+</div>

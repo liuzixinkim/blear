@@ -1,10 +1,8 @@
 {
   "name": "blear",
   "version": "1.0.0",
-  "description": "前后端通用脚本库",
-  "scripts": {
-
-  },
+  "description": "前后端通用脚本库，blear 官网",
+  "scripts": {},
   "preferGlobal": false,
   "bin": {},
   "engines": {

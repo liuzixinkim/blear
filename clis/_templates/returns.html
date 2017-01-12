@@ -1,0 +1,19 @@
+<div class="moduleReturns">
+    <div class="moduleReturns-title">返回</div>
+    <table class="moduleReturns-table">
+        <thead>
+        <tr>
+            <th class="moduleReturns-type">类型</th>
+            <th class="moduleReturns-desc">描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr @for="ret in returns">
+            <td>
+                <div class="label label-{{type}}" @for="type in ret.types">{{type}}</div>
+            </td>
+            <td>{{=ret.description}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
