@@ -12,7 +12,7 @@ var path = require('path');
 var env = getEnv();
 var webroot = env === 'local' ? 'dev' : 'pro';
 var root = __dirname;
-var port = 10000;
+var port = 18085;
 
 module.exports = {
     port: port,

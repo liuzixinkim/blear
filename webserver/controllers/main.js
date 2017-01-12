@@ -8,8 +8,6 @@
 'use strict';
 
 var Router = require('express').Router;
-var howdo = require('blear.utils.howdo');
-var weixin = require('blear.node.weixin');
 
 var configs = require('../../configs');
 var pkg = require('../../package.json');
