@@ -246,7 +246,7 @@
     "ignore": false,
     "line": 142,
     "codeStart": 148,
-    "code": "_enter: function (route, next) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    next = fun.noop(next);\n\n    var callback = function (boolean) {\n        next(boolean);\n        view.title(controller.title);\n    };\n\n    if (view.destroyed) {\n        return callback(true);\n    }\n\n    var enter = fun.noop(controller.enter);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n\n    // async enter\n    // enter(app, route, next);\n    if (enter.length === 3) {\n        enter(view, route, callback);\n    }\n    // sync enter\n    // enter(app, route);\n    else {\n        enter(view, route);\n        callback(true);\n    }\n\n    return view;\n},",
+    "code": "_enter: function (route, next) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    next = fun.noop(next);\n\n    var callback = function (boolean) {\n        next(boolean);\n        view.title(controller.title);\n        attribute.addClass(view.viewEl, controller.name || '');\n    };\n\n    if (view.destroyed) {\n        return callback(true);\n    }\n\n    var enter = fun.noop(controller.enter);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n\n    // async enter\n    // enter(app, route, next);\n    if (enter.length === 3) {\n        enter(view, route, callback);\n    }\n    // sync enter\n    // enter(app, route);\n    else {\n        enter(view, route);\n        callback(true);\n    }\n\n    return view;\n},",
     "ctx": {
       "type": "method",
       "name": "_enter",
@@ -298,8 +298,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 186,
-    "codeStart": 192,
+    "line": 187,
+    "codeStart": 193,
     "code": "_update: function (route, next) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    next = fun.noop(next);\n\n    if (view.destroyed) {\n        return next(true);\n    }\n\n    var callback = function (boolean) {\n        next(boolean);\n        view.title(controller.title);\n    };\n\n    var update = fun.noop(controller.update);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    // async update\n    // update(app, route, next);\n    if (update.length === 3) {\n        update(view, route, callback);\n    }\n    // sync update\n    // update(app, route);\n    else {\n        update(view, route);\n        callback(true);\n    }\n},",
     "ctx": {
       "type": "method",
@@ -352,8 +352,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 227,
-    "codeStart": 233,
+    "line": 228,
+    "codeStart": 234,
     "code": "_leave: function (route, callback) {\n    var view = this;\n    var controller = view.controller;\n\n    view.route = route;\n    view.route.view = view;\n    callback = fun.noop(callback);\n\n    if (!view.visible || view.destroyed) {\n        return callback(true);\n    }\n\n    var next = function next(can) {\n        // 当前 view 拒绝离开\n        if (!can) {\n            return callback(can);\n        }\n\n        view.state.scrollTop = layout.scrollTop(view.viewEl);\n        callback(can);\n    };\n    var leave = fun.noop(controller.leave);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    // async leave\n    // leave(app, route, next);\n    if (leave.length === 3) {\n        leave(view, route, next);\n    }\n    // sync leave\n    // leave(app, route);\n    else {\n        leave(view, route);\n        next(true);\n    }\n},",
     "ctx": {
       "type": "method",
@@ -393,9 +393,9 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 272,
-    "codeStart": 277,
-    "code": "_show: function (callback) {\n    var view = this;\n    var controller = view.controller;\n    var options = view.options;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (view.destroyed || view.visible) {\n        return callback(true);\n    }\n\n    var show = fun.noop(controller.show);\n    var viewOptions = view[_getViewOptions](true);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = true;\n    options.showAnimation(view.viewEl, viewOptions, function () {\n        time.nextFrame(function () {\n            layout.scrollTop(view.viewEl, view.state.scrollTop);\n            show(view, route);\n            callback(true);\n        });\n    });\n},",
+    "line": 273,
+    "codeStart": 278,
+    "code": "_show: function (callback) {\n    var view = this;\n    var controller = view.controller;\n    var options = view.options;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (view.destroyed || view.visible) {\n        return callback(true);\n    }\n\n    var show = fun.noop(controller.show);\n    var viewOptions = view[_getViewOptions](true);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = true;\n    attribute.show(view.viewEl);\n    options.showAnimation(view.viewEl, viewOptions, function () {\n        time.nextFrame(function () {\n            show(view, route);\n            layout.scrollTop(view.viewEl, view.state.scrollTop);\n            callback(true);\n        });\n    });\n},",
     "ctx": {
       "type": "method",
       "name": "_show",
@@ -434,9 +434,9 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 305,
-    "codeStart": 310,
-    "code": "_hide: function (callback) {\n    var view = this;\n    var options = view.options;\n    var controller = view.controller;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (!view.visible || view.destroyed) {\n        return callback(true);\n    }\n\n    var hide = fun.noop(controller.hide);\n    var viewOptions = view[_getViewOptions](false);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = false;\n\n    var next = function () {\n        options.hideAnimation(view.viewEl, viewOptions, function () {\n            callback(true);\n        });\n    };\n\n    if (hide.length === 3) {\n        hide(view, route, next);\n    } else {\n        hide(view, route);\n        next();\n    }\n},",
+    "line": 307,
+    "codeStart": 312,
+    "code": "_hide: function (callback) {\n    var view = this;\n    var options = view.options;\n    var controller = view.controller;\n    var route = view.route;\n\n    callback = fun.noop(callback);\n\n    if (!view.visible || view.destroyed) {\n        return callback(true);\n    }\n\n    var hide = fun.noop(controller.hide);\n    var viewOptions = view[_getViewOptions](false);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n    view.visible = false;\n\n    var next = function () {\n        options.hideAnimation(view.viewEl, viewOptions, function () {\n            attribute.hide(view.viewEl);\n            callback(true);\n        });\n    };\n\n    if (hide.length === 3) {\n        hide(view, route, next);\n    } else {\n        hide(view, route);\n        next();\n    }\n},",
     "ctx": {
       "type": "method",
       "name": "_hide",
@@ -462,8 +462,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 344,
-    "codeStart": 348,
+    "line": 347,
+    "codeStart": 351,
     "code": "_destroy: function () {\n    var view = this;\n    var controller = view.controller;\n    var route = view.route;\n\n    if (view.destroyed) {\n        return;\n    }\n\n    view.visible = false;\n    view.decorated = false;\n    view.destroyed = true;\n\n    var next = function next() {\n        modification.remove(view.viewEl);\n        modification.remove(view.styleEl);\n        view.app = view.viewEl = view.options\n            = view.styleEl = view.route\n            = view.controller = view.route.view\n            = null;\n        View.invoke('destroy', view);\n    };\n\n    var destroy = fun.noop(controller.destroy);\n    var watch = fun.noop(controller.watch);\n\n    watch(view, route);\n\n    // async destroy\n    // destroy(view, route, next);\n    if (destroy.length === 3) {\n        destroy(view, route, next);\n    }\n    // sync destroy\n    // destroy(app, route);\n    else {\n        destroy(view, route);\n        next(true);\n    }\n}\n});\nvar _getViewOptions = View.sole();\nvar pro = View.prototype;",
     "ctx": {
       "type": "method",
@@ -498,8 +498,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 393,
-    "codeStart": 397,
+    "line": 396,
+    "codeStart": 400,
     "code": "pro[_getViewOptions] = function (isShow) {\n    var view = this;\n    var route = view.route;\n    var relativedRoute = isShow ? route.prev : route.next;\n    var aniOptions = {};\n\n    if (relativedRoute) {\n        var relativedTime = relativedRoute.state.timeStamp;\n        var thisTime = route.state.timeStamp;\n        aniOptions.direction = ( isShow ? thisTime > relativedTime : thisTime < relativedTime )\n            ? 'forward' : 'back';\n    } else {\n        aniOptions.direction = 'none';\n    }\n\n    return aniOptions;\n};\n\n\nmodule.exports = View;",
     "ctx": false
   }

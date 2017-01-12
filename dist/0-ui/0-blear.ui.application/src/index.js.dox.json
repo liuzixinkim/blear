@@ -45,7 +45,7 @@
     "ignore": false,
     "line": 8,
     "codeStart": 13,
-    "code": "'use strict';\n\nvar UI = require('blear.ui');\nvar object = require('blear.utils.object');\nvar typeis = require('blear.utils.typeis');\nvar array = require('blear.utils.array');\nvar selector = require('blear.core.selector');\nvar attribute = require('blear.core.attribute');\nvar modification = require('blear.core.modification');\nvar event = require('blear.core.event');\nvar layout = require('blear.core.layout');\n\nvar htmlViews = require('./views.html', 'html');\nvar View = require('./_view.js');\n\n\nvar win = window;\nvar doc = win.document;\nvar htmlEl = doc.documentElement;\nvar bodyEl = doc.body;\nvar defaults = {\n    el: null,\n    showAnimation: function (el, viewOptions, done) {\n        attribute.show(el);\n        done();\n    },\n\n    hideAnimation: function (el, viewOptions, done) {\n        attribute.hide(el);\n        done();\n    },",
+    "code": "'use strict';\n\nvar UI = require('blear.ui');\nvar object = require('blear.utils.object');\nvar typeis = require('blear.utils.typeis');\nvar array = require('blear.utils.array');\nvar selector = require('blear.core.selector');\nvar attribute = require('blear.core.attribute');\nvar modification = require('blear.core.modification');\nvar event = require('blear.core.event');\nvar layout = require('blear.core.layout');\n\nvar View = require('./_view.js');\n\nvar win = window;\nvar doc = win.document;\nvar htmlEl = doc.documentElement;\nvar bodyEl = doc.body;\nvar namespace = 'blearui-application';\nvar defaults = {\n    el: null,\n\n    platform: 'mobile',\n\n    showAnimation: function (el, viewOptions, done) {\n        done();\n    },\n\n    hideAnimation: function (el, viewOptions, done) {\n        done();\n    },",
     "ctx": false
   },
   {
@@ -76,7 +76,7 @@
     "ignore": false,
     "line": 45,
     "codeStart": 49,
-    "code": "maxLength: 5\n};\n\n\nvar Application = UI.extend({\nclassName: 'Application',\nconstructor: function (router, options) {\n    var the = this;\n\n    the.router = router;\n    the[_options] = options = object.assign(true, {}, defaults, options);\n    Application.parent(the, options);\n    the[_viewsList] = [];\n    the[_viewsIdMap] = {};\n    the[_routersIdMap] = {};\n    the[_firstEnter] = true;\n    // 是否正在处理\n    the[_processing] = false;\n    the[_transiting] = false;\n\n    var el = selector.query(options.el)[0];\n    // init node\n    var viewsEl = modification.parse(htmlViews);\n\n    el.innerHTML = '';\n    the[_viewsEl] = modification.insert(viewsEl, el);\n\n    the.router.on('beforeLoad', function () {\n        the[_startTransition]();\n    });\n\n    the.router._change = function (route, next) {\n        var can = !the[_processing];\n\n        if (!can) {\n            next(can);\n            the[_stopTransition]();\n            return;\n        }\n\n        the[_processing] = true;\n\n        var oldView = the[_getViewByRoute](route);\n        var prevView = the[_getViewByRoute](route.prev);\n        // 在后\n        var thisView = the[_thisView] = the[_getThisViewByRoute](route);\n        var paramRoute = the[_cleanRoute](route);\n        paramRoute.prev = the[_cleanRoute](route.prev);\n        paramRoute.next = the[_cleanRoute](route.next);\n\n        // 二次\n        if (prevView) {\n            // query 变化\n            if (thisView === prevView) {\n                the.emit('beforeViewUpdate', thisView, paramRoute);\n                thisView._update(route, next);\n                the.emit('afterViewUpdate', thisView, paramRoute);\n            }\n            // path 变化\n            else {\n                the[_startTransition]();\n                the.emit('beforeViewLeave', thisView, paramRoute);\n                prevView._leave(route.prev, function (can) {\n                    next(can);\n\n                    // 前一个 view 拒绝离开\n                    if (!can) {\n                        the[_stopTransition]();\n                        return;\n                    }\n\n                    the.emit('afterViewLeave', thisView, paramRoute);\n                    the.emit('beforeViewHide', thisView, paramRoute);\n                    prevView._hide();\n                    the.emit('afterViewHide', thisView, paramRoute);\n\n                    // 旧 view 重新进入\n                    if (oldView === thisView) {\n                        the.emit('beforeViewUpdate', thisView, paramRoute);\n                        thisView._update(route, function () {\n                            the.emit('afterViewUpdate', thisView, paramRoute);\n                            the.emit('beforeViewShow', thisView, paramRoute);\n                            thisView._show();\n                            the.emit('afterViewShow', thisView, paramRoute);\n                            the[_stopTransition]();\n                        });\n                    } else {\n                        the.emit('beforeViewEnter', thisView, paramRoute);\n                        thisView._enter(route, function () {\n                            the.emit('afterViewEnter', thisView, paramRoute);\n                            the.emit('beforeViewShow', thisView, paramRoute);\n                            thisView._show();\n                            the.emit('afterViewShow', thisView, paramRoute);\n                            the[_stopTransition]();\n                        });\n                    }\n                });\n            }\n        }\n        // 首次进入\n        else {\n            next(true);\n            the.emit('beforeViewEnter', thisView, paramRoute);\n            thisView._enter(route, function () {\n                the.emit('afterViewEnter', thisView, paramRoute);\n                the.emit('beforeViewShow', thisView, paramRoute);\n                thisView._show();\n                the.emit('afterViewShow', thisView, paramRoute);\n                the[_stopTransition]();\n            });\n        }\n    };\n\n    // 路由变化之后\n    the.router.on('afterChange', function (route, changed) {\n        the[_processing] = false;\n    });\n\n\n    event.on(win, 'resize', the[_onResize] = function () {\n        var width = layout.innerWidth(el);\n        var height = layout.innerHeight(el);\n        var size = the[_latestSize] = {\n            width: width,\n            height: height\n        };\n\n        attribute.style(the[_viewsEl], size);\n        array.each(the[_viewsList], function (index, view) {\n            view._size(size);\n        });\n    });\n\n    the[_onResize]();\n},",
+    "code": "maxLength: 5\n};\nvar Application = UI.extend({\nclassName: 'Application',\nconstructor: function (router, options) {\n    var the = this;\n\n    the.router = router;\n    the[_options] = options = object.assign(true, {}, defaults, options);\n    Application.parent(the, options);\n    the[_viewsList] = [];\n    the[_viewsIdMap] = {};\n    the[_routersIdMap] = {};\n    the[_firstEnter] = true;\n    // 是否正在处理\n    the[_processing] = false;\n    the[_transiting] = false;\n\n    the.router.on('beforeLoad', function () {\n        the[_startTransition]();\n    });\n\n    the.router._change = function (route, next) {\n        var can = !the[_processing];\n\n        if (!can) {\n            next(can);\n            the[_stopTransition]();\n            return;\n        }\n\n        the[_processing] = true;\n\n        var oldView = the[_getViewByRoute](route);\n        var prevView = the[_getViewByRoute](route.prev);\n        // 在后\n        var thisView = the[_thisView] = the[_getThisViewByRoute](route);\n        var paramRoute = the[_cleanRoute](route);\n        paramRoute.prev = the[_cleanRoute](route.prev);\n        paramRoute.next = the[_cleanRoute](route.next);\n\n        // 二次\n        if (prevView) {\n            // query 变化\n            if (thisView === prevView) {\n                the.emit('beforeViewUpdate', thisView, paramRoute);\n                thisView._update(route, next);\n                the.emit('afterViewUpdate', thisView, paramRoute);\n            }\n            // path 变化\n            else {\n                the[_startTransition]();\n                the.emit('beforeViewLeave', thisView, paramRoute);\n                prevView._leave(route.prev, function (can) {\n                    next(can);\n\n                    // 前一个 view 拒绝离开\n                    if (!can) {\n                        the[_stopTransition]();\n                        return;\n                    }\n\n                    the.emit('afterViewLeave', thisView, paramRoute);\n                    the.emit('beforeViewHide', thisView, paramRoute);\n                    prevView._hide();\n                    the.emit('afterViewHide', thisView, paramRoute);\n\n                    // 旧 view 重新进入\n                    if (oldView === thisView) {\n                        the.emit('beforeViewUpdate', thisView, paramRoute);\n                        thisView._update(route, function () {\n                            the.emit('afterViewUpdate', thisView, paramRoute);\n                            the.emit('beforeViewShow', thisView, paramRoute);\n                            thisView._show();\n                            the.emit('afterViewShow', thisView, paramRoute);\n                            the[_stopTransition]();\n                        });\n                    } else {\n                        the.emit('beforeViewEnter', thisView, paramRoute);\n                        thisView._enter(route, function () {\n                            the.emit('afterViewEnter', thisView, paramRoute);\n                            the.emit('beforeViewShow', thisView, paramRoute);\n                            thisView._show();\n                            the.emit('afterViewShow', thisView, paramRoute);\n                            the[_stopTransition]();\n                        });\n                    }\n                });\n            }\n        }\n        // 首次进入\n        else {\n            next(true);\n            the.emit('beforeViewEnter', thisView, paramRoute);\n            thisView._enter(route, function () {\n                the.emit('afterViewEnter', thisView, paramRoute);\n                the.emit('beforeViewShow', thisView, paramRoute);\n                thisView._show();\n                the.emit('afterViewShow', thisView, paramRoute);\n                the[_stopTransition]();\n            });\n        }\n    };\n\n    // 路由变化之后\n    the.router.on('afterChange', function (route, changed) {\n        the[_processing] = false;\n    });\n\n    the[_initNode]();\n    the[_initStyle]();\n},",
     "ctx": {
       "type": "property",
       "name": "maxLength",
@@ -109,8 +109,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 186,
-    "codeStart": 190,
+    "line": 163,
+    "codeStart": 167,
     "code": "getViewsElement: function () {\n    return this[_viewsEl];\n},",
     "ctx": {
       "type": "method",
@@ -130,9 +130,9 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 195,
-    "codeStart": 198,
-    "code": "destroy: function () {\n    // do what\n}\n});\nvar _options = Application.sole();\nvar _viewsEl = Application.sole();\nvar _firstEnter = Application.sole();\nvar _viewsList = Application.sole();\nvar _viewsIdMap = Application.sole();\nvar _routersIdMap = Application.sole();\nvar _getViewByRoute = Application.sole();\nvar _getThisViewByRoute = Application.sole();\nvar _processing = Application.sole();\nvar _transiting = Application.sole();\nvar _startTransition = Application.sole();\nvar _stopTransition = Application.sole();\nvar _thisView = Application.sole();\nvar _onResize = Application.sole();\nvar _latestSize = Application.sole();\nvar _cleanRoute = Application.sole();\nvar pro = Application.prototype;",
+    "line": 172,
+    "codeStart": 175,
+    "code": "destroy: function () {\n    // do what\n}\n});\nvar _options = Application.sole();\nvar _viewsEl = Application.sole();\nvar _firstEnter = Application.sole();\nvar _viewsList = Application.sole();\nvar _viewsIdMap = Application.sole();\nvar _routersIdMap = Application.sole();\nvar _getViewByRoute = Application.sole();\nvar _getThisViewByRoute = Application.sole();\nvar _processing = Application.sole();\nvar _transiting = Application.sole();\nvar _initNode = Application.sole();\nvar _initStyle = Application.sole();\nvar _startTransition = Application.sole();\nvar _stopTransition = Application.sole();\nvar _thisView = Application.sole();\nvar _onResize = Application.sole();\nvar _latestSize = Application.sole();\nvar _cleanRoute = Application.sole();\nvar pro = Application.prototype;\n\npro[_initNode] = function () {\nvar the = this;\nvar options = the[_options];\nvar el = selector.query(options.el)[0];\n\nthe[_viewsEl] = el;\nattribute.addClass(el, namespace + '-views');\n};\n\npro[_initStyle] = function () {\nvar the = this;\nvar options = the[_options];\n\nif (options.platform !== 'mobile') {\n    return;\n}\n\nrequire('./style.css', 'css|style');\nvar fullpageClassName = namespace + '-fullpage';\nattribute.addClass(htmlEl, fullpageClassName);\nattribute.addClass(bodyEl, fullpageClassName);\n};",
     "ctx": {
       "type": "method",
       "name": "destroy",
@@ -151,8 +151,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 221,
-    "codeStart": 224,
+    "line": 222,
+    "codeStart": 225,
     "code": "pro[_startTransition] = function () {\n    var the = this;\n\n    if (!the[_transiting]) {\n        the[_transiting] = true;\n        the.emit('beforeTransition');\n    }\n};",
     "ctx": false
   },
@@ -168,8 +168,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 234,
-    "codeStart": 237,
+    "line": 235,
+    "codeStart": 238,
     "code": "pro[_stopTransition] = function () {\n    var the = this;\n\n    the[_transiting] = false;\n    the.emit('afterTransition');\n};",
     "ctx": false
   },
@@ -211,8 +211,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 244,
-    "codeStart": 249,
+    "line": 245,
+    "codeStart": 250,
     "code": "pro[_getViewByRoute] = function (route) {\n    if (!route) {\n        return;\n    }\n\n    return this[_viewsIdMap][route.id];\n};",
     "ctx": false
   },
@@ -242,8 +242,8 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 258,
-    "codeStart": 262,
+    "line": 259,
+    "codeStart": 263,
     "code": "pro[_getThisViewByRoute] = function (route) {\n    var the = this;\n    var oldView = the[_getViewByRoute](route);\n\n    if (oldView) {\n        // 找到旧的 view，需要将这个 view 放到队尾，\n        // 防止下次删除旧的 view 的时候被删除掉\n        var findIndex = the[_viewsList].indexOf(oldView);\n\n        the[_viewsList].splice(findIndex, 1);\n        the[_viewsList].push(oldView);\n\n        return oldView;\n    }\n\n    var view = new View(the, the[_options], route);\n    view._size(the[_latestSize]);",
     "ctx": false
   },
@@ -274,9 +274,9 @@
     "isClass": false,
     "isEvent": false,
     "ignore": false,
-    "line": 280,
-    "codeStart": 284,
-    "code": "view.is = function () {\n    return view === the[_thisView];\n};\n\nthe[_viewsList].push(view);\nthe[_viewsIdMap][view.id] = view;\nthe.emit('pushView', view);\n\n// 超过最大长度\nif (the[_viewsList].length > the[_options].maxLength) {\n    var oldestView = the[_viewsList].shift();\n    oldestView._destroy();\n    the[_viewsIdMap][oldestView.id] = null;\n    the.emit('dropView', oldestView);\n}\n\nreturn view;\n};\n\n\n// 清洁 route\npro[_cleanRoute] = function (route) {\nif (!route) {\n    return null;\n}\n\nreturn object.filter(route, [\n    'data',\n    'path',\n    'pathname',\n    'rule',\n    'query',\n    'params'\n]);\n};\n\n\nrequire('./style.css', 'css|style');\nApplication.defaults = defaults;\nmodule.exports = Application;",
+    "line": 281,
+    "codeStart": 285,
+    "code": "view.is = function () {\n    return view === the[_thisView];\n};\n\nthe[_viewsList].push(view);\nthe[_viewsIdMap][view.id] = view;\nthe.emit('pushView', view);\n\n// 超过最大长度\nif (the[_viewsList].length > the[_options].maxLength) {\n    var oldestView = the[_viewsList].shift();\n    oldestView._destroy();\n    the[_viewsIdMap][oldestView.id] = null;\n    the.emit('dropView', oldestView);\n}\n\nreturn view;\n};\n\n\n// 清洁 route\npro[_cleanRoute] = function (route) {\nif (!route) {\n    return null;\n}\n\nreturn object.filter(route, [\n    'data',\n    'path',\n    'pathname',\n    'rule',\n    'query',\n    'params'\n]);\n};\n\n\nApplication.defaults = defaults;\nmodule.exports = Application;",
     "ctx": {
       "type": "method",
       "receiver": "view",

@@ -18,6 +18,7 @@ module.exports = {
     port: port,
     env: env,
     root: root,
+    bookroot: path.join(root, './bookroot'),
     webroot: path.join(root, './webroot-' + webroot),
     cookie: {
         secret: 'express-template',

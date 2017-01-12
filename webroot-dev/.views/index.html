@@ -21,9 +21,21 @@
 </head>
 <body ontouchstart="">
 
-<h1>express 工程样板</h1>
-<h2>{{Date.now()}}</h2>
-<h3>{{pkg.name}}@{{pkg.version}}</h3>
+<div id="progress" class="progress"></div>
+
+<div class="body clearfix">
+    <div class="body-sidebar pull-left">
+        <div class="sidebar">
+            <h1 class="sidebar-title"><a href="/">{{=title}}</a></h1>
+            <nav class="sidebar-nav" id="nav">{{=sidebar}}</nav>
+            <div class="sidebar-action" id="navAction"><i></i><i></i><i></i></div>
+        </div>
+    </div>
+    <div class="body-main" id="main">
+        <div class="content typo" id="content">{{=content}}</div>
+    </div>
+</div>
+
 
 <script coolie src="/node_modules/coolie.js/coolie.js"
         data-config="/static/js/coolie-config.js"

@@ -13,6 +13,7 @@ var path = require('blear.node.path');
 var array = require('blear.utils.array');
 var object = require('blear.utils.object');
 var typeis = require('blear.utils.typeis');
+var plan = require('blear.utils.plan');
 var Template = require('blear.classes.template');
 
 var configs = require('../configs');
@@ -105,9 +106,6 @@ var parseSourceComment = function (files) {
         var filename = item.moduleIndex + '-' + item.moduleName + '/' + item.filename;
         var wf = path.join(configs.root, 'dist', dirname, filename + '.dox.json');
 
-        console.log(dirname);
-        console.log(filename);
-
         fse.outputJSONSync(wf, ast);
         astList.push({
             moduleName: item.moduleName,
@@ -125,8 +123,6 @@ var parseSourceComment = function (files) {
     return astList;
 };
 
-
-// 3、根据注释生成文档片段
 
 var parseForModuleRequires = function (ast) {
     var requires = parseRequires(ast.code);
@@ -191,7 +187,6 @@ var parseForModuleDesc = function (token, ast) {
     return tplDesc.render(data);
 };
 
-
 var parseForModuleUsage = function (token, ast) {
     var args = [];
 
@@ -208,7 +203,6 @@ var parseForModuleUsage = function (token, ast) {
         description: token.full
     });
 };
-
 
 var parseForModuleParams = function (token, ast) {
     var params = [];
@@ -237,7 +231,6 @@ var parseForModuleParams = function (token, ast) {
     });
 };
 
-
 var parseForModuleReturns = function (token, ast) {
     var returns = [];
     array.each(token.tags, function (index, tag) {
@@ -254,7 +247,6 @@ var parseForModuleReturns = function (token, ast) {
     });
 };
 
-
 var parseForModuleExamples = function (token, ast) {
     var examples = [];
     array.each(token.tags, function (index, tag) {
@@ -268,8 +260,8 @@ var parseForModuleExamples = function (token, ast) {
     });
 };
 
-
-var generateModuleToHTML = function (astList) {
+// 3、根据注释生成文档片段
+var generateAstToFragment = function (astList) {
     var hasDesc = false;
     array.each(astList, function (index, ast) {
         var wf = path.resolve(configs.root, 'docs', ast.dirname, ast.filename + '.html');
@@ -290,7 +282,7 @@ var generateModuleToHTML = function (astList) {
             }
         });
 
-        console.info(ast.filename);
+        console.info(wf);
         fse.outputFileSync(wf, md, 'utf8');
     });
 };
@@ -299,4 +291,16 @@ var generateModuleToHTML = function (astList) {
 
 
 // =====================================
-generateModuleToHTML(parseSourceComment(findModulesFiles()));
+plan
+    .taskSync(function () {
+        return findModulesFiles();
+    })
+    .taskSync(function (files) {
+        return parseSourceComment(files);
+    })
+    .taskSync(function (astList) {
+        return generateAstToFragment(astList);
+    })
+    .serial();
+
+
