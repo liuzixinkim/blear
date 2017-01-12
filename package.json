@@ -52,7 +52,11 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "supervisor": "^0.12.0"
+    "supervisor": "^0.12.0",
+    "blear.utils.array": "latest",
+    "blear.utils.object": "latest",
+    "blear.utils.typeis": "latest",
+    "blear.classes.template": "latest"
   },
   "license": "MIT"
 }
