@@ -1,0 +1,73 @@
+{
+  "/.views/index.html": {
+    "main": [
+      {
+        "src": "../webroot-dev/static/js/main/index.js",
+        "dest": "/static/js/main/dd52bc66a82a5bc214781de644bf9e25.js",
+        "deps": []
+      }
+    ],
+    "js": [
+      {
+        "dest": "/static/js/62de91705d225cddfc0a7c2a5ac50ed7.js",
+        "deps": [
+          "../webroot-dev/static/js/common/highlight.pack.js"
+        ]
+      },
+      {
+        "dest": "/static/js/61d1fca4d07303dab683e111d181409e.js",
+        "deps": [
+          "../webroot-dev/node_modules/coolie.js/coolie.js"
+        ]
+      }
+    ],
+    "css": [
+      {
+        "dest": "/static/css/132429762b1aa04db787462dae4a5c9e.css",
+        "deps": [
+          {
+            "src": "../webroot-dev/node_modules/blear.css.reset/src/index.css",
+            "res": []
+          },
+          {
+            "src": "../webroot-dev/node_modules/blear.css.function/src/index.css",
+            "res": []
+          }
+        ]
+      },
+      {
+        "dest": "/static/css/7a71490b31e4c659e641ef1d0cc93ac0.css",
+        "deps": [
+          {
+            "src": "../webroot-dev/static/css/common/base.css",
+            "res": []
+          },
+          {
+            "src": "../webroot-dev/static/css/modules/typo.css",
+            "res": []
+          },
+          {
+            "src": "../webroot-dev/static/css/modules/heading.css",
+            "res": []
+          },
+          {
+            "src": "../webroot-dev/static/css/modules/toc.css",
+            "res": []
+          }
+        ]
+      },
+      {
+        "dest": "/static/css/71194e56e8f7cd0bb2adaa9481338a71.css",
+        "deps": [
+          {
+            "src": "../webroot-dev/static/css/main/index.css",
+            "res": []
+          }
+        ]
+      }
+    ],
+    "res": [
+      "../webroot-dev/favicon.ico"
+    ]
+  }
+}
