@@ -1,0 +1,56 @@
+.toc {
+  background: #fff;
+  min-width: 200px;
+  max-height: 500px;
+  overflow: auto;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #E8E8E8;
+  z-index: 1;
+  opacity: 0.5;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  font-size: 14px;
+
+  &-index {
+    margin-right: 10px;
+    color: #bbb;
+  }
+
+  + h1,
+  + h2 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  ul li {
+    list-style: none;
+    bottom: 0;
+  }
+
+  & > ul {
+    padding: 20px;
+  }
+
+  & li,
+  & ul {
+    margin: 0;
+  }
+
+  li > a:link,
+  li > a:visited {
+    color: #5b5b5b;
+  }
+}

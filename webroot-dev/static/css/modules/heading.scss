@@ -1,0 +1,75 @@
+.heading {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  position: relative;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 1.6em 0 0.6em 0;
+  font-weight: 500;
+  clear: both;
+
+  &-index {
+    margin-right: 10px;
+    color: #bbb;
+  }
+
+  &-text {
+    code {
+      font-size: inherit;
+    }
+  }
+
+  > a {
+    margin: 0;
+    color: #444 !important;
+
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none !important;
+      border: 0 !important;
+    }
+
+    &:before {
+      content: "#";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: -30px;
+      opacity: 0;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: #333 !important;
+    }
+  }
+
+  &_1 {
+    font-size: 28px;
+  }
+
+  &_2 {
+    font-size: 22px;
+  }
+
+  &_3 {
+    font-size: 18px;
+  }
+
+  &_4 {
+    font-size: 16px;
+  }
+
+  &_5 {
+    font-size: 14px;
+  }
+
+  &_6 {
+    font-size: 12px;
+  }
+}

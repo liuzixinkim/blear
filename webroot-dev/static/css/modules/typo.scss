@@ -1,0 +1,188 @@
+// 中文内容排版
+// @ref https://github.com/sofish/typo.css/blob/master/typo.css
+
+$text-link-normal-color: #108ee9;
+$text-link-hover-color: #49a9ee;
+$text-link-active-color: #0e77ca;
+$text-link-visited-color: #0e77ca;
+
+.typo {
+  color: #666;
+  line-height: 1.5;
+
+  a {
+    text-decoration: none;
+    margin: 0 3px;
+
+    &:link {
+      color: $text-link-normal-color;
+    }
+
+    &:visited {
+      color: $text-link-visited-color;
+    }
+
+    &:hover {
+      border-bottom: 1px solid;
+      text-decoration: none;
+      color: $text-link-hover-color;
+    }
+
+    &:active {
+      color: $text-link-active-color;
+    }
+  }
+
+  p, pre, ul, ol, dl, form, hr, table, blockquote {
+    margin-bottom: 1.8em;
+  }
+
+  ul,
+  ol {
+    padding-left: 2em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dt + dd {
+    margin-top: .5em;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  dd + dt {
+    margin-top: 1em;
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
+  ul li {
+    list-style: square;
+    margin-bottom: 0.6em;
+  }
+
+  li {
+    ul, ol {
+      margin-top: 1em;
+    }
+  }
+
+  img {
+    vertical-align: baseline;
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 6px solid #e8e8e8;
+    overflow: hidden;
+
+    &.favicon {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: none !important;
+      max-height: none !important;
+      vertical-align: middle;
+      margin: 0 2px;
+      display: inline-block;
+      border: 0;
+      border-radius: 3px;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    background: #fbfbfb;
+  }
+
+  caption {
+    border-bottom: none;
+  }
+
+  th,
+  td,
+  caption {
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+    color: #666;
+    vertical-align: middle;
+  }
+
+  address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  blockquote {
+    border-left: 1px solid #31A0D8;
+    font-family: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
+    padding-left: 1em;
+    margin: 1em 3em 1em 2em;
+
+    @media (max-width: 640px) {
+      margin: 1em 0;
+    }
+  }
+
+  blockquote small {
+    display: block;
+    color: #999999;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    text-align: right;
+  }
+
+  blockquote p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  hr {
+    display: block;
+    padding: 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid #eeeeee;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+  }
+
+  code, pre {
+    font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  code {
+    margin: 0 2px;
+    padding: 2px 2px;
+    border-radius: 4px;
+    color: #C7254E;
+    font-size: 0.9em;
+    background: #fff5f7;
+  }
+
+  pre {
+    padding: 15px;
+    border-radius: 6px;
+    word-wrap: normal;
+    overflow: auto;
+    line-height: 1.4;
+    tab-size: 4;
+  }
+
+  pre code {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    color: #4e4e4e;
+  }
+
+//  hightlight
+  @import "highlight/github.css";
+
+}

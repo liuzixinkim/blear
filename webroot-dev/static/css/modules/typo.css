@@ -1,0 +1,115 @@
+@import url(highlight/github.css);
+.typo {
+  color: #666;
+  line-height: 1.5; }
+  .typo a {
+    text-decoration: none;
+    margin: 0 3px; }
+    .typo a:link {
+      color: #108ee9; }
+    .typo a:visited {
+      color: #0e77ca; }
+    .typo a:hover {
+      border-bottom: 1px solid;
+      text-decoration: none;
+      color: #49a9ee; }
+    .typo a:active {
+      color: #0e77ca; }
+  .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table, .typo blockquote {
+    margin-bottom: 1.8em; }
+  .typo ul,
+  .typo ol {
+    padding-left: 2em; }
+  .typo dt {
+    font-weight: bold; }
+  .typo dt + dd {
+    margin-top: .5em; }
+  .typo dd {
+    margin-left: 0; }
+  .typo dd + dt {
+    margin-top: 1em; }
+  .typo ol li {
+    list-style: decimal; }
+  .typo ul li {
+    list-style: square;
+    margin-bottom: 0.6em; }
+  .typo li ul, .typo li ol {
+    margin-top: 1em; }
+  .typo img {
+    vertical-align: baseline;
+    max-width: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 6px solid #e8e8e8;
+    overflow: hidden; }
+    .typo img.favicon {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: none !important;
+      max-height: none !important;
+      vertical-align: middle;
+      margin: 0 2px;
+      display: inline-block;
+      border: 0;
+      border-radius: 3px; }
+  .typo table {
+    width: 100%; }
+  .typo th {
+    background: #fbfbfb; }
+  .typo caption {
+    border-bottom: none; }
+  .typo th,
+  .typo td,
+  .typo caption {
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+    color: #666;
+    vertical-align: middle; }
+  .typo address, .typo caption, .typo cite, .typo code, .typo dfn, .typo em, .typo th, .typo var {
+    font-style: normal;
+    font-weight: 400; }
+  .typo blockquote {
+    border-left: 1px solid #31A0D8;
+    font-family: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
+    padding-left: 1em;
+    margin: 1em 3em 1em 2em; }
+    @media (max-width: 640px) {
+      .typo blockquote {
+        margin: 1em 0; } }
+  .typo blockquote small {
+    display: block;
+    color: #999999;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    text-align: right; }
+  .typo blockquote p:last-of-type {
+    margin-bottom: 0; }
+  .typo hr {
+    display: block;
+    padding: 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid #eeeeee;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+  .typo code, .typo pre {
+    font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+  .typo code {
+    margin: 0 2px;
+    padding: 2px 2px;
+    border-radius: 4px;
+    color: #C7254E;
+    font-size: 0.9em;
+    background: #fff5f7; }
+  .typo pre {
+    padding: 15px;
+    border-radius: 6px;
+    word-wrap: normal;
+    overflow: auto;
+    line-height: 1.4;
+    tab-size: 4; }
+  .typo pre code {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    color: #4e4e4e; }

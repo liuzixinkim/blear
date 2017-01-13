@@ -15,10 +15,7 @@ $title-size-small: 40px;
 }
 
 .body {
-  position: relative;
-  height: 100%;
-  $width: 300px;
-  background: #fff;
+  $sidebar-width: 300px;
 
   &-sidebar,
   &-main {
@@ -28,9 +25,8 @@ $title-size-small: 40px;
   }
 
   &-sidebar {
-    width: $width;
+    width: $sidebar-width;
     left: 0;
-    box-shadow: 0px 0 10px #D4D4D4;
 
     @media (max-width: 650px) {
       position: fixed;
@@ -44,7 +40,7 @@ $title-size-small: 40px;
 
   &-main {
     right: 0;
-    left: $width;
+    left: $sidebar-width;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 
@@ -55,6 +51,8 @@ $title-size-small: 40px;
 }
 
 .sidebar {
+  background: #fff;
+
   a {
     display: block;
     color: #5F5F5F;
@@ -87,13 +85,11 @@ $title-size-small: 40px;
     text-align: center;
     position: relative;
     z-index: 2;
-    box-shadow: 0 3px 14px -9px #888;
 
     a {
       &,
       &:hover {
-        background: #FAFAFA;
-        color: #737373;
+        color: $text-primary-color;
         line-height: $title-size-large;
         font-weight: normal;
 
