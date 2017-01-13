@@ -9,7 +9,6 @@
 
 
 var url = require('blear.utils.url');
-var random = require('blear.utils.random');
 
 
 var configs = require('../../configs');
