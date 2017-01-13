@@ -1,7 +1,6 @@
-{{blear.classes.mvvm}}
-
 # Description
-{{description}}
+@@description@@
+
 
 # Example
 ```js
@@ -308,3 +307,8 @@ mvvm.destroy();
 ```js
 MVVM.directive(name, definition);
 ```
+
+
+# Dependencies
+@@dependencies@@
+

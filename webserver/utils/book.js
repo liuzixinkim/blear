@@ -80,13 +80,66 @@ var getFiles = function (bookroot) {
 var REG_HREF = /<a([^>]*?)\shref="(.*?)">/g;
 var REG_HTTP = /^(https?:)?\/\//;
 var REG_ABSOLUTE = /^\//;
+
+
+/**
+ * 构建路由
+ * @param router
+ * @param controller
+ * @param bookroot
+ */
+exports.buildRouters = function (router, controller, bookroot) {
+    var ret = getFiles(bookroot);
+    var contentFiles = ret.files;
+    var sidebarCode = ret.code;
+    var sidebarContent = contentMD.render(sidebarCode).content;
+    var indexFile = path.join(bookroot, './readme.md');
+    var indexCode = fse.readFileSync(indexFile, 'utf8');
+    var indexContent = indexMD.render(indexCode).content;
+
+    sidebarContent = fixHref(sidebarContent);
+    indexContent = fixHref(indexContent);
+
+    router.get('/', controller('', '/', object.assign({
+        sidebar: sidebarContent,
+        content: indexContent
+    })));
+    contentFiles.forEach(function (item) {
+        var name = item.name;
+        var file = item.file;
+        var uri = path.relative(bookroot, file);
+        var markdown = fse.readFileSync(file, 'utf8');
+
+        uri = path.join('/', uri);
+        uri = uri
+            .replace(REG_MD, '/')
+            .replace(REG_EXTEND, '');
+        var ret = contentMD.render(markdown);
+        var toc = ret.toc;
+
+        var content = ret.content;
+        content = fixHref(content, file);
+
+        router.get(uri, controller(object.assign({
+            name: name,
+            file: file,
+            // markdown: markdown,
+            sidebar: sidebarContent,
+            toc: toc,
+            content: content
+        })));
+    });
+};
+
+
+
 /**
  * 修正 a href
  * @param content
  * @param [srcFile]
- * @returns {string|void|XML}
+ * @returns {string}
  */
-var fixHref = function (content, srcFile) {
+function fixHref(content, srcFile) {
     return content.replace(REG_HREF, function (source, prev, href) {
         var attr = '';
 
@@ -107,55 +160,6 @@ var fixHref = function (content, srcFile) {
                 .replace(REG_EXTEND, '') +
             '">';
     });
-};
-
-
-/**
- * 构建路由
- * @param router
- * @param controller
- * @param bookroot
- */
-exports.buildRouters = function (router, controller, bookroot) {
-    var ret = getFiles(bookroot);
-    var contentFiles = ret.files;
-    var sidebarCode = ret.code;
-    var sidebarContent = contentMD.render(sidebarCode).content;
-    var data = fse.readJsonSync(path.join(bookroot, './data.json'));
-    var indexFile = path.join(bookroot, './readme.md');
-    var indexCode = fse.readFileSync(indexFile, 'utf8');
-    var indexContent = indexMD.render(indexCode).content;
-
-    sidebarContent = fixHref(sidebarContent);
-    indexContent = fixHref(indexContent);
-
-    router.get('/', controller('', '/', object.assign({
-        sidebar: sidebarContent,
-        content: indexContent
-    }, data)));
-    contentFiles.forEach(function (item) {
-        var name = item.name;
-        var file = item.file;
-
-        var uri = path.relative(bookroot, file);
-        var content = fse.readFileSync(file, 'utf8');
-
-        uri = path.join('/', uri);
-        uri = uri
-            .replace(REG_MD, '/')
-            .replace(REG_EXTEND, '');
-        var ret = contentMD.render(content);
-        var toc = ret.toc;
-
-        content = ret.content;
-        content = fixHref(content, file);
-
-        router.get(uri, controller(name, uri, object.assign({
-            sidebar: sidebarContent,
-            toc: toc,
-            content: toc + content
-        }, data)));
-    });
-};
+}
 
 
