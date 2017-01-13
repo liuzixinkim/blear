@@ -1,5 +1,5 @@
 {
-  "name": "blear.__template__",
+  "name": "blear.ydr.me",
   "cwd": "./",
   "script": "./app.js",
   "error_file": "./logs/err.log",
