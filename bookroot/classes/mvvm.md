@@ -4,6 +4,8 @@
 
 # Example
 ```js
+var MVVM = require('blear.classes.mvvm');
+
 var mvvm = new MVVM(Options);
 ```
 
