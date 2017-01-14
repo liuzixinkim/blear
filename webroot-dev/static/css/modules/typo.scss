@@ -1,6 +1,5 @@
 // 中文内容排版
 // @ref https://github.com/sofish/typo.css/blob/master/typo.css
-
 @import "../varible";
 
 $text-link-normal-color: #108ee9;
@@ -35,13 +34,14 @@ $text-link-visited-color: #0e77ca;
     }
   }
 
-  p, pre, ul, ol, dl, form, hr, table, blockquote {
-    margin-bottom: 4em;
+  p, pre, dl, form, hr, table, blockquote {
+    margin-bottom: 2em;
   }
 
   ul,
   ol {
     padding-left: 2em;
+    margin-bottom: 4em;
   }
 
   dt {
@@ -65,8 +65,12 @@ $text-link-visited-color: #0e77ca;
   }
 
   ul li {
-    list-style: square;
-    margin-bottom: 0.6em;
+    list-style: circle;
+    margin-bottom: 1.2em;
+
+    li {
+      list-style: square;
+    }
   }
 
   li {
@@ -184,7 +188,7 @@ $text-link-visited-color: #0e77ca;
     color: #4e4e4e;
   }
 
-//  hightlight
+  //  hightlight
   @import "highlight/github";
 }
 

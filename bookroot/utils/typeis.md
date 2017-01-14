@@ -13,9 +13,30 @@ var typeis = require('blear.utils.typeis');
 ```js
 typeis(any);
 ```
-### any
+
+## any
 - 类型：`*`
 - 说明：任意对象
+
+## 返回值
+- 类型：`String`
+- 说明：对象类型，有：
+    - `undefined`
+    - `window`
+    - `document`
+    - `null`
+    - `nan`
+    - `element`
+    - `arguments`
+    - `number`
+    - `string`
+    - `boolean`
+    - `function`
+    - `symbol`
+    - `array`
+    - `regexp`
+    - `error`
+    - `date`
 
 
 # Static
@@ -26,6 +47,7 @@ typeis(any);
 ```js
 typeis.String(any);
 ```
+
 ### any
 - 类型：`*`
 - 说明：任意对象
@@ -201,4 +223,4 @@ typeis.Error(any);
 
 
 # More
-
+- <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString>

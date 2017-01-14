@@ -91,6 +91,10 @@ var generateDependencies = function (module) {
             '</li>';
     });
 
+    if (!desc.dependencies.length) {
+        html += '<li>无依赖</li>';
+    }
+
     html += '</ul>';
 
     return html;

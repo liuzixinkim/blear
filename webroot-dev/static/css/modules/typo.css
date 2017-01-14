@@ -19,11 +19,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #49a9ee; }
     .typo a:active {
       color: #0e77ca; }
-  .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table, .typo blockquote {
-    margin-bottom: 4em; }
+  .typo p, .typo pre, .typo dl, .typo form, .typo hr, .typo table, .typo blockquote {
+    margin-bottom: 2em; }
   .typo ul,
   .typo ol {
-    padding-left: 2em; }
+    padding-left: 2em;
+    margin-bottom: 4em; }
   .typo dt {
     font-weight: bold; }
   .typo dt + dd {
@@ -35,8 +36,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .typo ol li {
     list-style: decimal; }
   .typo ul li {
-    list-style: square;
-    margin-bottom: 0.6em; }
+    list-style: circle;
+    margin-bottom: 1.2em; }
+    .typo ul li li {
+      list-style: square; }
   .typo li ul, .typo li ol {
     margin-top: 1em; }
   .typo img {
