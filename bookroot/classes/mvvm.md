@@ -1,5 +1,5 @@
 # Description
-@@description@@
+{{description}}
 
 
 # Example
@@ -8,6 +8,7 @@ var MVVM = require('blear.classes.mvvm');
 
 var mvvm = new MVVM(Options);
 ```
+
 
 ## Options
 
@@ -312,7 +313,7 @@ MVVM.directive(name, definition);
 
 
 # Dependencies
-@@dependencies@@
+{{dependencies}}
 
 
 # More

@@ -20,8 +20,9 @@ var book = require('../utils/book.js');
 var router = new Router();
 var bookData = fse.readJSONSync(path.join(configs.bookroot, 'data.json'));
 var modulesData = fse.readJSONSync(path.join(configs.bookroot, 'modules.json'));
-var descriptionRE = /@@description@@/;
-var dependenciesRE = /@@dependencies@@/;
+var descriptionRE = /\{\{description}}/;
+var dependenciesRE = /\{\{dependencies}}/;
+
 
 // 生成模块描述
 var generateDescription = function (module) {
@@ -44,8 +45,9 @@ var generateDescription = function (module) {
 
         if (key === 'github') {
             var old = val;
-            val = '<a href="' + old + '">' +
-                '<img class="favicon" src="https://f.ydr.me/' + old + '">' +
+            val = '' +
+                '<img width="16" height="16" class="favicon" src="https://f.ydr.me/' + old + '">' +
+                '<a href="' + old + '">' +
                 old +
                 '</a>';
         }
