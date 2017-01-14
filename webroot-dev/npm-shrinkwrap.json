@@ -1,0 +1,21 @@
+{
+  "name": "webroot",
+  "version": "0.0.1",
+  "dependencies": {
+    "blear.css.function": {
+      "version": "1.0.2",
+      "from": "blear.css.function@>=1.0.2 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.css.function/download/blear.css.function-1.0.2.tgz"
+    },
+    "blear.css.reset": {
+      "version": "1.0.9",
+      "from": "blear.css.reset@>=1.0.9 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.css.reset/download/blear.css.reset-1.0.9.tgz"
+    },
+    "coolie.js": {
+      "version": "2.1.6",
+      "from": "coolie.js@>=2.1.6 <3.0.0",
+      "resolved": "http://registry.npm.taobao.org/coolie.js/download/coolie.js-2.1.6.tgz"
+    }
+  }
+}
