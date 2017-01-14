@@ -11,7 +11,7 @@
 var fse = require('fs-extra');
 var path = require('blear.node.path');
 var object = require('blear.utils.object');
-var marked = require('marked');
+var marked = require('blear.classes.markdown').marked;
 var SafeMakrdown = require('blear.classes.safe-markdown');
 
 var configs = require('../../configs');

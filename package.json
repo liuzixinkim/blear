@@ -35,7 +35,7 @@
     "url": "https://github.com/blearjs/blear/issues"
   },
   "dependencies": {
-    "blear.classes.markdown": "^1.1.0",
+    "blear.classes.markdown": "^1.1.1",
     "blear.classes.safe-markdown": "^1.0.10",
     "blear.express.res-api": "^1.1.2",
     "blear.node.console": "^1.0.7",
@@ -52,16 +52,15 @@
     "express": "^4.14.0",
     "express-session": "^1.14.2",
     "fs-extra": "^1.0.0",
-    "marked": "^0.3.6",
     "multer": "^1.2.1"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "supervisor": "^0.12.0",
+    "blear.classes.template": "latest",
     "blear.utils.array": "latest",
     "blear.utils.object": "latest",
     "blear.utils.typeis": "latest",
-    "blear.classes.template": "latest"
+    "supervisor": "^0.12.0"
   },
   "license": "MIT"
 }
