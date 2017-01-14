@@ -6,8 +6,7 @@
     "start": "node ./clis/start.js",
     "build": "node ./clis/build.js",
     "release": "coolie build -d webroot-dev && git add webroot-pro && git commit -am release && git push",
-    "live": "browser-sync start --config bs-config.js",
-    "shrink": "npm shrinkwrap --dev"
+    "live": "browser-sync start --config bs-config.js"
   },
   "preferGlobal": false,
   "bin": {},

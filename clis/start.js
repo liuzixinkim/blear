@@ -22,8 +22,8 @@ var NPM_REGISTRY = 'http://registry.npm.taobao.org';
 var ROOT = path.join(__dirname, '..');
 var WEBROOT_DEV = path.join(ROOT, 'webroot-dev');
 var isDebug = process.argv[2] === '--debug';
-var YARN_INSTALL = 'yarn install' +
-    (configs.env === 'local' ? '' : ' --production');
+// var YARN_INSTALL = 'yarn install' +
+//     (configs.env === 'local' ? '' : ' --production');
 var NPM_INSTALL = 'npm install --registry=' + NPM_REGISTRY +
     (configs.env === 'local' ? '' : ' --production');
 var APP_PATH = path.join(ROOT, 'app.js');
@@ -228,15 +228,11 @@ var gitPull = function (callback) {
 
 // 安装 Node 模块
 var installNodeModules = function (parent, callback) {
-    supportCommand('yarn', function (support) {
-        exec([
-            'cd ' + parent,
-            support ?
-                YARN_INSTALL :
-                NPM_INSTALL
-        ], function () {
-            callback(support ? '[yarn] ' : '[npm] ');
-        });
+    exec([
+        'cd ' + parent,
+        NPM_INSTALL
+    ], function () {
+        callback('[npm] ');
     });
 };
 
