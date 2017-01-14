@@ -26,6 +26,11 @@ var dependenciesRE = /@@dependencies@@/;
 // 生成模块描述
 var generateDescription = function (module) {
     var desc = modulesData[module];
+
+    if (!desc) {
+        return '';
+    }
+
     var html = '<ul>';
     var list = [
         'created',
@@ -60,6 +65,11 @@ var generateDescription = function (module) {
 // 生成依赖信息
 var generateDependencies = function (module) {
     var desc = modulesData[module];
+
+    if (!desc) {
+        return '';
+    }
+
     var html = '<ul>';
 
     object.each(desc.dependencies, function (mod, ver) {

@@ -100,7 +100,10 @@ exports.buildRouters = function (router, controller, bookroot) {
     sidebarContent = fixHref(sidebarContent);
     indexContent = fixHref(indexContent);
 
-    router.get('/', controller('', '/', object.assign({
+    router.get('/', controller(object.assign({
+        name: 'index',
+        file: indexFile,
+        toc: '',
         sidebar: sidebarContent,
         content: indexContent
     })));
@@ -123,14 +126,12 @@ exports.buildRouters = function (router, controller, bookroot) {
         router.get(uri, controller(object.assign({
             name: name,
             file: file,
-            // markdown: markdown,
             sidebar: sidebarContent,
             toc: toc,
             content: content
         })));
     });
 };
-
 
 
 /**
