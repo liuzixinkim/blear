@@ -76,27 +76,34 @@ var logNormal = function () {
 /**
  * 执行系统命令
  * @param cmds {Array|String} 命令数组
- * @param [callback] {Function} 执行完毕回调
+ * @param callback {Function} 执行完毕回调
+ * @param [noLog] {Boolean} 不输出日志
  */
-var exec = function (cmds, callback) {
+var exec = function (cmds, callback, noLog) {
     cmds = typeof(cmds) === 'string' ? [cmds] : cmds;
     var command = cmds.join(' && ');
-    logNormal(command);
 
-    var point = 1;
-    process.stdout.write('.');
-    var interval = setInterval(function () {
-        try {
-            process.stdout.cursorTo(point);
-        } catch (err) {
-            // ignore
-        }
+    if (!noLog) {
+        logNormal(command);
+    }
+
+    if (!noLog) {
+        var point = 1;
         process.stdout.write('.');
-        point++;
-    }, 1000);
+        var interval = setInterval(function () {
+            try {
+                process.stdout.cursorTo(point);
+            } catch (err) {
+                // ignore
+            }
+            process.stdout.write('.');
+            point++;
+        }, 1000);
+    }
 
     childProcess.exec(command, function (err, stdout, stderr) {
         clearInterval(interval);
+
         try {
             process.stdout.clearLine();
         } catch (err) {
@@ -105,19 +112,48 @@ var exec = function (cmds, callback) {
         process.stdout.write('\n');
 
         if (err) {
-            logDanger(err.message);
-            return process.exit(1);
+            if (noLog) {
+                return callback(err);
+            } else {
+                logDanger(err.message);
+                return process.exit(1);
+            }
         }
 
         if (stderr) {
-            logWarning(stderr);
+            if (noLog) {
+                return callback(new Error(stderr));
+            } else {
+                logWarning(stderr);
+            }
         }
 
-        logSuccess(stdout);
-        callback();
+        if (!noLog) {
+            logSuccess(stdout);
+        }
+
+        callback(null, stdout.trim());
     });
 };
 
+
+var supportCommand = function (command, callback) {
+    exec([
+        'if type ' + command + ' >/dev/null 2>&1; then\n\
+            echo "1"\n\
+        else\n\
+            echo "0"\n\
+        fi'
+    ], function (err, out) {
+        if (err) {
+            return callback(false);
+        }
+
+        var supported = out === '1';
+
+        callback(supported);
+    }, true);
+};
 
 /**
  * 输出当前时间字符串
@@ -188,12 +224,17 @@ var gitPull = function (callback) {
 // 更新后端模块
 var installNodeModules = function (callback) {
     logNormal('\n\n───────────[ 2/4 ]───────────');
-    exec([
-        'cd ' + ROOT,
-        'npm update --registry=' + NPM_REGISTRY
-    ], function () {
-        logSuccess('update node modules success');
-        callback();
+
+    supportCommand('yarn', function (support) {
+        exec([
+            'cd ' + ROOT,
+            support ?
+                'yarn install --production --no-emoji --no-progress' :
+                'npm update --registry=' + NPM_REGISTRY
+        ], function () {
+            logSuccess('update node modules success');
+            callback();
+        });
     });
 };
 
@@ -207,13 +248,17 @@ var installFrontModules = function (callback) {
         return callback();
     }
 
-    exec([
-        'cd ' + WEBROOT_DEV,
-        'npm update --registry=' + NPM_REGISTRY,
-        'cd ' + ROOT
-    ], function () {
-        logSuccess('update front modules success');
-        callback();
+    supportCommand('yarn', function (support) {
+        exec([
+            'cd ' + WEBROOT_DEV,
+            support ?
+                'yarn install --production --no-emoji --no-progress' :
+                'npm update --registry=' + NPM_REGISTRY,
+            'cd ' + ROOT
+        ], function () {
+            logSuccess('update front modules success');
+            callback();
+        });
     });
 };
 
@@ -326,3 +371,5 @@ gitPull(function () {
         });
     });
 });
+
+
