@@ -144,13 +144,186 @@ object.define({}, {
 - 说明：取值函数
 
 #### desc.set
-- 类型：`Boolean`
-- 说明：是否可以被重写
+- 类型：`Function`
+- 说明：设值函数
 
 #### desc.value
 - 类型：`Boolean`
-- 说明：是否可以被重写
+- 说明：固定值
 
+
+## map
+对象包装，返回一个新的对象。
+```js
+object.map(obj, callback(val, key));
+
+object.map({a: 1, b: 2}, function(val, key) {
+    return val + val;
+});
+// => {a: 2, b: 4}
+```
+### obj
+- 类型：`Object`
+- 说明：待包装对象
+
+### callback
+- 类型：`Function`
+- 说明：返回值作为该字段新值
+
+#### this
+- 类型：`Object`
+- 说明：指向当前传入的对象
+
+#### val
+- 类型：`any`
+- 说明：字段值
+
+#### key
+- 类型：`String`
+- 说明：字段
+
+
+## filter
+对象过滤，返回一个新对象。
+```js
+object.filter(obj, callback(val, key));
+```
+
+### obj
+- 类型：`Object`
+
+### callback
+- 类型：`Function | Array`
+- 说明：返回 `true` 则该字段被筛选。
+
+#### this
+- 类型：`Object`
+- 说明：指向当前传入的对象
+
+#### val
+- 类型：`any`
+- 说明：字段值
+
+#### key
+- 类型：`String`
+- 说明：字段
+
+
+## assign
+分配对象 target 上不为 undefined 的属性到 source 上，与 `jQuery.extend` 功能相同。
+```js
+object.assign([deep], source, target...);
+
+object.assign({a: 1}, {a: 2, b: 3}, {c: 4});
+// => {a: 2, b: 3, c: 4}
+```
+
+### deep
+- 类型：`Boolean`
+- 说明：是否深度处理
+- 默认：`false`
+
+### source
+- 类型：`Object | Array`
+
+### target
+- 类型：`any`
+- 说明：`target` 可以为任意个，后面同名属性**会**覆盖前面的
+
+### 返回值
+- 类型：`Object | Array`
+- 说明：指向 `source` 的对象
+
+
+## supply
+分配属性，与 `object.assign` 功能相反。
+```js
+object.supply(deep, source, target);
+
+object.supply({a: 1}, {a: 2, b: 3}, {c: 4});
+// => {a: 1, b: 3, c: 4}
+```
+### deep
+- 类型：`Boolean`
+- 说明：是否深度处理
+- 默认：`false`
+
+### source
+- 类型：`Object | Array`
+
+### target
+- 类型：`any`
+- 说明：`target` 可以为任意个，后面同名属性**不会**覆盖前面的
+
+### 返回值
+- 类型：`Object | Array`
+- 说明：指向 `source` 的对象
+
+
+## path
+根据路径获取路径数组
+```js
+object.path(path);
+
+object.path('a.b.c')
+// => ["a", "b", "c"]
+```
+### path
+- 类型：`String | Array`
+- 说明：待处理字段字符串或数组，如果是数组则原样返回
+
+### 返回值
+- 类型：`Array`
+- 说明：字段路径数组
+
+
+
+## get
+根据路径返回属性值。
+```js
+object.get(obj, path);
+
+object.get({a: {b: 1}}, 'a.b');
+// => 1
+```
+
+### obj
+- 类型：`Object`
+- 说明：待取值对象
+
+### path
+- 类型：`String | Array`
+- 说明：路径字符串或数组
+
+### 返回值
+- 类型：`any`
+- 说明：返回路径对应属性值，如果路径不存在，返回 `undefined`。
+
+
+## set
+根据路径设置属性值。
+```js
+object.set(obj, path, val);
+
+object.set({a: {b: 1}}, 'a.b.c', 2);
+// => {c: 2}
+```
+
+### obj
+- 类型：`Object`
+- 说明：待取值对象
+
+### path
+- 类型：`String | Array`
+- 说明：路径字符串或数组
+
+### val
+- 类型：`any`
+- 说明：被设置的值
+
+### 返回值
+- 类型：`Object | Array`
+- 说明：返回被设置的父级对象。
 
 
 # Dependencies
@@ -158,5 +331,4 @@ object.define({}, {
 
 
 # More
-这里写更多的额外内容，可以不写。
-
+- <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object>
