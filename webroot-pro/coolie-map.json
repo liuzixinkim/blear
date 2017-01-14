@@ -36,7 +36,7 @@
         ]
       },
       {
-        "dest": "/static/css/7a71490b31e4c659e641ef1d0cc93ac0.css",
+        "dest": "/static/css/dccb6a87c0fcf302db7dfc83344b781f.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/common/base.css",
