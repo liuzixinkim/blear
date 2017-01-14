@@ -20,7 +20,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .typo a:active {
       color: #0e77ca; }
   .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table, .typo blockquote {
-    margin-bottom: 1.8em; }
+    margin-bottom: 4em; }
   .typo ul,
   .typo ol {
     padding-left: 2em; }
