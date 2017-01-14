@@ -23,8 +23,6 @@ var NPM_REGISTRY = 'http://registry.npm.taobao.org';
 var ROOT = path.join(__dirname, '..');
 var WEBROOT_DEV = path.join(ROOT, 'webroot-dev');
 var isDebug = process.argv[2] === '--debug';
-// var YARN_INSTALL = 'yarn install' +
-//     (configs.env === 'local' ? '' : ' --production');
 var NPM_INSTALL = 'npm install --registry=' + NPM_REGISTRY +
     (configs.env === 'local' ? '' : ' --production');
 var APP_PATH = path.join(ROOT, 'app.js');
@@ -142,24 +140,6 @@ var exec = function (cmds, callback, noLog) {
     });
 };
 
-
-var supportCommand = function (command, callback) {
-    exec([
-        'if type ' + command + ' >/dev/null 2>&1; then\n\
-            echo "1"\n\
-        else\n\
-            echo "0"\n\
-        fi'
-    ], function (err, out) {
-        if (err) {
-            return callback(false);
-        }
-
-        var supported = out === '1';
-
-        callback(supported);
-    }, true);
-};
 
 /**
  * 输出当前时间字符串
