@@ -81,29 +81,24 @@ var logNormal = function () {
  * 执行系统命令
  * @param cmds {Array|String} 命令数组
  * @param callback {Function} 执行完毕回调
- * @param [noLog] {Boolean} 不输出日志
  */
-var exec = function (cmds, callback, noLog) {
+var exec = function (cmds, callback) {
     cmds = typeof(cmds) === 'string' ? [cmds] : cmds;
     var command = cmds.join(' && ');
 
-    if (!noLog) {
-        logNormal(command);
-    }
+    logNormal(command);
 
-    if (!noLog) {
-        var point = 1;
+    var point = 1;
+    process.stdout.write('.');
+    var interval = setInterval(function () {
+        try {
+            process.stdout.cursorTo(point);
+        } catch (err) {
+            // ignore
+        }
         process.stdout.write('.');
-        var interval = setInterval(function () {
-            try {
-                process.stdout.cursorTo(point);
-            } catch (err) {
-                // ignore
-            }
-            process.stdout.write('.');
-            point++;
-        }, 1000);
-    }
+        point++;
+    }, 1000);
 
     childProcess.exec(command, function (err, stdout, stderr) {
         clearInterval(interval);
@@ -116,26 +111,15 @@ var exec = function (cmds, callback, noLog) {
         process.stdout.write('\n');
 
         if (err) {
-            if (noLog) {
-                return callback(err);
-            } else {
-                logDanger(err.message);
-                return process.exit(1);
-            }
+            logDanger(err.message);
+            return process.exit(1);
         }
 
         if (stderr) {
-            if (noLog) {
-                return callback(new Error(stderr));
-            } else {
-                logWarning(stderr);
-            }
+            logWarning(stderr);
         }
 
-        if (!noLog) {
-            logSuccess(stdout);
-        }
-
+        logSuccess(stdout);
         callback(null, stdout.trim());
     });
 };
@@ -220,9 +204,7 @@ var installNodeModules = function (parent, callback) {
     exec([
         'cd ' + parent,
         NPM_INSTALL
-    ], function () {
-        callback('[npm] ');
-    });
+    ], callback);
 };
 
 
@@ -233,8 +215,8 @@ var installNodeModules = function (parent, callback) {
 var installWebserverModules = function (callback) {
     logNormal('\n\n───────────[ 2/4 ]───────────');
 
-    installNodeModules(ROOT, function (name) {
-        logSuccess(name + 'install webserver modules success');
+    installNodeModules(ROOT, function () {
+        logSuccess('install webserver modules success');
         callback();
     });
 };
@@ -253,8 +235,8 @@ var installFrontModules = function (callback) {
         return callback();
     }
 
-    installNodeModules(WEBROOT_DEV, function (name) {
-        logSuccess(name + 'install front modules success');
+    installNodeModules(WEBROOT_DEV, function () {
+        logSuccess('install front modules success');
         callback();
     });
 };
