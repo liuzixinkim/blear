@@ -19,9 +19,14 @@ var configs = require('../configs.js');
 
 var startTime = Date.now();
 var NPM_REGISTRY = 'http://registry.npm.taobao.org';
-var ROOT = path.join(__dirname, '../');
+var ROOT = path.join(__dirname, '..');
 var WEBROOT_DEV = path.join(ROOT, 'webroot-dev');
 var isDebug = process.argv[2] === '--debug';
+var YARN_INSTALL = 'yarn install' +
+    (configs.env === 'local' ? '' : ' --production');
+var NPM_INSTALL = 'npm install --registry=' + NPM_REGISTRY +
+    (configs.env === 'local' ? '' : ' --production');
+var APP_PATH = path.join(ROOT, 'app.js');
 
 
 /**
@@ -221,20 +226,28 @@ var gitPull = function (callback) {
 };
 
 
-// 更新后端模块
-var installNodeModules = function (callback) {
-    logNormal('\n\n───────────[ 2/4 ]───────────');
-
+// 安装 Node 模块
+var installNodeModules = function (parent, callback) {
     supportCommand('yarn', function (support) {
         exec([
-            'cd ' + ROOT,
+            'cd ' + parent,
             support ?
-                'yarn install --production --no-emoji --no-progress' :
-                'npm update --registry=' + NPM_REGISTRY
+                YARN_INSTALL :
+                NPM_INSTALL
         ], function () {
-            logSuccess('update node modules success');
-            callback();
+            callback(support ? '[yarn] ' : '[npm] ');
         });
+    });
+};
+
+
+// 更新后端模块
+var installWebserverModules = function (callback) {
+    logNormal('\n\n───────────[ 2/4 ]───────────');
+
+    installNodeModules(ROOT, function (name) {
+        logSuccess(name + 'install webserver modules success');
+        callback();
     });
 };
 
@@ -248,17 +261,9 @@ var installFrontModules = function (callback) {
         return callback();
     }
 
-    supportCommand('yarn', function (support) {
-        exec([
-            'cd ' + WEBROOT_DEV,
-            support ?
-                'yarn install --production --no-emoji --no-progress' :
-                'npm update --registry=' + NPM_REGISTRY,
-            'cd ' + ROOT
-        ], function () {
-            logSuccess('update front modules success');
-            callback();
-        });
+    installNodeModules(WEBROOT_DEV, function (name) {
+        logSuccess(name + 'install front modules success');
+        callback();
     });
 };
 
@@ -268,13 +273,16 @@ var startLocal = function (callback) {
     var supervisor = require('supervisor');
     var args = [];
 
-    args.push(__filename);
-    args.push('-w');
-    args.push('./webserver/,./bookroot/');
-    args.push('-e');
+    args.push('--watch');
+    args.push(
+        [
+            path.join(ROOT, 'webserver'),
+            path.join(ROOT, 'bookroot')
+        ].join(',')
+    );
+    args.push('--extensions');
     args.push('js,md');
-    args.push('app.js');
-
+    args.push(APP_PATH);
     supervisor.run(args);
     callback();
 };
@@ -365,7 +373,7 @@ banner();
 
 // 更新代码安装模块并启动
 gitPull(function () {
-    installNodeModules(function () {
+    installWebserverModules(function () {
         installFrontModules(function () {
             start();
         });
