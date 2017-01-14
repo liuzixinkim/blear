@@ -34,8 +34,8 @@ var generateDescription = function (module) {
 
     var html = '<ul>';
     var list = [
-        'created',
-        'updated',
+        'create',
+        'update',
         'version',
         'github'
     ];

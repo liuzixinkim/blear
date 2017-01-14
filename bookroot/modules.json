@@ -1,7 +1,7 @@
 {
   "blear.classes.mvvm": {
-    "created": "2016年06月04日14:09:36",
-    "updated": "2016年06月04日14:09:36",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
     "name": "blear.classes.mvvm",
     "version": "1.0.0",
     "github": "https://github.com/blearjs/blear.classes.mvvm",
@@ -35,5 +35,37 @@
       "blear.utils.time": "1.x",
       "blear.utils.typeis": "1.x"
     }
+  },
+  "blear.utils.object": {
+    "update": "2016年11月26日15:47:34",
+    "create": "2016年11月26日15:47:34",
+    "name": "blear.utils.object",
+    "version": "1.0.11",
+    "github": "https://github.com/blearjs/blear.utils.object",
+    "keywords": [
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "object utils",
+    "dependencies": {
+      "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.utils.typeis": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.typeis",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.utils.typeis",
+    "keywords": [
+      "blear",
+      "utils",
+      "typeis",
+      "typeof",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "typeis utils",
+    "dependencies": {}
   }
 }

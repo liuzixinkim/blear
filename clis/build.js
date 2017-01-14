@@ -47,7 +47,8 @@ plan
             var pkgFile = path.join(githubBlearjsDirname, moduleName, 'package.json');
             var moduleFile = path.join(githubBlearjsDirname, moduleName, 'src', indexFile);
             var moduleData = fse.readFileSync(moduleFile, 'utf8');
-            var descCommentList = moduleData.match(descCommentRE)[1].split('\n');
+            var matchedComment = moduleData.match(descCommentRE);
+            var descCommentList = matchedComment ? matchedComment[1].split('\n') : [];
             var json = {};
             var pkg = fse.readJSONSync(pkgFile);
 
@@ -63,18 +64,24 @@ plan
                 var key = mathes[1].trim();
 
                 if (/create/.test(key)) {
-                    json.created = mathes[2].trim();
+                    json.create = mathes[2].trim();
                 }
 
                 if (/update/.test(key)) {
-                    json.updated = mathes[2].trim();
+                    json.update = mathes[2].trim();
                 }
             });
 
-            if (!json.updated) {
-                json.updated = json.created;
+            if (!json.update) {
+                json.update = json.create;
             }
 
+            if (!json.create) {
+                json.create = json.update;
+            }
+
+            json.create = json.create || '未明确';
+            json.update = json.update || '未明确';
             json.name = pkg.name;
             json.version = pkg.version;
             json.github = pkg.repository.url;
@@ -91,7 +98,10 @@ plan
         var jsonFile = path.join(configs.bookroot, 'modules.json');
         fse.outputJSONSync(jsonFile, modulesData);
     })
-    .serial();
+    .serial()
+    .catch(function (err) {
+        console.error(err);
+    });
 
 
 
