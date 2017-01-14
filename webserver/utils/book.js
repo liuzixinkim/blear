@@ -162,5 +162,3 @@ function fixHref(content, srcFile) {
             '">';
     });
 }
-
-

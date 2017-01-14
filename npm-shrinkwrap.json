@@ -48,9 +48,9 @@
       "resolved": "http://registry.npm.taobao.org/blear.classes.events/download/blear.classes.events-1.0.6.tgz"
     },
     "blear.classes.markdown": {
-      "version": "1.1.1",
-      "from": "blear.classes.markdown@1.1.1",
-      "resolved": "http://registry.npm.taobao.org/blear.classes.markdown/download/blear.classes.markdown-1.1.1.tgz"
+      "version": "1.1.2",
+      "from": "blear.classes.markdown@1.1.2",
+      "resolved": "https://registry.npmjs.org/blear.classes.markdown/-/blear.classes.markdown-1.1.2.tgz"
     },
     "blear.classes.safe-markdown": {
       "version": "1.0.10",

@@ -35,7 +35,7 @@
     "url": "https://github.com/blearjs/blear/issues"
   },
   "dependencies": {
-    "blear.classes.markdown": "^1.1.1",
+    "blear.classes.markdown": "^1.1.2",
     "blear.classes.safe-markdown": "^1.0.10",
     "blear.express.res-api": "^1.1.2",
     "blear.node.console": "^1.0.7",

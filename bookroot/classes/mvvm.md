@@ -314,3 +314,9 @@ MVVM.directive(name, definition);
 # Dependencies
 @@dependencies@@
 
+
+# More
+- <https://cn.vuejs.org/>
+- <http://avalonjs.coding.me/>
+- <https://angularjs.org/>
+- <https://facebook.github.io/react/>
