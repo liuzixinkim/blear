@@ -102,13 +102,14 @@ var buildController = function (pageData) {
         });
         var isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
 
+        pageData.name = 'index' === pageData.name ? '' : pageData.name;
         pageData.content = pageData.content.replace(descriptionRE, generateDescription(pageData.name));
         pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
 
         if (isAjax) {
             return res.json({
                 title: data.title,
-                pageName: data.pageName,
+                name: pageData.name,
                 toc: pageData.toc,
                 content: pageData.content
             });

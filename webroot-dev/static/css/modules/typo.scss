@@ -1,6 +1,8 @@
 // 中文内容排版
 // @ref https://github.com/sofish/typo.css/blob/master/typo.css
 
+@import "../varible";
+
 $text-link-normal-color: #108ee9;
 $text-link-hover-color: #49a9ee;
 $text-link-active-color: #0e77ca;
@@ -167,11 +169,11 @@ $text-link-visited-color: #0e77ca;
 
   pre {
     padding: 15px;
-    border-radius: 6px;
     word-wrap: normal;
     overflow: auto;
     line-height: 1.4;
     tab-size: 4;
+    border-left: 2px solid $text-primary-color;
   }
 
   pre code {
@@ -183,6 +185,6 @@ $text-link-visited-color: #0e77ca;
   }
 
 //  hightlight
-  @import "highlight/github.css";
-
+  @import "highlight/github";
 }
+
