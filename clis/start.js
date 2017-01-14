@@ -187,7 +187,11 @@ var isDirectory = function (_path) {
 };
 
 
-// 更新代码
+/**
+ * 更新代码
+ * @param callback
+ * @returns {*}
+ */
 var gitPull = function (callback) {
     logNormal('\n\n───────────[ 1/4 ]───────────');
 
@@ -207,7 +211,11 @@ var gitPull = function (callback) {
 };
 
 
-// 安装 Node 模块
+/**
+ * 安装 Node 模块
+ * @param parent
+ * @param callback
+ */
 var installNodeModules = function (parent, callback) {
     exec([
         'cd ' + parent,
@@ -218,7 +226,10 @@ var installNodeModules = function (parent, callback) {
 };
 
 
-// 更新后端模块
+/**
+ * 更新后端模块
+ * @param callback
+ */
 var installWebserverModules = function (callback) {
     logNormal('\n\n───────────[ 2/4 ]───────────');
 
@@ -229,7 +240,11 @@ var installWebserverModules = function (callback) {
 };
 
 
-// 更新前端模块
+/**
+ * 更新前端模块
+ * @param callback
+ * @returns {*}
+ */
 var installFrontModules = function (callback) {
     logNormal('\n\n───────────[ 3/4 ]───────────');
 
@@ -245,7 +260,10 @@ var installFrontModules = function (callback) {
 };
 
 
-// 本地启动
+/**
+ * 本地启动
+ * @param callback
+ */
 var startLocal = function (callback) {
     var supervisor = require('supervisor');
     var args = [];
@@ -265,14 +283,20 @@ var startLocal = function (callback) {
 };
 
 
-// debug 启动
+/**
+ * debug 启动
+ * @param callback
+ */
 var startDebug = function (callback) {
     require('../app.js');
     callback();
 };
 
 
-// pm2 启动
+/**
+ * pm2 启动
+ * @param callback
+ */
 var startPM2 = function (callback) {
     exec([
         'pm2 start pm2.json',
@@ -281,7 +305,9 @@ var startPM2 = function (callback) {
 };
 
 
-// 启动
+/**
+ * 启动
+ */
 var start = function () {
     logNormal('\n\n───────────[ 4/4 ]───────────');
 
@@ -310,6 +336,9 @@ var start = function () {
 };
 
 
+/**
+ * 输出 banner
+ */
 var banner = function () {
     var list = [];
     var padding = 4;
@@ -345,6 +374,10 @@ var banner = function () {
     logWarning(tfoot);
 };
 
+
+// ======================================================================
+// ======================================================================
+// ======================================================================
 
 banner();
 
