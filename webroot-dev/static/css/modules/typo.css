@@ -42,14 +42,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       list-style: square; }
   .typo li ul, .typo li ol {
     margin-top: 1em; }
-  .typo img {
+  .typo p img {
     vertical-align: baseline;
     max-width: 100%;
     display: block;
     border-radius: 8px;
     border: 6px solid #e8e8e8;
     overflow: hidden; }
-    .typo img.favicon {
+    .typo p img.favicon {
       width: 16px !important;
       height: 16px !important;
       max-width: none !important;

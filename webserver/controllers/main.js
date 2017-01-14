@@ -23,6 +23,24 @@ var modulesData = fse.readJSONSync(path.join(configs.bookroot, 'modules.json'));
 var descriptionRE = /\{\{description}}/;
 var dependenciesRE = /\{\{dependencies}}/;
 
+var buildTravisBadge = function (module) {
+    return '<a target="_blank" rel="nofollow" href="https://travis-ci.org/blearjs/' + module + '">' +
+        '<img src="https://img.shields.io/travis/blearjs/' + module + '/master.svg?style=flat-square">' +
+        '</a>';
+};
+
+var buildNomBadge = function (module) {
+    return '<a target="_blank" rel="nofollow" href="https://www.npmjs.com/package/' + module + '">' +
+        '<img src="https://img.shields.io/npm/v/' + module + '.svg?style=flat-square">' +
+        '</a>';
+};
+
+var buildCoverallsBadge = function (module) {
+    return '<a target="_blank" rel="nofollow" href="https://coveralls.io/github/blearjs/' + module + '?branch=master">' +
+        '<img src="https://img.shields.io/coveralls/blearjs/' + module + '/master.svg?style=flat-square">' +
+        '</a>';
+};
+
 
 // 生成模块描述
 var generateDescription = function (module) {
@@ -59,6 +77,12 @@ var generateDescription = function (module) {
             val +
             '</li>'
     });
+
+    html += '<li>' +
+        buildTravisBadge(module) +
+        buildNomBadge(module) +
+        buildCoverallsBadge(module) +
+        '</li>';
 
     html += '</ul>';
 
