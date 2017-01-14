@@ -74,6 +74,7 @@ var generateDependencies = function (module) {
     }
 
     var html = '<ul>';
+    var dependenciesLenth = 0;
 
     object.each(desc.dependencies, function (mod, ver) {
         var arr = mod.split('.');
@@ -86,12 +87,13 @@ var generateDependencies = function (module) {
             return;
         }
 
+        dependenciesLenth++;
         html += '<li>' +
             '<a class="j-pjax" href="' + href + '">' + mod + '@' + ver + '</a>' +
             '</li>';
     });
 
-    if (!desc.dependencies.length) {
+    if (!dependenciesLenth) {
         html += '<li>无依赖</li>';
     }
 
