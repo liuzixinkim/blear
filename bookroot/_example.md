@@ -7,7 +7,7 @@
 
 # Example
 ```js
-这里写例子
+var example = require('blear.example');
 ```
 
 

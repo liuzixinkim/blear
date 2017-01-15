@@ -8,10 +8,10 @@
     - [blear.utils.canvas-img](/utils/canvas-img.md)
     - [blear.utils.collection](/utils/collection.md)
     - [blear.utils.compatible](/utils/compatible.md)
+    - [blear.utils.date](/utils/date.md)
     
     
 ```text
-    - [blear.utils.date](/utils/date.md)
     - [blear.utils.debug](/utils/debug.md)
     - [blear.utils.easing](/utils/easing.md)
     - [blear.utils.function](/utils/function.md)
