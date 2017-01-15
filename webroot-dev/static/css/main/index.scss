@@ -1,7 +1,7 @@
 @import "../varible";
 
 
-$title-size-large: 60px;
+$title-size-large: 100px;
 $title-size-small: 40px;
 
 .progress {
@@ -27,6 +27,7 @@ $title-size-small: 40px;
   &-sidebar {
     width: $sidebar-width;
     left: 0;
+    border-right: 1px solid #eee;
 
     @media (max-width: 650px) {
       position: fixed;
@@ -51,7 +52,9 @@ $title-size-small: 40px;
 }
 
 .sidebar {
+  position: relative;
   background: #fff;
+  height: 100%;
 
   a {
     display: block;
@@ -102,7 +105,6 @@ $title-size-small: 40px;
   }
 
   &-nav {
-    background: #fafafa;
     position: absolute;
     top: $title-size-large;
     left: 0;
@@ -173,7 +175,7 @@ $title-size-small: 40px;
 }
 
 .content {
-  padding: 30px;
+  padding: 0 30px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;

@@ -14,7 +14,8 @@
 
 .body-sidebar {
   width: 300px;
-  left: 0; }
+  left: 0;
+  border-right: 1px solid #eee; }
   @media (max-width: 650px) {
     .body-sidebar {
       position: fixed;
@@ -34,7 +35,9 @@
       left: 0; } }
 
 .sidebar {
-  background: #fff; }
+  position: relative;
+  background: #fff;
+  height: 100%; }
   .sidebar a {
     display: block;
     color: #5F5F5F;
@@ -56,16 +59,15 @@
     z-index: 2; }
     .sidebar-title a, .sidebar-title a:hover {
       color: #d45959;
-      line-height: 60px;
+      line-height: 100px;
       font-weight: normal; }
       @media (max-width: 650px) {
         .sidebar-title a, .sidebar-title a:hover {
           line-height: 40px;
           font-size: 20px; } }
   .sidebar-nav {
-    background: #fafafa;
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -114,7 +116,7 @@
       border-radius: 1px; }
 
 .content {
-  padding: 30px;
+  padding: 0 30px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto; }

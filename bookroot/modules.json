@@ -40,7 +40,7 @@
     "update": "未明确",
     "create": "未明确",
     "name": "blear.utils.access",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.access",
     "keywords": [
       "blear",
@@ -73,6 +73,29 @@
     "description": "数组函数",
     "dependencies": {
       "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.utils.calendar": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.calendar",
+    "version": "1.0.6",
+    "github": "https://github.com/blearjs/blear.utils.calendar",
+    "keywords": [
+      "blear",
+      "utils",
+      "calendar",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "calendar utils",
+    "dependencies": {
+      "blear.utils.date": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.array": "1.x"
     }
   },
   "blear.utils.object": {
