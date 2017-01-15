@@ -6,10 +6,10 @@
     - [blear.utils.calendar](/utils/calendar.md)
     - [blear.utils.canvas-content](/utils/canvas-content.md)
     - [blear.utils.canvas-img](/utils/canvas-img.md)
+    - [blear.utils.collection](/utils/collection.md)
     
     
 ```text
-    - [blear.utils.collection](/utils/collection.md)
     - [blear.utils.compatible](/utils/compatible.md)
     - [blear.utils.date](/utils/date.md)
     - [blear.utils.debug](/utils/debug.md)

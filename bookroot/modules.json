@@ -140,6 +140,26 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.utils.collection": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.collection",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.utils.collection",
+    "keywords": [
+      "blear",
+      "utils",
+      "collection",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "集合",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x"
+    }
+  },
   "blear.utils.object": {
     "update": "2016年11月26日15:47:34",
     "create": "2016年11月26日15:47:34",
