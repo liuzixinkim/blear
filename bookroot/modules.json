@@ -79,7 +79,7 @@
     "update": "未明确",
     "create": "未明确",
     "name": "blear.utils.calendar",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.utils.calendar",
     "keywords": [
       "blear",
@@ -94,8 +94,30 @@
       "blear.utils.typeis": "1.x",
       "blear.utils.function": "1.x",
       "blear.utils.object": "1.x",
-      "blear.utils.string": "1.x",
       "blear.utils.array": "1.x"
+    }
+  },
+  "blear.utils.canvas-content": {
+    "create": "2016年08月20日10:46:33",
+    "update": "2016年08月20日10:46:33",
+    "name": "blear.utils.canvas-content",
+    "version": "1.0.2",
+    "github": "https://github.com/blearjs/blear.utils.canvas-content",
+    "keywords": [
+      "blear",
+      "utils",
+      "canvas",
+      "img",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "画布内容工具函数",
+    "dependencies": {
+      "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.core.event": "1.x"
     }
   },
   "blear.utils.object": {
