@@ -7,8 +7,16 @@
 这里写例子
 ```
 
+# Function
+本身是一个方法
 
-这里是主体内容
+
+# Prototype
+原型属性、方法
+
+
+# Static
+静态属性、方法
 
 
 # Dependencies
