@@ -12,8 +12,6 @@ var compatibe = require('blear.utils.compatible');
 
 
 # Static
-静态属性、方法
-
 ## css
 获取有浏览器前缀的CSS名称。
 ```js
@@ -35,11 +33,11 @@ compatible.css('border-start');
 - 类型：`{{key: String, val: String}}`
 - 说明：返回一个对象
 
-### key
+#### key
 - 类型：`String`
 - 说明：浏览器支持的 CSS 键，可能含有私有前缀，如果浏览器不支持，则为空字符串
 
-### val
+#### val
 - 类型：`String`
 - 说明：浏览器支持的 CSS 值，可能含有私有前缀
 
