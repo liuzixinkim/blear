@@ -15,14 +15,14 @@
     - [blear.utils.hashbang](/utils/hashbang.md)
     - [blear.utils.image](/utils/image.md)
     - [blear.utils.json](/utils/json.md)
-    
+    - [blear.utils.loader](/utils/loader.md)
+
     
     
     
     
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
-- [blear.utils.loader](/utils/loader.md)
 - [blear.utils.number](/utils/number.md)
 - [blear.utils.object](/utils/object.md)
 - [blear.utils.path](/utils/path.md)

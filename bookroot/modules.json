@@ -306,7 +306,7 @@
     "update": "2016年11月26日15:36:18",
     "create": "2016年11月26日15:36:18",
     "name": "blear.utils.json",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.json",
     "keywords": [
       "blear",
@@ -318,6 +318,27 @@
     "description": "json utils",
     "dependencies": {
       "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x"
+    }
+  },
+  "blear.utils.loader": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.loader",
+    "version": "1.0.2",
+    "github": "https://github.com/blearjs/blear.utils.loader",
+    "keywords": [
+      "blear",
+      "utils",
+      "loader",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "loader utils",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.function": "1.x",
       "blear.utils.object": "1.x"
     }
   },
