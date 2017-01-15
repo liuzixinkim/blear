@@ -120,6 +120,26 @@
       "blear.core.event": "1.x"
     }
   },
+  "blear.utils.canvas-img": {
+    "create": "2016年08月20日10:21:42",
+    "update": "2016年08月20日10:21:42",
+    "name": "blear.utils.canvas-img",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.utils.canvas-img",
+    "keywords": [
+      "blear",
+      "utils",
+      "canvas",
+      "img",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "画布图片工具函数",
+    "dependencies": {
+      "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
   "blear.utils.object": {
     "update": "2016年11月26日15:47:34",
     "create": "2016年11月26日15:47:34",
