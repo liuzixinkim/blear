@@ -346,7 +346,7 @@
     "update": "未明确",
     "create": "未明确",
     "name": "blear.utils.number",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "github": "https://github.com/blearjs/blear.utils.number",
     "keywords": [
       "blear",
@@ -373,6 +373,57 @@
     ],
     "description": "object utils",
     "dependencies": {
+      "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.utils.path": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.path",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.utils.path",
+    "keywords": [
+      "blear",
+      "utils",
+      "path",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "path utils",
+    "dependencies": {
+      "blear.utils.array": "1.x",
+      "blear.utils.access": "1.x"
+    }
+  },
+  "blear.utils.plan": {
+    "create": "2017-01-08 14:16",
+    "update": "2017-01-08 14:16",
+    "name": "blear.utils.plan",
+    "version": "2.0.0",
+    "github": "https://github.com/blearjs/blear.utils.plan",
+    "keywords": [
+      "blear",
+      "utils",
+      "howdo",
+      "plan",
+      "task",
+      "async",
+      "sync",
+      "promise",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "（同步、异步）任务计划（流程控制）",
+    "dependencies": {
+      "blear.classes.class": "1.x",
+      "blear.classes.events": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.random": "1.x",
+      "blear.utils.number": "1.x",
+      "blear.utils.time": "1.x",
       "blear.utils.typeis": "1.x"
     }
   },

@@ -17,6 +17,9 @@
     - [blear.utils.json](/utils/json.md)
     - [blear.utils.loader](/utils/loader.md)
     - [blear.utils.number](/utils/number.md)
+    - [blear.utils.object](/utils/object.md)
+    - [blear.utils.path](/utils/path.md)
+    - [blear.utils.plan](/utils/plan.md)
 
     
     
@@ -24,9 +27,6 @@
     
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
-- [blear.utils.object](/utils/object.md)
-- [blear.utils.path](/utils/path.md)
-- [blear.utils.plan](/utils/plan.md)
 - [blear.utils.querystring](/utils/querystring.md)
 - [blear.utils.random](/utils/random.md)
 - [blear.utils.scope-css](/utils/scope-css.md)
