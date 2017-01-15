@@ -13,6 +13,8 @@
     - [blear.utils.easing](/utils/easing.md)
     - [blear.utils.function](/utils/function.md)
     - [blear.utils.hashbang](/utils/hashbang.md)
+    - [blear.utils.image](/utils/image.md)
+    - [blear.utils.json](/utils/json.md)
     
     
     
@@ -20,8 +22,6 @@
     
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
-- [blear.utils.image](/utils/image.md)
-- [blear.utils.json](/utils/json.md)
 - [blear.utils.loader](/utils/loader.md)
 - [blear.utils.number](/utils/number.md)
 - [blear.utils.object](/utils/object.md)
