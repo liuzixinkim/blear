@@ -9,11 +9,11 @@
     - [blear.utils.collection](/utils/collection.md)
     - [blear.utils.compatible](/utils/compatible.md)
     - [blear.utils.date](/utils/date.md)
+    - [blear.utils.debug](/utils/debug.md)
+    - [blear.utils.easing](/utils/easing.md)
     
     
 ```text
-    - [blear.utils.debug](/utils/debug.md)
-    - [blear.utils.easing](/utils/easing.md)
     - [blear.utils.function](/utils/function.md)
     - [blear.utils.hashbang](/utils/hashbang.md)
     - [blear.utils.hashstring](/utils/hashstring.md)
