@@ -1,5 +1,5 @@
-# Description
-{{description}}
+# Introduction
+{{ introduction }}
 
 
 # Example
@@ -313,7 +313,7 @@ MVVM.directive(name, definition);
 
 
 # Dependencies
-{{dependencies}}
+{{ dependencies }}
 
 
 # More

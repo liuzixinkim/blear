@@ -36,6 +36,45 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.utils.access": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.access",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.utils.access",
+    "keywords": [
+      "blear",
+      "utils",
+      "access",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "访问器",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x"
+    }
+  },
+  "blear.utils.array": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.array",
+    "version": "1.0.12",
+    "github": "https://github.com/blearjs/blear.utils.array",
+    "keywords": [
+      "blear",
+      "utils",
+      "array",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "数组函数",
+    "dependencies": {
+      "blear.utils.typeis": "1.x"
+    }
+  },
   "blear.utils.object": {
     "update": "2016年11月26日15:47:34",
     "create": "2016年11月26日15:47:34",

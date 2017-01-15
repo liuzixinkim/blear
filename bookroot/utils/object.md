@@ -1,5 +1,5 @@
-# Description
-{{description}}
+# Introduction
+{{ introduction }}
 
 
 # Example
@@ -327,7 +327,7 @@ object.set({a: {b: 1}}, 'a.b.c', 2);
 
 
 # Dependencies
-{{dependencies}}
+{{ dependencies }}
 
 
 # More

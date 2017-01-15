@@ -1,5 +1,5 @@
-# Description
-{{description}}
+# Introduction
+{{ introduction }}
 
 
 # Example
@@ -219,7 +219,7 @@ typeis.Error(any);
 
 
 # Dependencies
-{{dependencies}}
+{{ dependencies }}
 
 
 # More

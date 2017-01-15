@@ -20,8 +20,8 @@ var book = require('../utils/book.js');
 var router = new Router();
 var bookData = fse.readJSONSync(path.join(configs.bookroot, 'data.json'));
 var modulesData = fse.readJSONSync(path.join(configs.bookroot, 'modules.json'));
-var descriptionRE = /\{\{description}}/;
-var dependenciesRE = /\{\{dependencies}}/;
+var introductionRE = /\{\{\s*?introduction\s*?}}/i;
+var dependenciesRE = /\{\{\s*?dependencies\s*?}}/i;
 
 var buildTravisBadge = function (module) {
     return '<a target="_blank" rel="nofollow" href="https://travis-ci.org/blearjs/' + module + '">' +
@@ -43,7 +43,7 @@ var buildCoverallsBadge = function (module) {
 
 
 // 生成模块描述
-var generateDescription = function (module) {
+var generateIntroduction = function (module) {
     var desc = modulesData[module];
 
     if (!desc) {
@@ -136,7 +136,7 @@ var buildController = function (pageData) {
         var isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
 
         pageData.name = 'index' === pageData.name ? '' : pageData.name;
-        pageData.content = pageData.content.replace(descriptionRE, generateDescription(pageData.name));
+        pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
         pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
 
         if (isAjax) {
