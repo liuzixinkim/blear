@@ -245,7 +245,7 @@
     "update": "2016年11月26日14:41:29",
     "create": "2016年11月26日14:41:29",
     "name": "blear.utils.function",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.function",
     "keywords": [
       "blear",
@@ -256,11 +256,30 @@
     ],
     "description": "function utils",
     "dependencies": {
-      "blear.utils.date": "1.x",
       "blear.utils.access": "1.x",
-      "blear.utils.time": "1.x",
       "blear.utils.array": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.debug": "^1.0.2",
+      "blear.utils.time": "1.x",
       "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.utils.hashbang": {
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.utils.hashbang",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.utils.hashbang",
+    "keywords": [
+      "blear",
+      "utils",
+      "hashbang",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "hashbang",
+    "dependencies": {
+      "blear.utils.string": "1.x"
     }
   },
   "blear.utils.object": {
