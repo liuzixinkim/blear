@@ -36,7 +36,7 @@
         ]
       },
       {
-        "dest": "/static/css/145644a4217f3eb2d3d2a3894e60f0c0.css",
+        "dest": "/static/css/c39260a82d3ab2a96b4b0f3fcc4a4cc1.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/common/base.css",
@@ -49,15 +49,11 @@
           {
             "src": "../webroot-dev/static/css/modules/heading.css",
             "res": []
-          },
-          {
-            "src": "../webroot-dev/static/css/modules/toc.css",
-            "res": []
           }
         ]
       },
       {
-        "dest": "/static/css/71194e56e8f7cd0bb2adaa9481338a71.css",
+        "dest": "/static/css/7590cb1fe39449669357e5037b80ca35.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/main/index.css",
