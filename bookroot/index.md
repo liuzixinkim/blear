@@ -20,6 +20,7 @@
     - [blear.utils.object](/utils/object.md)
     - [blear.utils.path](/utils/path.md)
     - [blear.utils.plan](/utils/plan.md)
+    - [blear.utils.typeis](/utils/typeis.md)
 
     
     
@@ -32,7 +33,6 @@
 - [blear.utils.scope-css](/utils/scope-css.md)
 - [blear.utils.string](/utils/string.md)
 - [blear.utils.time](/utils/time.md)
-- [blear.utils.typeis](/utils/typeis.md)
 - [blear.utils.ua](/utils/ua.md)
 - [blear.utils.uri](/utils/uri.md)
 - [blear.utils.url](/utils/url.md)
