@@ -223,7 +223,7 @@
     "update": "未明确",
     "create": "未明确",
     "name": "blear.utils.easing",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "github": "https://github.com/blearjs/blear.utils.easing",
     "keywords": [
       "blear",
@@ -239,6 +239,28 @@
       "blear.utils.access": "1.x",
       "blear.utils.array": "1.x",
       "blear.shims.bezier": "1.x"
+    }
+  },
+  "blear.utils.function": {
+    "update": "2016年11月26日14:41:29",
+    "create": "2016年11月26日14:41:29",
+    "name": "blear.utils.function",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.utils.function",
+    "keywords": [
+      "blear",
+      "utils",
+      "function",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "function utils",
+    "dependencies": {
+      "blear.utils.date": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.typeis": "1.x"
     }
   },
   "blear.utils.object": {

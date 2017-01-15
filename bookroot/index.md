@@ -11,10 +11,10 @@
     - [blear.utils.date](/utils/date.md)
     - [blear.utils.debug](/utils/debug.md)
     - [blear.utils.easing](/utils/easing.md)
+    - [blear.utils.function](/utils/function.md)
     
     
 ```text
-    - [blear.utils.function](/utils/function.md)
     - [blear.utils.hashbang](/utils/hashbang.md)
     - [blear.utils.hashstring](/utils/hashstring.md)
     - [blear.utils.image](/utils/image.md)
