@@ -96,225 +96,297 @@ plan
 
 
 # Prototype
-## task
-定义一个异步任务。
+## `#task(asyncTask(next(err, result), prev)): plan`
+定义一个异步任务，链式调用返回 `plan`。
+
 ```js
-plan.task(asyncTask(next, prev));
+plan.task(function asyncTask(next, prev) {
+    // 异步操作……
+    next(err, result);
+});
 ```
 
-### asyncTask
+### `asyncTask`
 - 类型：`Function`
 - 说明：任务处理，如果是串行，则将执行 `next` 传给下一个任务，否则传到终点
 
-#### next(err, result)
+#### `asyncTask: next(err, result)`
 - 类型：`Function`
 - 说明：如果是串行则传给下一个任务，否则传给终点
 
-##### err
+##### `asyncTask: next: this`
+- 类型：`null`
+
+##### `asyncTask: next: err`
 - 类型：`Error`
 - 说明：如果错误的话为 `Error` 实例，否则为 `null`
 
-##### result
+##### `asyncTask: next: result`
 - 类型：`*`
 - 说明：结果，如果是串行则传给下一个任务，否则传给终点
 
-#### prev
+#### `asyncTask: prev`
 - 类型：`*`
 - 说明：上一个任务结果，如果是串行的话
 
 
-## taskSync
-定义一个同步任务。
+## `#taskSync(syncTask(prev): result): plan`
+定义一个同步任务，链式调用返回 `plan`。
 ```js
-plan.taskSync(syncTask(prev));
+plan.taskSync(function syncTask(prev) {
+    // 同步操作……
+    return err || result;
+});
 ```
 
-### syncTask
+### `syncTask`
 - 类型：`Function`
 - 说明：任务处理，如果是串行，则将返回值传给下一个任务，否则传到终点
 
-#### prev
+#### `syncTask: prev`
 - 类型：`*`
 - 说明：上一个任务结果，如果是串行的话
 
+#### `syncTask(): result`
+- 类型：`Error | *`
+- 说明：同步任务执行结果，如果执行错误，返回 `Error` 实例
 
 
-## each
-循环处理异步任务。
+
+## `#each(list, asyncTasker(index, val, next(err, result)), prev): plan`
+循环处理异步任务，链式调用返回 `plan`。
 ```js
-plan.each(list, asyncTasker(index, val, next(err, result)));
+plan.each(['a', 'b'], function(index, val, next, prev) {
+    // 异步操作……
+    next(err || result);
+});
 ```
 
-### list
+### `list`
 - 类型：`Array | Object`
 - 说明：集合，数组、类数组或对象
 
-### syncTasker
+### `syncTasker`
 - 类型：`Function`
 - 说明：任务处理
 
-#### this
+#### `syncTasker: this`
 - 类型：`null`
 
-#### keyIndex
+#### `syncTasker: keyIndex`
 - 类型：`Number | String`
 - 说明：如果是对象，则为 `String`，否则为 `Number`
 
-#### val
+#### `syncTasker: val`
 - 类型：`*`
 - 说明：遍历的集合值
 
-#### next(err, result)
+#### `syncTasker: next`
 - 类型：`Function`
 - 说明：如果是串行则传给下一个任务，否则传给终点
 
-##### err
+##### `syncTasker: next: err`
 - 类型：`Error`
 - 说明：如果错误的话为 `Error` 实例，否则为 `null`
 
-##### result
+##### `syncTasker: next: result`
 - 类型：`*`
 - 说明：结果，如果是串行则传给下一个任务，否则传给终点
 
+#### `syncTasker: prev`
+- 类型：`*`
+- 说明：上一个任务的结果，如果是串行的话
 
 
-## eachSync
-循环处理异步任务。
+
+## `#eachSync(list, syncTasker(keyIndex, val, prev)): plan`
+循环处理异步任务，链式调用返回 `plan`。
 ```js
-plan.eachSync(list, syncTasker(keyIndex, val));
+plan.eachSync(['a', 'b'], function(index, val, prev) {
+    // 同步操作……
+    return err || result;
+});
 ```
 
-### list
+### `list`
 - 类型：`Array | Object`
 - 说明：集合，数组、类数组或对象
 
-### syncTasker
+### `syncTasker`
 - 类型：`Function`
 - 说明：任务处理，如果是串行，则将返回值传给下一个任务，否则传到终点
 
-#### this
+#### `syncTasker: this`
 - 类型：`null`
 
-#### keyIndex
+#### `syncTasker: keyIndex`
 - 类型：`Number | String`
 - 说明：如果是对象，则为 `String`，否则为 `Number`
 
-#### val
+#### `syncTasker: val`
 - 类型：`*`
 - 说明：遍历的集合值
 
+#### `syncTasker: prev`
+- 类型：`*`
+- 说明：上一个任务结果，如果是串行的话
+
+#### `syncTasker(): result`
+- 类型：`Error || *`
+- 说明：如果错误的话为 `Error` 实例，否则为任务执行结果
 
 
-## repeat
-再重复上一个任务的次数，**如果上一步是 each 任务，只会重复最后一次遍历任务**。
+
+## `#repeat(times): plan`
+再重复上一个任务的次数，**如果上一步是 each 任务，只会重复最后一次遍历任务**，链式调用返回 `plan`。
 ```js
-plan.task|taskSync.repeat(times);
+plan.taskSync(function taskA() {
+    // 任务 A
+}).repeat(2);
+// 任务 A 将会被执行 1 + 2 = 3 次
 ```
 
-### times
+### `times`
 - 类型：`Number`
-- 说明：等待次数
+- 说明：再执行次数
 
 
 
-## wait
-空闲等待时间，单位 ms。
+## `#wait(time): plan`
+空闲等待时间，单位 ms，链式调用返回 `plan`。
 ```js
-plan.wait(time);
+plan.wait(10);
+// 等待 10ms 
 ```
 
-### time
+### `time`
 - 类型：`Number`
 - 说明：等待时间，异步
 
 
 
-## serial
-串行执行任务。
+## `#serial(done(err, result)): plan`
+串行执行任务，链式调用返回 `plan`。
 ```js
-plan.task...serial(callback);
+plan
+    .task(taskA)
+    .task(taskB)
+    .serial();
+// 串行执行 taskA 和 taskB
 ```
 
 
-### done
+### `done`
 - 类型：`Function`
 - 说明：完成后回调，如果有一个任务出错，则标记为失败
 
-#### this
+#### `done: this`
 - 类型：`null`
 
-#### err
+#### `done: err`
 - 类型：`Error | null`
 - 说明：如果出错的话为 `Error` 实例，否则为 `null`
 
-#### ...result
+#### `done: result`
 - 类型：`*`
-- 说明：如果是串行，则只有一个结果；如果是并行，则有多个结果
+- 说明：一个结果
 
 
 
 
-## parallel
-并行执行任务。
+## `#parallel(done(err, ...result)): plan`
+并行执行任务，链式调用返回 `plan`。
 ```js
-plan.task...parallel(done(err, ...result));
+plan
+    .task(taskA)
+    .task(taskB)
+    .parallel();
+// 并行执行 taskA 和 taskB
 ```
 
 
-### done
+### `done`
 - 类型：`Function`
 - 说明：完成后回调，如果有一个任务出错，则标记为失败
 
-#### this
+#### `done: this`
 - 类型：`null`
 
-#### err
+#### `done: err`
 - 类型：`Error | null`
 - 说明：如果出错的话为 `Error` 实例，否则为 `null`
 
-#### ...result
+#### `done: ...result`
 - 类型：`*`
-- 说明：如果是串行，则只有一个结果；如果是并行，则有多个结果
+- 说明：任务数量个结果
 
 
 
 
-## try
-任务成功。
+## `#try(success(...result)): plan`
+任务成功，链式调用返回 `plan`。
 ```js
-plan.task...try(success(...result));
+plan
+    .task(taskA)
+    .task(taskB)
+    .serial()
+    .try(function(resultAB) {
+        // 串行执行成功
+    });
+
+plan
+    .task(taskA)
+    .task(taskB)
+    .parallel()
+    .try(function(resultA, resultB) {
+        // 并行执行成功
+    });
 ```
 
-### success
+### `success`
 - 类型：`Function`
 - 说明：成功后回调
 
-#### this
+#### `success: this`
 - 类型：`null`
 
-#### ...result
+#### `success: ...result`
 - 类型：`*`
-- 说明：如果是串行，则只有一个结果；如果是并行，则有多个结果
+- 说明：如果是串行，则只有一个结果；如果是并行，则有任务数量个结果
 
 
 
 
 
 
-## catch
-任务失败。
+## `#catch(error(err)): plan`
+任务失败，链式调用返回 `plan`。
 ```js
-plan.task...catch(error(err));
+plan
+    .task(taskA)
+    .task(taskB)
+    .serial()
+    .catch(function(err) {
+        // 串行执行失败
+    });
+
+plan
+    .task(taskA)
+    .task(taskB)
+    .parallel()
+    .catch(function(err) {
+        // 并行执行失败
+    });
 ```
 
-### error
+### `error`
 - 类型：`Function`
 - 说明：失败后回调
 
-#### this
+#### `error: this`
 - 类型：`null`
 
-#### err
+#### `error: err`
 - 类型：`Error | null`
 - 说明：如果出错的话为 `Error` 实例，否则为 `null`
 
