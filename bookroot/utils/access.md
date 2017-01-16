@@ -9,31 +9,27 @@ var access = require('blear.utils.access');
 
 
 # Static
-## args
-将 `Arguments` 转换为数组，末尾 undefined 的项将会被丢弃。
+## `.args(args): argsArray`
+将 `Arguments` 转换为数组，末尾为 `undefined` 的项将会被丢弃。
 ```js
-access.args(arguments);
-
 access.args([1, 2, undefined, undefined, undefined]);
 // => [1, 2]
 ```
 
-### arguments
+### `args`
 - 类型：`Arguments`
 - 说明：函数传入实参
 
-### 返回值
+### `argsArray`
 - 类型：`Array`
-- 说明：返回一个新数组
+- 说明：返回一个由 `args` 项组成的数组
 
 
 
-## getSet
+## `getSet(getSet, args): fn`
 单个函数 get、set 处理器。
 
 ```js
-access.getSet(getSet, args);
-
 var fn = function(key, val){
     return access.getset({
         get: function(key){
@@ -59,24 +55,24 @@ fn({a: 1, b: 2});
 // => set b = 2
 ```
 
-### getSet
+### `getSet`
 - 类型：`Object`
 - 说明：get、set 描述对象
 
-#### getSet.get
+#### `getSet.get`
 - 类型：`Function`
 - 说明：取值函数
 
-#### getSet.set
+#### `getSet.set`
 - 类型：`Function`
 - 说明：设值函数
 
-#### getSet.setLength
+#### `getSet.setLength`
 - 类型：`Number`
 - 说明：设值时的参数的个数
 - 默认：`2`
 
-#### getSet.eachSet
+#### `getSet.eachSet`
 - 类型：`Boolean`
 - 说明：是否遍历每一次 set 操作
 - 默认：`true`
@@ -88,7 +84,7 @@ removeAttr(node, ['id', 'class', 'name']);
 // 结果将删除 node 节点上的 id、class、name 三个属性
 ```
 
-#### getSet.eachGet
+#### `getSet.eachGet`
 - 类型：`Boolean`
 - 说明：是否遍历每一次 get 操作
 - 默认：`true`
@@ -99,10 +95,13 @@ getAttr(node, ['id', 'class', 'name']);
 // => {id: "id", class: "class", name: "name"}
 ```
 
-
-### args
+### `args`
 - 类型：`Arguments`
 - 说明：实参
+
+### `fn`
+- 类型：`Function`
+- 说明：返回一个自动分析 get、set 的函数
 
 
 

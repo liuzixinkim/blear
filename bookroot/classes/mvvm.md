@@ -9,6 +9,55 @@ var MVVM = require('blear.classes.mvvm');
 new MVVM({
     el: '#app',
     data: {
+        msg: 'Hello'
+    }
+});
+```
+
+<div class="split text_center">+</div>
+
+```html
+<div id="app">{{ msg }}</div>
+```
+
+<div class="split text_center">=</div> 
+
+```html
+<div id="app">Hello</div>
+```
+
+
+
+
+# `new MVVM(options)`
+## `options`
+- 类型：`Object`
+- 说明：配置参数
+
+### `options.el`
+- 类型：`String | HTMLelement` 
+- 说明：元素，选择器、DOM 元素
+
+### `options.data`
+- 类型：`Object` 
+- 说明：需要绑定的数据，必须是对象
+
+### `options.computed: {prop: getSet}`
+- 类型：`Object {Function | {get: Function, set: Function}}` 
+- 说明：计算属性，必须是对象
+
+#### `options.computed.{prop}`
+- 类型：`String`
+- 说明：新建的计算属性名，不能与 `data` 里的属性重名
+
+#### `options.computed.{getSet}`
+- 类型：`Function: get | Object {get: Function, set: Function}`
+- 说明：如果是一个 `Function`，则作为 `prop` 的 `get` 方法
+
+```js
+new MVVM({
+    el: '#app',
+    data: {
         firstName: 'John',
         lastName: 'Moo'
     },
@@ -30,26 +79,6 @@ new MVVM({
     }
 });
 ```
-
-
-# `new MVVM(options)`
-## `options`
-- 类型：`Object`
-- 说明：配置参数
-
-### `options.el`
-- 类型：`String | HTMLelement` 
-- 说明：元素，选择器、DOM 元素
-
-### `options.data`
-- 类型：`Object` 
-- 说明：需要绑定的数据，必须是对象
-
-### `options.computed`
-- 类型：`Object {Function | {get: Function, set: Function}}` 
-- 说明：计算属性，必须是对象
-- 例如：
-
 
 # Directives
 内置的指令有：
