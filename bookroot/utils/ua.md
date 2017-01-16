@@ -8,6 +8,8 @@
 
 
 # `ua(uaStr): result`
+user-agent 字符串解析，文件体积比较大，建议在 Node 端解析。
+
 ```js
 var ret = ua('Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 ' +
  'like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko)' +
@@ -123,4 +125,4 @@ ret = {
 
 # More
 - 百度 FEX-team UA 解析：<https://github.com/fex-team/ua-device>
-
+- user-agent 维基百科：<https://zh.wikipedia.org/zh-cn/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86>
