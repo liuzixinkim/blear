@@ -134,7 +134,7 @@ var data = {
 <div class="c class-A class-B class-a"></div>
 ```
 
-### :style
+### `:style`
 自动处理兼容性，不必写 CSS 私有前缀。
 
 ```js
@@ -143,13 +143,13 @@ var data = {
 };
 ```
 
-<div>+</div> 
+<div class="split text_center">+</div> 
 
 ```html
 <div :style="width: 100, height: height"></div>
 ```
 
-<div>=</div> 
+<div class="split text_center">=</div> 
 
 ```html
 <div style="width: 100px; height: 200px;"></div>
@@ -157,20 +157,20 @@ var data = {
 
 
 ## 事件指令
-### @{eventType}
+### `@{eventType}`
 所有未明确的指令都会划分为事件指令。
 ```html
 <button @click="onClick($el, $ev)"></button>
 ```
-### this
+### `this`
 - 类型：`this`
 - 说明：指向 `data`
 
-### $el
+### `$el`
 - 类型：`HTMLElement`
 - 说明：当前事件源
 
-### $ev
+### `$ev`
 - 类型：`Event`
 - 说明：当前事件
 
@@ -178,13 +178,13 @@ var data = {
 ## 指令过滤器
 使用`.`分隔符用来过滤指令。
 
-### .once 和 *
+### `.once` 和 `*`
 一次性绑定。
 ```html
 <div :any-attr.once="varible">{{* varible}}</div>
 ```
 
-### prop
+### `prop`
 指定绑定属性为 property（延伸：[JS DOM 的attribute 与 property](http://frontenddev.org/link/js-dom-attribute-and-property.html)）。
 
 
@@ -231,31 +231,31 @@ var data = {
 
 
 # Prototype
-## #watch
+## `watch`
 监视表达式变化。
 
 ```js
 mvvm.watch(exp, listener, options);
 ```
 
-### exp
+### `exp`
 - 类型：`String | Function`
 - 说明：表达式字符串或函数
 
-### listener
+### `listener`
 - 类型：`Function`
 - 说明：监听函数
 
-### options
+### `options`
 - 默认：`{imme: false, deep: false}`
 - 类型：`Object`
 
-#### options.imme
+#### `options.imme`
 - 默认：`false`
 - 类型：`Boolean`
 - 是否立即回调，即回调初始值
 
-#### options.deep
+#### `options.deep`
 - 默认：`false`
 - 类型：`Boolean`
 - 是否深度监听（**目前未实现**）
@@ -266,11 +266,11 @@ mvvm.watch(exp, listener, options);
 mvvm.directive(name, definition);
 ```
 
-### name
+### `name`
 - 类型：`String`
 - 说明：指令名称，不需要前缀。
 
-### definition
+### `definition`
 - 类型：`Object | Function`
 - 说明：指令定义，可以是一个 update 函数，或者是指令定义对象。
 - 例如：
@@ -296,7 +296,7 @@ mvvm.directive('my-directive-2', {
 });
 ```
 
-## destroy
+## `destroy`
 销毁当前 MVVM。
 ```js
 mvvm.destroy();
@@ -305,7 +305,7 @@ mvvm.destroy();
 
 # Static
 
-## directive
+## `directive`
 自定义静态（全局）级别的指令，可以被所有实例使用。使用方法与`mvvm.directive`一致。
 ```js
 MVVM.directive(name, definition);

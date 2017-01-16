@@ -8,8 +8,8 @@
     color: #ccc; }
   .heading-text code {
     font-size: inherit;
-    color: #fff;
-    background: #656565; }
+    color: inherit;
+    background: #dcdcdc; }
   .heading > a {
     margin: 0;
     color: #444 !important; }

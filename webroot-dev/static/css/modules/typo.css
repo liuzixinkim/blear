@@ -124,7 +124,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .typo .hljs {
     display: block;
     overflow-x: auto;
-    padding: 1em 1.25em;
+    padding: 1em .5em;
     color: #333;
     background: #f8f8f8; }
   .typo .hljs-comment,
