@@ -15,24 +15,22 @@ var date = require('blear.utils.date');
 
 # Static
 
-## id
+## `.id(date): id`
 ```js
-date.id(d);
-
 date.id(new Date());
 // => 20170115
 ```
 
-### d
+### `date`
 - 类型：`Date`
 - 说明：日期对象
 
-### 返回值
+### `id`
 - 类型：`Number`
 - 说明：以为由`fullYear + (month + 1) + date`组成的唯一 ID，可以用作日期比较
 
 
-## fromId
+## `.fromId(id): date`
 将日期 ID 转换为日期，是 `.id` 方法的逆转。
 ```js
 date.fromId(id);
@@ -41,20 +39,17 @@ date.fromId(20170115);
 // => new Date(2017, 0, 15)
 ```
 
-### id
+### `id`
 - 类型：`Number`
 - 说明：日期 ID
 
-### 返回值
+### `date`
 - 类型：`Date`
 - 说明：返回日期对象，精确到年月日
 
 
-## parse
+## `.parse(...args): date`
 根据传入的参数解析为一个日期对象。
-```js
-date.parse(...args);
-```
 
 ### 0 个参数
 将参数作为时间戳、或者是日期字符串描述、或者是一个日期对象。
@@ -116,18 +111,16 @@ date.parse(new Date().getTime());
 
 
 
-## format
+## `.format(format, [date]): formated`
 格式化日期。主要参考 [ECMA规范定义][ecma date time string format]：`YYYY-MM-DDTHH:mm:ss.sssZ`，次要参考 [moment](http://momentjs.com/)。
 更多阅读参考页底的更多链接。
 
 ```js
-date.format(format, [d]);
-
 date.format('YYYY-MM-DD HH:mm:ss.SSS 周ea');
 // => "2017-01-15 18:15:01.289 周日下午"
 ```
 
-## format
+### `format`
 - 类型：`String`
 - 说明：格式化字符串，有以下标记：
     - 年：`Y`
@@ -140,144 +133,152 @@ date.format('YYYY-MM-DD HH:mm:ss.SSS 周ea');
     - 星期：`e`，默认是汉字“一二三四五六日”
     - 上下午：`a`，默认是汉字“上午、下午”
 
-## d
+### `date`
 - 类型：`Date`
 
+### `formated`
+- 类型：`String`
+- 说明：格式化之后的字符串
 
-## isLeapYear
+
+## `.isLeapYear(year): isLeapYear`
 判断是否为闰年。
 ```js
-date.isLeapYear(year);
-
 date.isLeapYear(2014);
 // => false
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：年
 
+### `isLeapYear`
+- 类型：`Boolean`
 
-## getDaysInMonth
+
+## `.getDaysInMonth(year, month): days`
 获得某年某月的天数。
 ```js
-date.getDaysInMonth(year, month);
-
 date.getDaysInMonth(2014, 9);
 // => 31
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：年
 
-### month
+### `month`
 - 类型：`Number`
 - 说明：月
 
+### `days`
+- 类型：`Number`
+- 说明：天数
 
-## getDaysInYear
+
+## `.getDaysInMonth(year, month, date): days`
 获得某年某月某日在当年的第几天。
 ```js
-date.getDaysInMonth(year, month, d);
-
 date.getDaysInMonth(2014, 0, 1);
 // => 1
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：年
 
-### month
+### `month`
 - 类型：`Number`
 - 说明：月
 
-### d
+### `date`
 - 类型：`Number`
 - 说明：日
 
+### `days`
+- 类型：`Number`
+- 说明：天数
 
 
-
-## getWeeksInYear
+## `.getWeeksInYear(year, month, date, [weekStartDay=0]): weeks`
 计算某年某月某日是当年的第几周，第一周为 1，而不是 0。
 ```js
-date.getWeeksInYear(year, month, d, [weekStartDay=0]);
-
 // 判断 2014 年 10 月 24 日是 2014 年的第几周
 date.getWeeksInYear(2014, 9, 24);
 // => 43（第 43 周）
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：年
 
-### month
+### `month`
 - 类型：`Number`
 - 说明：月
 
-### d
+### `date`
 - 类型：`Number`
 - 说明：日
 
-### weekStartDay
+### `weekStartDay`
 - 类型：`Number`
 - 说明：一周开始是星期几，0 为周日
 - 默认：`0`
 
+### `weeks`
+- 类型：`Number`
+- 说明：周数
 
 
-## getWeeksInMonth
+## `.getWeeksInMonth(year, month, d, [weekStartDay=0]): weeks`
 计算某年某月某日是当月的第几周，第一周为 1，而不是 0。
 
 ```js
-date.getWeeksInMonth(year, month, d, [weekStartDay=0]);
-
 // 判断 2014 年 10 月 24 日是 2014 年 10 月的第几周
 date.getWeeksInMonth(2014, 9, 24);
 // => 4（第 4 周）
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：年
 
-### month
+### `month`
 - 类型：`Number`
 - 说明：月
 
-### d
+### `date`
 - 类型：`Number`
 - 说明：日
 
-### weekStartDay
+### `weekStartDay`
 - 类型：`Number`
 - 说明：一周开始是星期几，0 为周日
 - 默认：`0`
 
+### `weeks`
+- 类型：`Number`
+- 说明：周数
 
-## from
+
+## `.from(to, [from=now]): humanized`
 时间比较，符合人类阅读。
 
 ```js
-date.from(to, [from=now]);
-
 date.from(new Date());
 // => "刚刚"
 ```
 
-### to
+### `to`
 - 类型：`Number | String | Date`
 - 说明：比较时间
 
-### from
+### `from`
 - 类型：`Number | String | Date`
 - 说明：被比较时间
 - 默认：当前时间
 
-### 返回值
+### `humanized`
 - 类型：`String`
 - 说明：时间差距描述，内置的描述有
     - 过去时间
@@ -300,56 +301,46 @@ date.from(new Date());
         - 很久之后
 
 
-## iso
+## `.iso(date): isoString`
 将日期时间转换为 [ISO8601 标准][w3c datetime]（YYYY-MM-DDThh:mm:ss.sTZD）。
 ```js
-date.iso(d);
-
 date.iso(new Date());
 // => "2017-01-15T10:26:09.999Z"
 ```
 
-### d
+### `date`
 - 类型：`Date`
 - 说明：日期
 
 
-### 返回值
+### `isoString`
 - 类型：`String`
 - 说明：ISO 标准字符串
 
 
-## start
+## `.start(date): startTime`
 获取日期的开始时间（即：当天的 0:0:0:000）。
-```js
-date.start(d);
-```
 
-### d
+### `date`
 - 类型：`Date`
 - 说明：日期
 
-
-### 返回值
+### `startTime`
 - 类型：`Date`
-- 说明：当前开始时间戳
+- 说明：当天开始时间
 
 
 
-## end
+## `.end(date): endTime`
 获取日期的结束时间（即：当天的 23:59:59:999）。
-```js
-date.start(d);
-```
 
-### d
+### `date`
 - 类型：`Date`
 - 说明：日期
 
-
-### 返回值
+### `endTime`
 - 类型：`Date`
-- 说明：当前结束时间戳
+- 说明：当天结束时间
 
 
 
