@@ -231,12 +231,9 @@ var data = {
 
 
 # Prototype
-## `watch`
+## `#watch(exp, listener, [options])`
 监视表达式变化。
 
-```js
-mvvm.watch(exp, listener, options);
-```
 
 ### `exp`
 - 类型：`String | Function`
@@ -247,24 +244,22 @@ mvvm.watch(exp, listener, options);
 - 说明：监听函数
 
 ### `options`
-- 默认：`{imme: false, deep: false}`
 - 类型：`Object`
+- 默认：`{imme: false, deep: false}`
 
 #### `options.imme`
-- 默认：`false`
 - 类型：`Boolean`
 - 是否立即回调，即回调初始值
+- 默认：`false`
 
 #### `options.deep`
-- 默认：`false`
 - 类型：`Boolean`
 - 是否深度监听（**目前未实现**）
+- 默认：`false`
 
-## directive
+## `#directive(name, definition)`
 自定义实例级别的指令，只能被当前实例使用。
-```js
-mvvm.directive(name, definition);
-```
+
 
 ### `name`
 - 类型：`String`
@@ -296,7 +291,7 @@ mvvm.directive('my-directive-2', {
 });
 ```
 
-## `destroy`
+## `#destroy()`
 销毁当前 MVVM。
 ```js
 mvvm.destroy();
@@ -305,7 +300,7 @@ mvvm.destroy();
 
 # Static
 
-## `directive`
+## `.directive()`
 自定义静态（全局）级别的指令，可以被所有实例使用。使用方法与`mvvm.directive`一致。
 ```js
 MVVM.directive(name, definition);
