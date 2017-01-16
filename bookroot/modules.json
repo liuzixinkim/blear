@@ -427,6 +427,28 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.utils.querystring": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.querystring",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.utils.querystring",
+    "keywords": [
+      "blear",
+      "utils",
+      "querystring",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "querystring utils",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.uri": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.array": "1.x"
+    }
+  },
   "blear.utils.typeis": {
     "update": "未明确",
     "create": "未明确",
