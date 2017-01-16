@@ -16,60 +16,54 @@ var hashang = require('blear.utils.hashbang');
 
 
 # Static
-## stringify
+## `.stringify(path, [split=""]): hash`
 将 path 转换为符合 hashbang 的 hashstring
 ```js
-hashbang.stringify(path, [split]);
-
 hashbang.stringify('/a/b?x=1&y=2#zzz', '!');
 // => #!/a/b?x=1&y=2#zzz
 ```
 
-### hashbang
+### `hashbang`
 - 类型：`String`
 - 说明：待转换的路径
 
-### split
+### `split`
 - 类型：`String`
 - 说明：分隔符
 - 默认：为空
 
-### 返回值
+### `hash`
 - 类型：`String`
 
 
-## parse
+## `.parse(hashstring): path`
 解析 hashstring 为 hashbang。
 ```js
-hashbang.parse(hashstring);
-
 hashbang.parse('###!!!/a/b');
 // => /a/b
 ```
 
-### hashstring
+### `hashstring`
 - 类型：`String`
 - 说明：包含 `#` 的 hash 字符串
 
-### 返回值
+### `path`
 - 类型：`String`
 - 说明：路径
 
 
 
-## is
+## `.is(hashstring): isHashbang`
 判断一个 hash 字符串是否为 hashbang
 ```js
-hashbang.is(hashstring);
-
 hashbang.is('#!/a/b');
 // => true
 ```
 
-### hashstring
+### `hashstring`
 - 类型：`String`
 
-### 返回值
+### `isHashbang`
 - 类型：`Boolean`
 
 
