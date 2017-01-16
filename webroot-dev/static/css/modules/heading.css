@@ -7,7 +7,9 @@
     margin-right: 10px;
     color: #ccc; }
   .heading-text code {
-    font-size: inherit; }
+    font-size: inherit;
+    color: #fff;
+    background: #656565; }
   .heading > a {
     margin: 0;
     color: #444 !important; }

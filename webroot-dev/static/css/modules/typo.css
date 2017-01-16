@@ -103,7 +103,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
   .typo code {
     margin: 0 2px;
-    padding: 2px 2px;
+    padding: 0.2em 0.4em;
     border-radius: 4px;
     color: #C7254E;
     font-size: 0.9em;

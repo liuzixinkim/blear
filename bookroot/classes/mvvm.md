@@ -6,26 +6,6 @@
 ```js
 var MVVM = require('blear.classes.mvvm');
 
-var mvvm = new MVVM(Options);
-```
-
-
-## Options
-
-## el
-- 类型：`String | HTMLelement` 
-- 说明：元素，选择器、DOM 元素
-
-## data
-- 类型：`Object` 
-- 说明：需要绑定的数据，必须是对象
-
-## computed
-- 类型：`Object {Function | {get: Function, set: Function}}` 
-- 说明：计算属性，必须是对象
-- 例如：
-
-```js
 new MVVM({
     el: '#app',
     data: {
@@ -51,16 +31,36 @@ new MVVM({
 });
 ```
 
+
+# `new MVVM(options)`
+## `options`
+- 类型：`Object`
+- 说明：配置参数
+
+### `options.el`
+- 类型：`String | HTMLelement` 
+- 说明：元素，选择器、DOM 元素
+
+### `options.data`
+- 类型：`Object` 
+- 说明：需要绑定的数据，必须是对象
+
+### `options.computed`
+- 类型：`Object {Function | {get: Function, set: Function}}` 
+- 说明：计算属性，必须是对象
+- 例如：
+
+
 # Directives
 内置的指令有：
 
 ## 控制指令
-### @if
+### `@if`
 ```html
 <div @if="bool1">if bool1 == true</div>
 ```
 
-### @else-if
+### `@else-if`
 ```html
 <div @if="bool1">if bool1 == true</div>
 <div @else-if="bool2">if bool1 == false && bool2 == true</div>
