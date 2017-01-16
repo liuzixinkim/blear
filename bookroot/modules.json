@@ -431,7 +431,7 @@
     "update": "未明确",
     "create": "未明确",
     "name": "blear.utils.querystring",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.querystring",
     "keywords": [
       "blear",
@@ -448,6 +448,44 @@
       "blear.utils.string": "1.x",
       "blear.utils.array": "1.x"
     }
+  },
+  "blear.utils.random": {
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.utils.random",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.utils.random",
+    "keywords": [
+      "blear",
+      "utils",
+      "random",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "random utils",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.number": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.utils.scope-css": {
+    "create": "2016年05月30日20:00:23",
+    "update": "2016年05月30日20:00:23",
+    "name": "blear.utils.scope-css",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.utils.scope-css",
+    "keywords": [
+      "blear",
+      "utils",
+      "scope",
+      "css",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "CSS 作用域，常用于组件，防止组件之间的样式互相干扰",
+    "dependencies": {}
   },
   "blear.utils.typeis": {
     "update": "未明确",

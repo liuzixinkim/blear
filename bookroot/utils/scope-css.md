@@ -7,67 +7,33 @@
 
 # Example
 ```js
-var example = require('blear.example');
-
-example.balabala....
+var scopeCSS = require('blear.utils.scope-css');
 ```
 
 
 
 
-# `new Example(...)`
-本身是一个方法
 
+# `scopeCSS(css, scope): scopedCSS`
+将 css 添加上作用域，这样的话，css 就可以不污染其他部分，常用于单页面架构、组件架构。
 
-语法规则
-```text
-# 代表原型方法、属性
-. 代表静态方法、属性
-[] 代表可选
-() 代表函数，里面填参数
-(): 函数末尾的表示函数的返回值
-fn: a 表示 fn 函数的形参 
-
-标题需抽象写明方法的形参，如
-# `#getUserInfo(userName, [options], callback(err, userInfo)): someReturn`
-
-在说明各个参数，分别都要写明，甚至包括函数的 this
-
-## `userName`
-## `options`
-### `options.key1`
-### `options.key2`
-## `callback`
-### `callback: this`
-### `callback: err`
-### `callback: userInfo`
-## `someReturn`
+```js
+scopeCSS('.header{width: 100px;}', '#some-page');
+// => "#some-page .header{width: 100px;}"
 ```
 
 
+## css
+- 类型：`String`
+- 说明：待转换的 css
 
+## scope
+- 类型：`String`
+- 说明：作用域，通常是一个 id 选择器
 
-# Prototype
-原型属性、方法
-
-## `#bala(arg)`
-
-### `arg`
-- 类型：`Object`
-- 说明：巴拉巴拉
-
-
-
-
-
-
-# Static
-静态属性、方法
-
-
-## `.bala`
-
-
+## scopedCSS
+- 类型：`String`
+- 说明：经过处理的 css
 
 
 
@@ -79,5 +45,6 @@ fn: a 表示 fn 函数的形参
 
 
 # More
-这里写更多的额外内容，可以不写。
-
+- scope css：<https://developer.mozilla.org/zh-CN/docs/Web/CSS/:scope>
+- 参考：<https://github.com/thomaspark/scoper>
+- 参考：<https://github.com/nathanmacinnes/scoped-style>

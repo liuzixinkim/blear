@@ -341,7 +341,7 @@ MVVM.directive(name, definition);
 
 
 # More
-- <https://cn.vuejs.org/>
-- <http://avalonjs.coding.me/>
-- <https://angularjs.org/>
-- <https://facebook.github.io/react/>
+- vuejs：<https://cn.vuejs.org/>
+- avalonjs：<http://avalonjs.coding.me/>
+- angularjs： <https://angularjs.org/>
+- reactjs：<https://facebook.github.io/react/>
