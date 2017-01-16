@@ -7,18 +7,22 @@
 var typeis = require('blear.utils.typeis');
 ```
 
-# Function
+# `typeis(any): type`
 获取当前对象类型
 
 ```js
-typeis(any);
+typeis('');
+// => "string"
+
+typeis();
+// => "undefined"
 ```
 
-## any
+## `any`
 - 类型：`*`
 - 说明：任意对象
 
-## 返回值
+## `type`
 - 类型：`String`
 - 说明：对象类型，有：
     - `undefined`
@@ -41,180 +45,308 @@ typeis(any);
 
 # Static
 
-## String
-判断是否为 string
+## `.String(any): type`
+判断是否为 `String` 实例。
 
 ```js
-typeis.String(any);
+typeis.String('');
+// => true
 ```
 
-### any
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
-## Number
-判断是否为 number
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
+
+
+
+## `.Number(any): type`
+判断是否为 `Number` 实例。
 
 ```js
-typeis.Number(any);
+typeis.Number(1);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Array
-判断是否为 nrray
+
+
+## `.Array(any): type`
+判断是否为 `Array` 实例。
+
 
 ```js
-typeis.Array(any);
+typeis.Array([]);
+// => true
 ```
-### any
+
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Object
-判断是否为 object
+
+
+## `.Object(any): type`
+判断是否为 `Object` 实例。
 
 ```js
-typeis.Object(any);
+typeis.Object({});
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Function
-判断是否为 function
+
+
+## `.Function(any): type`
+判断是否为 `Function` 实例。
 
 ```js
-typeis.Function(any);
+typeis.Function(function(){});
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Null
-判断是否为 null
+
+
+## `.Null(any): type`
+判断是否为 `null`
 
 ```js
-typeis.Null(any);
+typeis.Function(null);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Undefined
-判断是否为 undefined
+
+
+## `.Undefined(any): type`
+判断是否为 `undefined`。
 
 ```js
-typeis.Undefined(any);
+typeis.Undefined();
+// => true
 ```
-### any
+
+如果要判断一个变量是否为 `undefined`，安全的做法是使用 `typeof`。
+
+```js
+typeis(undefinedVarible) === 'undefined';
+// 将会抛错，因为 `undefinedVarible` 未定义
+
+typeof undefinedVarible === 'undefined';
+// 不会抛错
+```
+
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Regexp
-判断是否为 regexp
+
+
+## `.Regexp(any): type`
+判断是否为 `RegExp` 实例。
 
 ```js
-typeis.Regexp(any);
+typeis.Regexp(/a/);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Boolean
-判断是否为 boolean
+
+
+## `.Boolean(any): type`
+判断是否为 `Boolean` 实例。
 
 ```js
-typeis.Boolean(any);
+typeis.Boolean(true);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Window
-判断是否为 window
+
+
+## `.Window(any): type`
+判断是否为 `window`。
 
 ```js
-typeis.Window(any);
+typeis.Window(window.window);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Document
-判断是否为 document
+
+
+## `.Document(any): type`
+判断是否为 `document`。
 
 ```js
-typeis.Document(any);
+typeis.Document(window.document);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Element
-判断是否为 element
+
+
+## `.Element(any): type`
+判断是否为 `HTMLElement` 实例。
 
 ```js
-typeis.Element(any);
+typeis.Element(document.createElement('div'));
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Nan
-判断是否为 nan
+
+
+## `.Nan(any): type`
+判断是否为 `NaN`，别名`.NaN(any): type`。
 
 ```js
-typeis.Nan(any);
+typeis.Nan(NaN);
+typeis.NaN(NaN);
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Arguments
-判断是否为 arguments
+
+
+## `.Arguments(any): type`
+判断是否为 `arguments`
 
 ```js
-typeis.Arguments(any);
+(function() {
+    typeis.Arguments(arguments);
+    // => true
+}());
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Date
-判断是否为 date
+
+
+## `.Date(any): type`
+判断是否为 `Date` 实例。
 
 ```js
-typeis.Date(any);
+typeis.Date(new Date());
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
 
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
 
-## Error
-判断是否为 error
+
+
+## `.Error(any): type`
+判断是否为 `Error` 实例。
 
 ```js
-typeis.Error(any);
+typeis.Error(new Error(''));
+// => true
 ```
-### any
+
+### `any`
 - 类型：`*`
 - 说明：任意对象
+
+### `type`
+- 类型：`Boolean`
+- 说明：如果符合，则返回 `true`
+
 
 
 

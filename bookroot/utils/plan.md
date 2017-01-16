@@ -252,16 +252,16 @@ plan.taskSync(function taskA() {
 
 
 
-## `#wait(time): plan`
+## `#wait(timeout): plan`
 空闲等待时间，单位 ms，链式调用返回 `plan`。
 ```js
 plan.wait(10);
 // 等待 10ms 
 ```
 
-### `time`
+### `timeout`
 - 类型：`Number`
-- 说明：等待时间，异步
+- 说明：超时时间，单位 ms，异步
 
 
 
