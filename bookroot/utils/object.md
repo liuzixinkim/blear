@@ -129,7 +129,7 @@ object.define({}, {
 - 类型：`Function`
 - 说明：设值函数
 
-#### desc.value
+#### `desc.value`
 - 类型：`Boolean`
 - 说明：固定值
 
@@ -137,8 +137,6 @@ object.define({}, {
 ## `.map(obj, callback(val, key)): mappedObj`
 对象包装，返回一个新的对象。
 ```js
-object.map(obj, callback(val, key));
-
 object.map({a: 1, b: 2}, function(val, key) {
     return val + val;
 });
@@ -246,7 +244,7 @@ object.supply({a: 1}, {a: 2, b: 3}, {c: 4});
 ## `.path(path): pathList`
 根据路径获取路径数组
 ```js
-object.path('a.b.c')
+object.path('a.b.c');
 // => ["a", "b", "c"]
 ```
 ### `path`
