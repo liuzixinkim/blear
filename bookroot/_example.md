@@ -8,12 +8,14 @@
 # Example
 ```js
 var example = require('blear.example');
+
+example.balabala....
 ```
 
 
 
 
-# Function
+# `new Example(...)`
 本身是一个方法
 
 
@@ -22,6 +24,12 @@ var example = require('blear.example');
 
 # Prototype
 原型属性、方法
+
+## `#bala(arg)`
+
+### `arg`
+- 类型：`Object`
+- 说明：巴拉巴拉
 
 
 
@@ -32,6 +40,7 @@ var example = require('blear.example');
 静态属性、方法
 
 
+## `.bala`
 
 
 
