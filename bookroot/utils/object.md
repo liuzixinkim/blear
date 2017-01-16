@@ -10,88 +10,70 @@ var object = require('blear.utils.object');
 
 # Static
 
-## keys
+## `.keys(obj): keys`
 返回对象的静态键。
 
-```js
-object.keys(obj);
-```
-
-### obj
+### `obj`
 - 类型：`Object`
 
 
-### 返回值
+### `keys`
 - 类型：`Array`
 
 
-## isPlain
+## `.isPlain(obj): isPlain`
 判断对象是否为无属性对象。
-```js
-object.isPlan(obj);
-```
 
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：传入对象
 
-### 返回值
+### `isPlain`
 - 类型：`Boolean`
 
 
 
-## hasOwn
+## `.hasOwn(obj, key): hasOwn`
 判断对象是否有自身属性，即静态属性
-```js
-object.hasOwn(obj, key);
-```
 
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：待判断对象
 
-### key
+### `key`
 - 类型：`String`
 - 说明：字段名称
 
-### 返回值
+### `hasOwn`
 - 类型：`Boolean`
 
 
-## each
+## `.each(obj, callback(key, val)): undefined`
 对象的遍历。
-```js
-object.each(obj, callback(key, val));
-```
 
-### obj
+### `obj`
 - 类型：`Object`
 
-### callback
+### `callback`
 - 类型：`Function`
 - 说明：返回 `false` 终止遍历
 
-#### this
+#### `callback: this`
 - 类型：`Object`
 - 说明：指向当前传入的对象 `obj`
 
-#### key
+#### `callback: key`
 - 类型：`String`
 - 说明：字段名称
 
-#### val
+#### `callback: val`
 - 类型：`*`
 - 说明：对应字段的值
 
-### 返回值
-- 类型：`undefined`
 
-
-## define
+## `.define(obj, key, [desc]): undefiend`
 定义一个对象的属性
 ```js
-object.define(obj, key, [desc]);
-
 object.define({}, 'a', {
     get: function () {
         return 1
@@ -113,37 +95,37 @@ object.define({}, {
 });
 ```
 
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：待定义属性的对象。
 
-### key
+### `key`
 - 类型：`String | Object`
 - 说明：如果是字符串，则必须传入 desc，作为该字段的描述，如果是对象，则批量定义对象属性
 
-### desc
+### `desc`
 - 类型：`Object`
 - 说明：对字段的描述
 
 描述的值有：
 
-#### desc.writable
+#### `desc.writable`
 - 类型：`Boolean`
 - 说明：是否可以被重写
 
-#### desc.enumerable
+#### `desc.enumerable`
 - 类型：`Boolean`
 - 说明：是否可以被重写
 
-#### desc.configurable
+#### `desc.configurable`
 - 类型：`Boolean`
 - 说明：是否可以被配置，即是否可以被删除
 
-#### desc.get
+#### `desc.get`
 - 类型：`Function`
 - 说明：取值函数
 
-#### desc.set
+#### `desc.set`
 - 类型：`Function`
 - 说明：设值函数
 
@@ -152,7 +134,7 @@ object.define({}, {
 - 说明：固定值
 
 
-## map
+## `.map(obj, callback(val, key)): mappedObj`
 对象包装，返回一个新的对象。
 ```js
 object.map(obj, callback(val, key));
@@ -162,166 +144,161 @@ object.map({a: 1, b: 2}, function(val, key) {
 });
 // => {a: 2, b: 4}
 ```
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：待包装对象
 
-### callback
+### `callback`
 - 类型：`Function`
 - 说明：返回值作为该字段新值
 
-#### this
+#### `callback: this`
 - 类型：`Object`
 - 说明：指向当前传入的对象
 
-#### val
+#### `callback: val`
 - 类型：`*`
 - 说明：字段值
 
-#### key
+#### `callback: key`
 - 类型：`String`
 - 说明：字段
 
+### `mappedObj`
+- 类型：`Object`
+- 说明：包装后的对象
 
-## filter
+
+## `.filter(obj, callback(val, key)): filteredObj`
 对象过滤，返回一个新对象。
-```js
-object.filter(obj, callback(val, key));
-```
 
-### obj
+### `obj`
 - 类型：`Object`
 
-### callback
+### `callback`
 - 类型：`Function | Array`
 - 说明：返回 `true` 则该字段被筛选。
 
-#### this
+#### `callback: this`
 - 类型：`Object`
 - 说明：指向当前传入的对象
 
-#### val
+#### `callback: val`
 - 类型：`*`
 - 说明：字段值
 
-#### key
+#### `callback: key`
 - 类型：`String`
 - 说明：字段
 
+### `filteredObj`
+- 类型：`Object`
+- 说明：过滤后的对象
 
-## assign
+
+## `.assign([deep], source, target...): assignedSource`
 分配对象 target 上不为 undefined 的属性到 source 上，与 `jQuery.extend` 功能相同。
 ```js
-object.assign([deep], source, target...);
-
 object.assign({a: 1}, {a: 2, b: 3}, {c: 4});
 // => {a: 2, b: 3, c: 4}
 ```
 
-### deep
+### `deep`
 - 类型：`Boolean`
 - 说明：是否深度处理
 - 默认：`false`
 
-### source
+### `source`
 - 类型：`Object | Array`
 
-### target
+### `target`
 - 类型：`*`
 - 说明：`target` 可以为任意个，后面同名属性**会**覆盖前面的
 
-### 返回值
+### `assignedSource`
 - 类型：`Object | Array`
 - 说明：指向 `source` 的对象
 
 
-## supply
+## `.supply(deep, source, ...target): supplyedSource`
 分配属性，与 `object.assign` 功能相反。
 ```js
-object.supply(deep, source, target);
-
 object.supply({a: 1}, {a: 2, b: 3}, {c: 4});
 // => {a: 1, b: 3, c: 4}
 ```
-### deep
+### `deep`
 - 类型：`Boolean`
 - 说明：是否深度处理
 - 默认：`false`
 
-### source
+### `source`
 - 类型：`Object | Array`
 
-### target
+### `target`
 - 类型：`*`
 - 说明：`target` 可以为任意个，后面同名属性**不会**覆盖前面的
 
-### 返回值
+### `supplyedSource`
 - 类型：`Object | Array`
 - 说明：指向 `source` 的对象
 
 
-## path
+## `.path(path): pathList`
 根据路径获取路径数组
 ```js
-object.path(path);
-
 object.path('a.b.c')
 // => ["a", "b", "c"]
 ```
-### path
+### `path`
 - 类型：`String | Array`
 - 说明：待处理字段字符串或数组，如果是数组则原样返回
 
-### 返回值
+### `pathList`
 - 类型：`Array`
 - 说明：字段路径数组
 
 
 
-## get
+## `.get(obj, path): val`
 根据路径返回属性值。
 ```js
-object.get(obj, path);
-
 object.get({a: {b: 1}}, 'a.b');
 // => 1
 ```
 
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：待取值对象
 
-### path
+### `path`
 - 类型：`String | Array`
 - 说明：路径字符串或数组
 
-### 返回值
+### `val`
 - 类型：`*`
 - 说明：返回路径对应属性值，如果路径不存在，返回 `undefined`。
 
 
-## set
+## `.set(obj, path, val): parent`
 根据路径设置属性值。
 ```js
-object.set(obj, path, val);
-
 object.set({a: {b: 1}}, 'a.b.c', 2);
 // => {c: 2}
 ```
 
-### obj
+### `obj`
 - 类型：`Object`
 - 说明：待取值对象
 
-### path
+### `path`
 - 类型：`String | Array`
 - 说明：路径字符串或数组
 
-### val
+### `val`
 - 类型：`*`
 - 说明：被设置的值
 
-### 返回值
+### `parent`
 - 类型：`Object | Array`
 - 说明：返回被设置的父级对象。
 
