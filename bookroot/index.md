@@ -21,6 +21,8 @@
     - [blear.utils.path](/utils/path.md)
     - [blear.utils.plan](/utils/plan.md)
     - [blear.utils.querystring](/utils/querystring.md)
+    - [blear.utils.random](/utils/random.md)
+    - [blear.utils.scope-css](/utils/scope-css.md)
     - [blear.utils.typeis](/utils/typeis.md)
 
     
@@ -29,8 +31,6 @@
     
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
-- [blear.utils.random](/utils/random.md)
-- [blear.utils.scope-css](/utils/scope-css.md)
 - [blear.utils.string](/utils/string.md)
 - [blear.utils.time](/utils/time.md)
 - [blear.utils.ua](/utils/ua.md)
