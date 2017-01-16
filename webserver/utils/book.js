@@ -29,6 +29,7 @@ var indexMD = new SafeMakrdown({
 var contentMD = new SafeMakrdown({
     xssable: false,
     mentionable: false,
+    hadingMinLevel: 2,
     linkTrustedDomains: [
         'ydr.me',
         'frontenddev.org',

@@ -1,8 +1,11 @@
 @import "../varible";
 
-
-$title-size-large: 100px;
-$title-size-small: 40px;
+$title-large-height: 100px;
+$title-large-font: 30px;
+$title-small-height: 40px;
+$title-small-font: 20px;
+$border-color: #eee;
+$small-screen-width: 750px;
 
 .progress {
   position: fixed;
@@ -16,51 +19,67 @@ $title-size-small: 40px;
 
 .body {
   $sidebar-width: 300px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
 
-  &-sidebar,
-  &-main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  @media (max-width: $small-screen-width) {
+    flex-wrap: wrap;
   }
 
   &-sidebar {
+    min-width: $sidebar-width;
     width: $sidebar-width;
-    left: 0;
-    border-right: 1px solid #eee;
 
-    @media (max-width: 650px) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: auto;
-      bottom: auto;
-      z-index: 2;
+    @media (max-width: $small-screen-width) {
+      width: 100%;
     }
   }
 
   &-main {
-    right: 0;
-    left: $sidebar-width;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-grow: 1;
+    width: calc(100% - #{$sidebar-width});
 
-    @media (max-width: 650px) {
-      left: 0;
+    @media (max-width: $small-screen-width) {
+      width: 100%;
     }
   }
 }
 
 .sidebar {
-  position: relative;
-  background: #fff;
+  border-right: 1px solid $border-color;
   height: 100%;
 
+  @media (max-width: $small-screen-width) {
+    border-right: 0;
+  }
+}
+
+.title {
+  line-height: $title-large-height;
+  color: $text-normal-color;
+  font-size: $title-large-font;
+  text-align: center;
+  border-bottom: 1px solid $border-color;
+  font-weight: normal;
+
+  a {
+    color: $text-primary-color;
+  }
+
+  @media (max-width: $small-screen-width) {
+    line-height: $title-small-height;
+    font-size: $title-small-font;
+  }
+}
+
+.nav {
   a {
     display: block;
     color: #5F5F5F;
-    line-height: 40px;
     padding: 0 16px;
+    line-height: $title-small-height;
 
     &:hover {
       background: #F3F3F3;
@@ -75,65 +94,16 @@ $title-size-small: 40px;
 
     &[href="#"] {
       &, &:link, &:visited, &:hover, &:active {
-        background: #f7f7f7;
-        color: #000;
+        color: $text-normal-color;
         cursor: default;
         pointer-events: none;
+        font-weight: 900;
       }
     }
   }
 
-  &-title {
-    font-size: 30px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-
-    a {
-      &,
-      &:hover {
-        color: $text-primary-color;
-        line-height: $title-size-large;
-        font-weight: normal;
-
-        @media (max-width: 650px) {
-          line-height: $title-size-small;
-          font-size: 20px;
-        }
-      }
-    }
-  }
-
-  &-nav {
-    position: absolute;
-    top: $title-size-large;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-
-    @media (max-width: 650px) {
-      position: fixed;
-      top: $title-size-small;
-      z-index: 3;
-      width: 50%;
-      min-width: 300px;
-      border-right: 1px solid #EEE;
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-      -webkit-transition: all 300ms;
-      transition: all 300ms;
-    }
-
-    &.active {
-      -webkit-transform: translateX(0);
-    }
-
-    a {
-      position: relative;
-      font-size: 14px;
-    }
+  & > ul > li {
+    margin-bottom: 2em;
   }
 
   li {
@@ -148,41 +118,15 @@ $title-size-small: 40px;
       }
     }
   }
-
-  &-action {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 40px;
-    padding: 8px 16px;
-    z-index: 2;
-
-    @media (max-width: 650px) {
-      display: block;
-    }
-
-    i {
-      width: 100%;
-      height: 2px;
-      background-color: #808080;
-      display: block;
-      margin-top: 5px;
-      border-radius: 1px;
-    }
-  }
 }
 
 .content {
   padding: 0 30px;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 650px) {
-    margin-top: $title-size-small;
-    padding: 5px;
+  @media (max-width: $small-screen-width) {
+    padding: 15px;
   }
 }
 

@@ -38,18 +38,18 @@
 
 <div id="progress" class="progress"></div>
 
-<div class="body clearfix">
-    <div class="body-sidebar pull-left">
+<section class="body">
+    <aside class="body-sidebar">
         <div class="sidebar">
-            <h1 class="sidebar-title"><a href="/">{{=title}}</a></h1>
-            <nav class="sidebar-nav" id="nav">{{=page.sidebar}}</nav>
-            <div class="sidebar-action" id="navAction"><i></i><i></i><i></i></div>
+            <h1 class="title"><a href="/">{{=title}}</a></h1>
+            <nav class="sidebar-nav nav" id="nav">{{=page.sidebar}}</nav>
         </div>
-    </div>
-    <div class="body-main" id="main">
+    </aside>
+    <main class="body-main" id="main">
+        <h1 class="title" id="title">{{=page.name}}</h1>
         <div class="content typo" id="content">{{=page.content}}</div>
-    </div>
-</div>
+    </main>
+</section>
 
 
 <div class="none">

@@ -127,6 +127,16 @@ var generateDependencies = function (module) {
 };
 
 
+// 生成标题
+var generateTitle = function (pageName) {
+    if (!pageName) {
+        return '';
+    }
+
+    return '<h1 class="title">' + pageName + '</h1>';
+};
+
+
 // book
 var buildController = function (pageData) {
     return function (req, res, next) {
