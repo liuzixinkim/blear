@@ -66,24 +66,24 @@ new MVVM({
 <div @else-if="bool2">if bool1 == false && bool2 == true</div>
 ```
 
-### @else
+### `@else`
 ```html
 <div @if="bool1">if bool1 == true</div>
 <div @else-if="bool2">if bool1 == false && bool2 == true</div>
 <div @else>if bool1 == false && bool2 == false</div>
 ```
 
-### @show
+### `@show`
 ```html
 <div @show="bool1">if bool1 == true show</div>
 ```
 
-### @hide
+### `@hide`
 ```html
 <div @hide="bool1">if bool1 == true hide</div>
 ```
 
-### @for
+### `@for`
 **list**必须为数组。
 ```html
 <div @for="item in list"></div>
@@ -91,24 +91,24 @@ new MVVM({
 <div @for="(index, item) in list"></div>
 ```
 
-### @pre
+### `@pre`
 ```html
 <div @pre>{{这里必须原样输出}}</div>
 ```
 
-### @model
+### `@model`
 模型指令。用来监听 DOM 数据变化。
 ```html
 <input type="text" @model="userName">
 ```
 
 ## 绑定指令
-### :{attrName}
+### `:{attrName}`
 ```html
 <div :any-attr="varible"></div>
 ```
 
-### :class
+### `:class`
 ```js
 var data = {
     isClassA: true,
@@ -118,7 +118,7 @@ var data = {
 }
 ```
 
-<div>+</div> 
+<div class="split text_center">+</div> 
 
 ```html
 <div class="a" :class="{class-a: isClassA, class-b: isClassB}"></div>
@@ -126,7 +126,7 @@ var data = {
 <div class="c" :class="[classA, classB, {class-a: isClassA, class-b: isClassB}]"></div>
 ```
 
-<div>=</div>
+<div class="split text_center">=</div> 
 
 ```html
 <div class="a class-a"></div>
