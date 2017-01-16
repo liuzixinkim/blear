@@ -16,24 +16,22 @@ var debug = require('blear.utils.debug');
 
 # Static
 
-## deprecate
+## `.deprecate(fn, [msg]): deprecatedFn`
 标记某个方法被废弃使用。
-```js
-debug.deprecate(fn, [msg]);
-```
 
-### fn
+
+### `fn`
 - 类型：`Function`
 - 说明：被替代方法
 
-### msg
+### `msg`
 - 类型：`String`
 - 说明：废弃说明
 - 默认：`(function.name || 该) 方法已被废弃，请及时修改！`
 
-### 返回值
+### `deprecatedFn`
 - 类型：`Function`
-- 说明：废弃的方法
+- 说明：被废弃的方法
 
 
 
