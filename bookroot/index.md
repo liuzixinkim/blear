@@ -27,6 +27,8 @@
     - [blear.utils.time](/utils/time.md)
     - [blear.utils.typeis](/utils/typeis.md)
     - [blear.utils.ua](/utils/ua.md)
+    - [blear.utils.uri](/utils/uri.md)
+    - [blear.utils.url](/utils/url.md)
 
     
     
@@ -34,8 +36,6 @@
     
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
-- [blear.utils.uri](/utils/uri.md)
-- [blear.utils.url](/utils/url.md)
 - [blear.utils.validator](/utils/validator.md)
 - [blear.utils.weixin](/utils/weixin.md)
 </div>
