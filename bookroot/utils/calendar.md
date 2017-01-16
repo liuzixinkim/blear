@@ -9,11 +9,9 @@ var calendar = require('blear.utils.calendar');
 
 
 # Static
-## month
+## `.month(year, month, [options]): calendarGroup`
 月历计算。
 ```js
-calendar.month(year, month, [options]);
-
 calendar.month(2016, 3);
 // =>
 // 从 2.27 开始填充
@@ -39,33 +37,33 @@ calendar.month(2016, 3);
 // ]
 ```
 
-### year
+### `year`
 - 类型：`Number`
 - 说明：需要计算月历的年
 
-### month
+### `month`
 - 类型：`Number`
 - 说明：需要计算月历的月
 
-### options
+### `options`
 - 类型：`Object`
 - 说明：可选配置项
 
-#### options.firstDayInWeek
+#### `options.firstDayInWeek`
 - 类型：`Number`
 - 说明：每周的第一天是星期几
 - 默认：`0`，即星期日
 
-#### options.weeks
+#### `options.weeks`
 - 类型：`Number`
 - 说明：月历需要展示几周
 - 默认：自动最小周数
 
-#### options.filter
+#### `options.filter`
 - 类型：`Function`
 - 说明：对月历的一个过滤操作，但不会对其进行筛选
 
-### 返回值
+### `calendarGroup`
 - 类型：`Array`
 - 说明：一个二维数组`[[第一周的每天], [第二周的每天], ...]`
 
