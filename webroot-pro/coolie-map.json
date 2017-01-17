@@ -36,10 +36,14 @@
         ]
       },
       {
-        "dest": "/static/css/838312000ae3ea4c320bd435fef04789.css",
+        "dest": "/static/css/efcf771859060a41597890d6b2aa7517.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/common/base.css",
+            "res": []
+          },
+          {
+            "src": "../webroot-dev/static/css/common/anchor.css",
             "res": []
           },
           {
@@ -57,7 +61,7 @@
         ]
       },
       {
-        "dest": "/static/css/56f50b81a294f3da216688be23086363.css",
+        "dest": "/static/css/d5bce67e3e7c696a5ac94be06ff15e2a.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/main/index.css",
