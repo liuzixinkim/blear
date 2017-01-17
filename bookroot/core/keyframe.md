@@ -19,6 +19,7 @@ var keyframe = require('blear.core.keyframe');
 
 ## `.create([name], descriptions): name`
 在 DOM 中创建一个帧动画样式。
+生成的帧动画名称可用于 [blear.core.transform](/core/transform.md) 实现 JS 控制帧动画。
 
 ```js
 keyframe.create({
@@ -83,8 +84,4 @@ keyframe.create({
 
 
 
-
-
-# More
-这里写更多的额外内容，可以不写。
 

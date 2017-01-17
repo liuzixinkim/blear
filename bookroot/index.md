@@ -6,7 +6,7 @@
     - [blear.core.event](/core/event.md)
     - [blear.core.flexible](/core/flexible.md)
     - [blear.core.jsonp](/core/jsonp.md)
-    - [blear.core.keyframe](#)
+    - [blear.core.keyframe](/core/keyframe.md)
     - [blear.core.layout](#)
     - [blear.core.modification](#)
     - [blear.core.querystring](#)
