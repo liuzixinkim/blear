@@ -3,7 +3,7 @@
     - [blear.core.animation](/core/animation.md)
     - [blear.core.attribute](/core/attribute.md)
     - [blear.core.cookie](/core/cookie.md)
-    - [blear.core.event](#)
+    - [blear.core.event](/core/event.md)
     - [blear.core.flexible](#)
     - [blear.core.hashbang](#)
     - [blear.core.jsonp](#)

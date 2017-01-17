@@ -70,6 +70,10 @@ plan
                 if (/update/.test(key)) {
                     json.update = mathes[2].trim();
                 }
+
+                if (/author/.test(key)) {
+                    json.author = mathes[2].trim();
+                }
             });
 
             if (!json.update) {
@@ -82,6 +86,7 @@ plan
 
             json.create = json.create || '未明确';
             json.update = json.update || '未明确';
+            json.author = json.author || '#云淡然';
             json.name = pkg.name;
             json.version = pkg.version;
             json.github = pkg.repository.url;

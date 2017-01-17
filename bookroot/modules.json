@@ -1,5 +1,6 @@
 {
   "blear.classes.mvvm": {
+    "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.classes.mvvm",
@@ -37,6 +38,7 @@
     }
   },
   "blear.core.ajax": {
+    "author": "zcl",
     "create": "2016-04-12 14:39",
     "update": "2017年01月17日10:34:48",
     "name": "blear.core.ajax",
@@ -62,6 +64,7 @@
     }
   },
   "blear.core.animation": {
+    "author": "ydr.me",
     "create": "2016-04-08 21:13",
     "update": "2016-04-08 21:13",
     "name": "blear.core.animation",
@@ -89,6 +92,7 @@
     }
   },
   "blear.core.attribute": {
+    "author": "ydr.me",
     "create": "2016年04月14日22:42:03",
     "update": "2016年04月14日22:42:03",
     "name": "blear.core.attribute",
@@ -116,6 +120,7 @@
     }
   },
   "blear.core.cookie": {
+    "author": "ydr.me",
     "create": "2016-04-08 22:45",
     "update": "2016-04-08 22:45",
     "name": "blear.core.cookie",
@@ -137,9 +142,33 @@
       "blear.utils.querystring": "1.x"
     }
   },
+  "blear.core.event": {
+    "author": "ydr.me",
+    "create": "2016-04-12 15:04",
+    "update": "2016年04月16日12:34:25",
+    "name": "blear.core.event",
+    "version": "1.0.5",
+    "github": "https://github.com/blearjs/blear.core.event",
+    "keywords": [
+      "blear",
+      "core",
+      "event",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 事件",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.core.selector": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.access",
     "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.access",
@@ -161,6 +190,7 @@
   "blear.utils.array": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.array",
     "version": "1.0.12",
     "github": "https://github.com/blearjs/blear.utils.array",
@@ -179,6 +209,7 @@
   "blear.utils.calendar": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.calendar",
     "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.utils.calendar",
@@ -199,6 +230,7 @@
     }
   },
   "blear.utils.canvas-content": {
+    "author": "ydr.me",
     "create": "2016年08月20日10:46:33",
     "update": "2016年08月20日10:46:33",
     "name": "blear.utils.canvas-content",
@@ -222,6 +254,7 @@
     }
   },
   "blear.utils.canvas-img": {
+    "author": "ydr.me",
     "create": "2016年08月20日10:21:42",
     "update": "2016年08月20日10:21:42",
     "name": "blear.utils.canvas-img",
@@ -244,6 +277,7 @@
   "blear.utils.collection": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.collection",
     "version": "1.0.4",
     "github": "https://github.com/blearjs/blear.utils.collection",
@@ -264,6 +298,7 @@
   "blear.utils.compatible": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.compatible",
     "version": "1.0.6",
     "github": "https://github.com/blearjs/blear.utils.compatible",
@@ -281,6 +316,7 @@
     }
   },
   "blear.utils.date": {
+    "author": "ydr.me",
     "create": "2016年5月18日13:45:44",
     "update": "2016年11月26日14:29:44",
     "name": "blear.utils.date",
@@ -305,6 +341,7 @@
     }
   },
   "blear.utils.debug": {
+    "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.utils.debug",
@@ -323,6 +360,7 @@
   "blear.utils.easing": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.easing",
     "version": "1.0.6",
     "github": "https://github.com/blearjs/blear.utils.easing",
@@ -343,6 +381,7 @@
     }
   },
   "blear.utils.function": {
+    "author": "云淡然",
     "update": "2016年11月26日14:41:29",
     "create": "2016年11月26日14:41:29",
     "name": "blear.utils.function",
@@ -366,6 +405,7 @@
     }
   },
   "blear.utils.hashbang": {
+    "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.utils.hashbang",
@@ -386,6 +426,7 @@
   "blear.utils.image": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.image",
     "version": "1.0.2",
     "github": "https://github.com/blearjs/blear.utils.image",
@@ -404,6 +445,7 @@
     }
   },
   "blear.utils.json": {
+    "author": "云淡然",
     "update": "2016年11月26日15:36:18",
     "create": "2016年11月26日15:36:18",
     "name": "blear.utils.json",
@@ -425,6 +467,7 @@
   "blear.utils.loader": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.loader",
     "version": "1.0.2",
     "github": "https://github.com/blearjs/blear.utils.loader",
@@ -446,6 +489,7 @@
   "blear.utils.number": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.number",
     "version": "1.0.3",
     "github": "https://github.com/blearjs/blear.utils.number",
@@ -463,6 +507,7 @@
     }
   },
   "blear.utils.object": {
+    "author": "云淡然",
     "update": "2016年11月26日15:47:34",
     "create": "2016年11月26日15:47:34",
     "name": "blear.utils.object",
@@ -480,6 +525,7 @@
   "blear.utils.path": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.path",
     "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.utils.path",
@@ -497,6 +543,7 @@
     }
   },
   "blear.utils.plan": {
+    "author": "ydr.me",
     "create": "2017-01-08 14:16",
     "update": "2017-01-08 14:16",
     "name": "blear.utils.plan",
@@ -531,6 +578,7 @@
   "blear.utils.querystring": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.querystring",
     "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.querystring",
@@ -553,6 +601,7 @@
   "blear.utils.random": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.random",
     "version": "1.0.3",
     "github": "https://github.com/blearjs/blear.utils.random",
@@ -572,6 +621,7 @@
     }
   },
   "blear.utils.scope-css": {
+    "author": "ydr.me",
     "create": "2016年05月30日20:00:23",
     "update": "2016年05月30日20:00:23",
     "name": "blear.utils.scope-css",
@@ -591,6 +641,7 @@
   "blear.utils.string": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.string",
     "version": "1.0.8",
     "github": "https://github.com/blearjs/blear.utils.string",
@@ -613,6 +664,7 @@
   "blear.utils.time": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.time",
     "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.utils.time",
@@ -633,6 +685,7 @@
   "blear.utils.typeis": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.typeis",
     "version": "1.0.3",
     "github": "https://github.com/blearjs/blear.utils.typeis",
@@ -648,6 +701,7 @@
     "dependencies": {}
   },
   "blear.utils.ua": {
+    "author": "ydr.me",
     "create": "2016-04-09 15:53",
     "update": "2016-04-09 15:53",
     "name": "blear.utils.ua",
@@ -667,6 +721,7 @@
   "blear.utils.uri": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.uri",
     "version": "1.0.2",
     "github": "https://github.com/blearjs/blear.utils.uri",
@@ -683,6 +738,7 @@
   "blear.utils.url": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.url",
     "version": "1.0.17",
     "github": "https://github.com/blearjs/blear.utils.url",
@@ -707,6 +763,7 @@
   "blear.utils.validator": {
     "update": "未明确",
     "create": "未明确",
+    "author": "#云淡然",
     "name": "blear.utils.validator",
     "version": "1.0.4",
     "github": "https://github.com/blearjs/blear.utils.validator",
@@ -721,6 +778,7 @@
     "dependencies": {}
   },
   "blear.utils.weixin": {
+    "author": "ydr.me",
     "create": "2015-12-15 10:40",
     "update": "2016年05月27日15:50:59",
     "name": "blear.utils.weixin",

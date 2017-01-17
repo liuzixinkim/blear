@@ -53,9 +53,9 @@ var generateIntroduction = function (module) {
     var html = '<ul>';
     var list = [
         'description',
+        'author',
         'create',
         'update',
-        'version',
         'github'
     ];
 
