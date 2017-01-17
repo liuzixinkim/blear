@@ -83,18 +83,6 @@
     .content {
       padding: 15px; } }
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px; }
-  .hero img {
-    display: inline-block; }
-  .hero-title {
-    font-size: 60px;
-    font-weight: normal; }
-  .hero-desc {
-    font-size: 20px;
-    font-weight: normal; }
-
 .avatar {
   width: 30px;
   height: 30px;
