@@ -157,7 +157,7 @@ var buildController = function (pageData) {
                 content: pageData.content
             });
         }
-
+        console.log(data, 111)
         res.render('index.html', data);
     };
 };
