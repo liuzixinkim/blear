@@ -165,6 +165,24 @@
       "blear.core.selector": "1.x"
     }
   },
+  "blear.core.flexible": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.core.flexible",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.core.flexible",
+    "keywords": [
+      "blear",
+      "core",
+      "flexible",
+      "rem",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "移动端 rem 动态计算",
+    "dependencies": {}
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

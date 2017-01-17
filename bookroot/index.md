@@ -4,7 +4,7 @@
     - [blear.core.attribute](/core/attribute.md)
     - [blear.core.cookie](/core/cookie.md)
     - [blear.core.event](/core/event.md)
-    - [blear.core.flexible](#)
+    - [blear.core.flexible](/core/flexible.md)
     - [blear.core.hashbang](#)
     - [blear.core.jsonp](#)
     - [blear.core.keyframe](#)
