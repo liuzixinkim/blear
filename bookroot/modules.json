@@ -36,6 +36,31 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.core.ajax": {
+    "create": "2016-04-12 14:39",
+    "update": "2017年01月17日10:34:48",
+    "name": "blear.core.ajax",
+    "version": "1.0.9",
+    "github": "https://github.com/blearjs/blear.core.ajax",
+    "keywords": [
+      "blear",
+      "core",
+      "selector",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "AJAX",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.querystring": "1.x",
+      "blear.utils.json": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.url": "1.x",
+      "blear.utils.compatible": "1.x",
+      "blear.utils.function": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",
