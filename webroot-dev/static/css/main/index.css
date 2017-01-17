@@ -94,3 +94,12 @@
   .hero-desc {
     font-size: 20px;
     font-weight: normal; }
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1em; }
