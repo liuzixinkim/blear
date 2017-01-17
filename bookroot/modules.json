@@ -61,6 +61,60 @@
       "blear.utils.function": "1.x"
     }
   },
+  "blear.core.animation": {
+    "create": "2016-04-08 21:13",
+    "update": "2016-04-08 21:13",
+    "name": "blear.core.animation",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.core.animation",
+    "keywords": [
+      "blear",
+      "core",
+      "animation",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 动画",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.easing": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.layout": "1.x"
+    }
+  },
+  "blear.core.attribute": {
+    "create": "2016年04月14日22:42:03",
+    "update": "2016年04月14日22:42:03",
+    "name": "blear.core.attribute",
+    "version": "1.0.11",
+    "github": "https://github.com/blearjs/blear.core.attribute",
+    "keywords": [
+      "blear",
+      "core",
+      "attribute",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 属性",
+    "dependencies": {
+      "blear.utils.typeis": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.compatible": "1.x",
+      "blear.utils.json": "1.x",
+      "blear.utils.validator": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.polyfills.data-set": "1.x",
+      "blear.polyfills.class-list": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

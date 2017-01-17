@@ -1,5 +1,7 @@
 - [core 模块](#)
     - [blear.core.ajax](/core/ajax.md)
+    - [blear.core.animation](/core/animation.md)
+    - [blear.core.attribute](/core/attribute.md)
 - [classes 模块](#)
     - [blear.classes.mvvm](/classes/mvvm.md)
 - [utils 模块](#)
