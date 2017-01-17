@@ -136,12 +136,128 @@ attribute.hasAttr(divEl, 'id');
 
 
 ## `.prop(el, propKey, [propVal]): propVal`
+设置 DOM 特性。延伸：[JS DOM 的attribute 与 property](http://frontenddev.org/link/js-dom-attribute-and-property.html)。
+```js
+attribute.prop(divEl, 'xxxx', {a: 1});
+
+attribute.prop(divEl, 'xxxx');
+// => {a: 1}
+```
+### `el`
+- 类型：`HTMLElement`
+
+### `propKey`
+- 类型：`String`
+- 说明：任意特性键
+
+### `propVal`
+- 类型：`*`
+- 说明：任意特性值，如果为空，则为特性键返回值
+
+
+
 ## `.data(el, dataKey, [dataVal]): dataVal`
+或者或设置 dataset。
+```js
+attribute.data(divEl, 'aBc', [1, 2, 3]);
+// <div data-a-b-c="[1, 2, 3]">
+
+attribute.data(divEl, 'a-b-c');
+// => [1, 2, 3]
+```
+
+### `el`
+- 类型：`HTMLElement`
+
+### `dataKey`
+- 类型：`String`
+- 说明：任意属性键，会将驼峰形式转换为 `-` 分隔符小写形式
+
+### `dataVal`
+- 类型：`*`
+- 说明：任意属性值，如果为空，则为属性键返回值
+
+
 ## `.addClass(el, className): undefined`
+添加 DOM className。
+```js
+attribute.addClass(divEl, 'classA');
+attribute.addClass(divEl, 'classA classB');
+```
+
+### `el`
+- 类型：`HTMLElement`
+
+### `className`
+- 类型：`String`
+- 说明：多个 className 使用空格分开
+
+
 ## `.removeClass(el, className): undefined`
-## `.hasClass(el, className): undefined`
+移除 DOM className。
+```js
+attribute.removeClass(divEl, 'classA');
+attribute.removeClass(divEl, 'classA classB');
+```
+
+### `el`
+- 类型：`HTMLElement`
+
+### `className`
+- 类型：`String`
+- 说明：多个 className 使用空格分开
+
+
+
+## `.hasClass(el, className): hasClass`
+判断 DOM 是否包含一个 className。
+### `el`
+- 类型：`HTMLElement`
+
+### `className`
+- 类型：`String`
+- 说明：只能是一个 className
+
+### `hasClass`
+- 类型：`Boolean`
+
+
 ## `.html(el, [html]): html`
+设置、获取 DOM 的 innerHTML。
+
+```js
+attribute.html(divEl, '<b>Hello</b>');
+// <div><b>Hello</b></div>
+
+attribute.html(divEl);
+// "<b>Hello</b>"
+```
+
+### `el`
+- 类型：`HTMLElement`
+
+### `html`
+- 类型：`String`
+- 说明：如果为空，则为返回值
+
+
 ## `.text(el, [text]): text`
+设置、获取 DOM 的 textContent。
+
+```js
+attribute.text(divEl, '<b>Hello</b>');
+// <div>&lt;b&gt;Hello&lt;/b&gt;</div>
+
+attribute.text(divEl);
+// "<b>Hello</b>"
+```
+
+### `el`
+- 类型：`HTMLElement`
+
+### `text`
+- 类型：`String`
+- 说明：如果为空，则为返回值
 
 
 
@@ -155,5 +271,5 @@ attribute.hasAttr(divEl, 'id');
 
 
 # More
-这里写更多的额外内容，可以不写。
+- JS DOM 的attribute 与 property：<http://frontenddev.org/link/js-dom-attribute-and-property.html>
 
