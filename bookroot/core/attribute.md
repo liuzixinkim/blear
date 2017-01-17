@@ -14,7 +14,7 @@ var attribute = require('blear.core.attribute');
 
 
 # Static
-## `.css(cssKey, cssVal): undefined`
+## `.css(cssKey, cssVal): keyValMap`
 根据浏览器兼容性，返回兼容性的 css key-val 键值对。
 ```js
 attribute.css('appearance', 'none');
@@ -38,6 +38,18 @@ attribute.css('transform', {
 ### `cssVal`
 - 类型：`String | Number | Object`
 - 说明：标准 css 值
+
+### `keyValMap`
+- 类型：`Object`
+- 说明：包含 `key`、`val` 的键值对
+
+### `keyValMap.key`
+- 类型：`String`
+- 说明：css 键
+
+### `keyValMap.val`
+- 类型：`String`
+- 说明：css 值
 
 
 ## `.style(el, cssKey, cssVal): cssVal`
