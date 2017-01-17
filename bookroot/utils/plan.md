@@ -7,7 +7,7 @@
 
 # Example
 ```js
-var path = require('blear.utils.plan');
+var plan = require('blear.utils.plan');
 ```
 
 plan 是一个同、异步任务串、并行流程处理工具。
