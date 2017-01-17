@@ -51,18 +51,19 @@
 
 .nav a {
   display: block;
-  color: #5F5F5F;
   padding: 0 16px;
   line-height: 40px; }
-  .nav a:hover {
-    background: #F3F3F3; }
-  .nav a:link, .nav a:visited, .nav a:hover, .nav a:active {
-    text-decoration: none; }
-  .nav a[href="#"], .nav a[href="#"]:link, .nav a[href="#"]:visited, .nav a[href="#"]:hover, .nav a[href="#"]:active {
-    color: #333;
-    cursor: default;
-    pointer-events: none;
-    font-weight: 900; }
+
+.nav li a[href="#"] {
+  color: #333;
+  cursor: default;
+  pointer-events: none;
+  font-weight: 900; }
+
+.nav li li a[href="#"] {
+  color: #ccc;
+  pointer-events: none;
+  font-weight: normal; }
 
 .nav > ul > li {
   margin-bottom: 2em; }

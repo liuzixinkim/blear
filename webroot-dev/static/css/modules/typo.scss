@@ -8,26 +8,7 @@
   line-height: 1.5;
 
   a {
-    text-decoration: none;
     margin: 0 3px;
-
-    &:link {
-      color: $text-link-normal-color;
-    }
-
-    &:visited {
-      color: $text-link-visited-color;
-    }
-
-    &:hover {
-      border-bottom: 1px solid;
-      text-decoration: none;
-      color: $text-link-hover-color;
-    }
-
-    &:active {
-      color: $text-link-active-color;
-    }
   }
 
   p, pre, dl, form, hr, table, blockquote {

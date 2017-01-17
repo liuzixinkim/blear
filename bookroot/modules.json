@@ -115,6 +115,28 @@
       "blear.polyfills.class-list": "1.x"
     }
   },
+  "blear.core.cookie": {
+    "create": "2016-04-08 22:45",
+    "update": "2016-04-08 22:45",
+    "name": "blear.core.cookie",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.core.cookie",
+    "keywords": [
+      "blear",
+      "core",
+      "cookie",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "浏览器核心 cookie",
+    "dependencies": {
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.json": "1.x",
+      "blear.utils.uri": "1.x",
+      "blear.utils.querystring": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

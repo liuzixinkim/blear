@@ -7,52 +7,8 @@
 
 # Example
 ```js
-var example = require('blear.core.example');
+var cookie = require('blear.core.cookie');
 ```
-
-
-
-
-# `new Example(...)`
-本身是一个方法
-
-
-语法规则
-```text
-# 代表原型方法、属性
-. 代表静态方法、属性
-[] 代表可选
-() 代表函数，里面填参数
-(): 函数末尾的表示函数的返回值
-fn: a 表示 fn 函数的形参 
-
-标题需抽象写明方法的形参，如
-# `#getUserInfo(userName, [options], callback(err, userInfo)): someReturn`
-
-在说明各个参数，分别都要写明，甚至包括函数的 this
-
-## `userName`
-## `options`
-### `options.key1`
-### `options.key2`
-## `callback`
-### `callback: this`
-### `callback: err`
-### `callback: userInfo`
-## `someReturn`
-```
-
-
-
-
-# Prototype
-原型属性、方法
-
-## `#bala(arg)`
-
-### `arg`
-- 类型：`Object`
-- 说明：巴拉巴拉
 
 
 
@@ -60,10 +16,175 @@ fn: a 表示 fn 函数的形参
 
 
 # Static
-静态属性、方法
+
+## `.get(name): value`
+获取 cookie。
+
+```js
+cookie.get('token');
+// => "balabala"
+```
+
+### `name`
+- 类型：`String`
+- 说明：cookie 名称
+
+### `value`
+- 类型：`String`
+- 说明：对应 cookie 值
 
 
-## `.bala`
+
+## `.getJSON(name): json`
+获取 cookie 的 JSON 值。
+
+```js
+cookie.getJSON('userInfo');
+// => {userName: 'Cloudcome'}
+```
+
+### `name`
+- 类型：`String`
+- 说明：cookie 名称
+
+### `json`
+- 类型：`Object | null`
+- 说明：将对应cookie 值转换成 JSON 对象
+
+
+
+
+## `.set(name, value, [options]): cookieStr`
+设置 cookie。
+
+```js
+cookie.set('token', 'balabala');
+// => "token=balabala"
+```
+
+### `name`
+- 类型：`String`
+- 说明：cookie 名称
+
+### `value`
+- 类型：`String`
+- 说明：cookie 值
+
+### `options`
+- 类型：`Object`
+- 说明：配置
+
+### `options.domain`
+- 类型：`String`
+- 说明：cookie 域
+- 默认：自动设置，如果是 `localhost`，则为空；否则为 `location.hostname`
+
+### `options.expires`
+- 类型：`Number`
+- 说明：cookie 有效期，单位 ms
+- 默认：`3600000`
+
+### `options.path`
+- 类型：`String`
+- 说明：cookie 路径
+- 默认：`"/"`
+
+### `options.secure`
+- 类型：`Boolean`
+- 说明：是否以加密形式存取
+- 默认：自动根据 URL 协议设置，如果是 `https:` 则为 `true`；否则为 `false`
+
+### `cookieStr`
+- 类型：`String`
+- 说明：实际设置的字符串表达式
+
+
+## `.setJSON(name, json, [options]): cookieStr`
+设置 cookie，存储的时候转换为 JSON。
+
+```js
+cookie.set('userInfo', {
+    userName: 'cloudcome'
+});
+// => "userInfo={"userName":"cloudcome"}"
+```
+
+### `name`
+- 类型：`String`
+- 说明：cookie 名称
+
+### `json`
+- 类型：`Object`
+- 说明：cookie 值
+
+### `options`
+- 类型：`Object`
+- 说明：配置
+
+### `options.domain`
+- 类型：`String`
+- 说明：cookie 域
+- 默认：自动设置，如果是 `localhost`，则为空；否则为 `location.hostname`
+
+### `options.expires`
+- 类型：`Number`
+- 说明：cookie 有效期，单位 ms
+- 默认：`3600000`
+
+### `options.path`
+- 类型：`String`
+- 说明：cookie 路径
+- 默认：`"/"`
+
+### `options.secure`
+- 类型：`Boolean`
+- 说明：是否以加密形式存取
+- 默认：自动根据 URL 协议设置，如果是 `https:` 则为 `true`；否则为 `false`
+
+### `cookieStr`
+- 类型：`String`
+- 说明：实际设置的字符串表达式
+
+
+## `.remove(name, [options]): cookieStr`
+移除 cookie。其实移除 cookie 本质上也是一种设置操作，
+只是将 cookie 值设为空，有效期设置为过期。
+
+```js
+cookie.remove('userInfo');
+// => "userInfo=; expires=过期时间"
+```
+
+### `name`
+- 类型：`String`
+- 说明：cookie 名称
+
+### `json`
+- 类型：`Object`
+- 说明：cookie 值
+
+### `options`
+- 类型：`Object`
+- 说明：配置
+
+### `options.domain`
+- 类型：`String`
+- 说明：cookie 域
+- 默认：自动设置，如果是 `localhost`，则为空；否则为 `location.hostname`
+
+### `options.path`
+- 类型：`String`
+- 说明：cookie 路径
+- 默认：`"/"`
+
+### `options.secure`
+- 类型：`Boolean`
+- 说明：是否以加密形式存取
+- 默认：自动根据 URL 协议设置，如果是 `https:` 则为 `true`；否则为 `false`
+
+### `cookieStr`
+- 类型：`String`
+- 说明：实际设置的字符串表达式
 
 
 
@@ -73,9 +194,4 @@ fn: a 表示 fn 函数的形参
 {{ dependencies }}
 
 
-
-
-
-# More
-这里写更多的额外内容，可以不写。
 

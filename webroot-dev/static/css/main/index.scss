@@ -77,29 +77,21 @@ $small-screen-width: 750px;
 .nav {
   a {
     display: block;
-    color: #5F5F5F;
     padding: 0 16px;
     line-height: $title-small-height;
+  }
 
-    &:hover {
-      background: #F3F3F3;
-    }
+  li a[href="#"] {
+    color: $text-normal-color;
+    cursor: default;
+    pointer-events: none;
+    font-weight: 900;
+  }
 
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
-
-    &[href="#"] {
-      &, &:link, &:visited, &:hover, &:active {
-        color: $text-normal-color;
-        cursor: default;
-        pointer-events: none;
-        font-weight: 900;
-      }
-    }
+  li li a[href="#"] {
+    color: #ccc;
+    pointer-events: none;
+    font-weight: normal;
   }
 
   & > ul > li {

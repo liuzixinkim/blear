@@ -1,0 +1,26 @@
+@import "../varible";
+
+
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  &:link {
+    color: $text-link-normal-color;
+  }
+
+  &:visited {
+    color: $text-link-visited-color;
+  }
+
+  &:hover {
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: $text-link-hover-color;
+  }
+
+  &:active {
+    color: $text-link-active-color;
+  }
+}

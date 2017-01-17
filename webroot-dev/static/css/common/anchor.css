@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent; }
+  a:link {
+    color: #108ee9; }
+  a:visited {
+    color: #0e77ca; }
+  a:hover {
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: #49a9ee; }
+  a:active {
+    color: #0e77ca; }
