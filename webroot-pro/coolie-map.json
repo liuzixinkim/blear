@@ -61,7 +61,7 @@
         ]
       },
       {
-        "dest": "/static/css/d5bce67e3e7c696a5ac94be06ff15e2a.css",
+        "dest": "/static/css/ee192a550d2f3dc64d318779cdbfc2cc.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/main/index.css",
