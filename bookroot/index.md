@@ -10,7 +10,7 @@
     - [blear.core.layout](#)
     - [blear.core.modification](#)
     - [blear.core.querystring](#)
-    - [blear.core.selector](#)
+    - [blear.core.selector](/core/selector.md)
     - [blear.core.storage](#)
     - [blear.core.touch](#)
     - [blear.core.transform](#)
@@ -129,9 +129,8 @@
 - [更多](#)
     - [贡献、共享](/more/contribute.md)
 
-    
-    
+
+
 <div class="none">
 - [blear.utils.hashstring](/utils/hashstring.md)
 </div>
-    
