@@ -140,16 +140,16 @@ var generateEditLink = function (pageData) {
 
 // book
 var buildController = function (pageData) {
+    pageData.name = 'index' === pageData.name ? '' : pageData.name;
+    pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
+    pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
+    pageData.content += generateEditLink(pageData);
+
     return function (req, res, next) {
         var data = object.assign({}, bookData, {
             page: pageData
         });
         var isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
-
-        pageData.name = 'index' === pageData.name ? '' : pageData.name;
-        pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
-        pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
-        pageData.content += generateEditLink(pageData);
 
         if (isAjax) {
             return res.json({
