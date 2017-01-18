@@ -18,7 +18,7 @@
 - [classes 模块](#)
     - [blear.classes.animation](#)
     - [blear.classes.cache](#)
-    - [blear.classes.class](#)
+    - [blear.classes.class](/classes/class.md)
     - [blear.classes.count-down](#)
     - [blear.classes.draggable](#)
     - [blear.classes.error](#)

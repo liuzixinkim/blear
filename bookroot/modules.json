@@ -1,4 +1,27 @@
 {
+  "blear.classes.class": {
+    "author": "ydr.me",
+    "create": "2014年10月04日15:09:02",
+    "update": "2016年11月23日11:23:54",
+    "name": "blear.classes.class",
+    "version": "1.1.5",
+    "github": "https://github.com/blearjs/blear.classes.class",
+    "keywords": [
+      "blear",
+      "classes",
+      "class",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "类的继承",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.debug": "1.x",
+      "blear.utils.random": "1.x"
+    }
+  },
   "blear.classes.mvvm": {
     "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
