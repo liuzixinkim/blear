@@ -209,9 +209,10 @@ win.getHeight();
 ```js
 var UI = Class.extend({
     constructor: function() {
+        UI.parent(this);
         this[_UIOptions] = {width: 100};
     },
-    
+
     getWidth: function() {
         return this[_UIOptions].width;
     }
@@ -220,9 +221,10 @@ var _UIOptions = UI.sole();
 
 var Window = UI.extend({
     constructor: function() {
+        Window.parent(this);
         this[_WindowOptions] = {height: 200};
     },
-    
+
     getHeight: function() {
         return this[_WindowOptions].height;
     }
