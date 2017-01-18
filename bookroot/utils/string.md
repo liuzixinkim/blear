@@ -377,6 +377,6 @@ var nodeSummary = "abc\ndef";
 
 
 
-# More
+# Reference
 - 实体符维基百科：<https://zh.wikipedia.org/zh-cn/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8>
 - 正则表达式 MDN：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions>

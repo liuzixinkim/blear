@@ -28,6 +28,6 @@ touch 返回的是 [blear.core.event](/core/event.md)。
 
 
 
-# More
+# Reference
 - Fastclick：<https://github.com/ftlabs/fastclick>
 

@@ -340,7 +340,7 @@ MVVM.directive(name, definition);
 {{ dependencies }}
 
 
-# More
+# Reference
 - vuejs：<https://cn.vuejs.org/>
 - avalonjs：<http://avalonjs.coding.me/>
 - angularjs： <https://angularjs.org/>

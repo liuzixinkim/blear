@@ -325,6 +325,33 @@
       "blear.core.attribute": "1.x"
     }
   },
+  "blear.core.upload": {
+    "author": "zcl",
+    "create": "2016-04-12 17:59",
+    "update": "2017-01-18 14:44:06",
+    "name": "blear.core.upload",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.core.upload",
+    "keywords": [
+      "blear",
+      "core",
+      "querystring",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "异步上传",
+    "dependencies": {
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.ajax": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.json": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

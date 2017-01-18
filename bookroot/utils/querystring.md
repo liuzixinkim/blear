@@ -91,7 +91,7 @@ qs.stringify({
 
 
 
-# More
+# Reference
 - <https://en.wikipedia.org/wiki/Query_string>
 - <https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/querystring>
 

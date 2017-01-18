@@ -14,9 +14,7 @@
     - [blear.core.storage](/core/storage.md)
     - [blear.core.touch](/core/touch.md)
     - [blear.core.transform](/core/transform.md)
-    - [blear.core.ua](#)
-    - [blear.core.upload](#)
-    - [blear.core.url](#)
+    - [blear.core.upload](/core/upload.md)
 - [classes 模块](#)
     - [blear.classes.animation](#)
     - [blear.classes.cache](#)
@@ -131,6 +129,3 @@
 
 
 
-<div class="none">
-- [blear.utils.hashstring](/utils/hashstring.md)
-</div>

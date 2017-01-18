@@ -115,6 +115,6 @@ canvasContent.supportToBlob;
 {{ dependencies }}
 
 
-# More
+# Reference
 - <https://developer.mozilla.org/zh-CN/docs/Web/API/Blob>
 - <https://developer.mozilla.org/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding>

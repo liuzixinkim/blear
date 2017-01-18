@@ -134,5 +134,5 @@ number.from62('xyz');
 
 
 
-# More
+# Reference
 - <http://searchstorage.techtarget.com/definition/Kilo-mega-giga-tera-peta-and-all-that>

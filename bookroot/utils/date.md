@@ -355,7 +355,7 @@ date.iso(new Date());
 
 
 
-# More
+# Reference
 - [ecma date time string format]
 - [w3c datetime]
 - <https://zh.wikipedia.org/wiki/ISO_8601>

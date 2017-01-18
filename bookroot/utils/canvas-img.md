@@ -69,6 +69,6 @@ var canvasImg = require('blear.utils.canvas-img');
 {{ dependencies }}
 
 
-# More
+# Reference
 这里写更多的额外内容，可以不写。
 

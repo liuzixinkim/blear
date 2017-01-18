@@ -169,6 +169,6 @@ event.emit(btnEl, myClickEv);
 
 
 
-# More
+# Reference
 - DOM 事件详解：<http://yujiangshui.com/javascript-event/>
 - DOM 事件维基百科：<https://en.wikipedia.org/wiki/DOM_events#Events>

@@ -60,6 +60,6 @@ json.safeParse('');
 
 
 
-# More
+# Reference
 - <https://zh.wikipedia.org/zh-cn/JSON>
 

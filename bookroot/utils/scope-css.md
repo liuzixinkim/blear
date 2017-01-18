@@ -44,7 +44,7 @@ scopeCSS('.header{width: 100px;}', '#some-page');
 
 
 
-# More
+# Reference
 - scope css：<https://developer.mozilla.org/zh-CN/docs/Web/CSS/:scope>
 - 参考：<https://github.com/thomaspark/scoper>
 - 参考：<https://github.com/nathanmacinnes/scoped-style>

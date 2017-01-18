@@ -123,7 +123,7 @@ var ajax = require('blear.core.ajax');
 
 ## `options.onComplete`
 - 类型：`Function`
-- 说明：请求发送时回调
+- 说明：请求发送时回调，最后触发
 - 默认：`null`
 
 ## `options.onComplete: err`

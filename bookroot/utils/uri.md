@@ -57,6 +57,6 @@ uri.decode('%21');
 
 
 
-# More
+# Reference
 - encodeURIComponent：<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent>
 - rfc3986：<http://tools.ietf.org/html/rfc3986>

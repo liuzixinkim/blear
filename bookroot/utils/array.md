@@ -220,6 +220,6 @@ array.range(10, 13);
 {{ dependencies }}
 
 
-# More
+# Reference
 - <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array>
 

@@ -123,6 +123,6 @@ ret = {
 
 
 
-# More
+# Reference
 - 百度 FEX-team UA 解析：<https://github.com/fex-team/ua-device>
 - user-agent 维基百科：<https://zh.wikipedia.org/zh-cn/%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86>

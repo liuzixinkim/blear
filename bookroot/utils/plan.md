@@ -403,7 +403,7 @@ plan
 
 
 
-# More
+# Reference
 - <https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise>
 - <http://zodiacg.net/2015/08/javascript-async-control-flow/>
 

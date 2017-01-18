@@ -345,7 +345,7 @@ url.join('http://example.com/a/b/c/d', 'e/f/g');
 
 
 
-# More
+# Reference
 - 二维码开放平台：<http://www.topscan.com/pingtai/>
 - URI 百度百科：<http://baike.baidu.com/item/URI> 
 - URL 百度百科：<http://baike.baidu.com/item/url> 

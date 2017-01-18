@@ -76,6 +76,6 @@ hashbang.is('#!/a/b');
 
 
 
-# More
+# Reference
 - <https://zh.wikipedia.org/wiki/Shebang>
 

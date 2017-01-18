@@ -336,7 +336,7 @@ weixin.support('chooseWXPay', function(support) {
 
 
 
-# More
+# Reference
 - 微信 JSSDK 说明文档：<https://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html>
 - 微信 JS 接口签名校验工具：<https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign>
 

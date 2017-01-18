@@ -171,5 +171,5 @@ fun.until(function() {
 
 
 
-# More
+# Reference
 - <https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs>

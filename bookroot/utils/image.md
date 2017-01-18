@@ -62,6 +62,6 @@ image.qiniuWebp('http:/a.b/c.png');
 
 
 
-# More
+# Reference
 - <http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html>
 

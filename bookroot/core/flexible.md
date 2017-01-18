@@ -66,7 +66,7 @@ blear.core.flexible 不是一个 commonjs 规范的模块，需要使用 `script
 
 
 
-# More
+# Reference
 - 淘宝 flexible - 可伸缩布局方案：<https://github.com/amfe/lib-flexible>
 - Rem精简版实现自适应：<http://caibaojian.com/simple-flexible.html>
 

@@ -12,11 +12,6 @@
 - COMMONJS 构建：<https://coolie.ydr.me/>
 
 
-# 经验
-- 旅销宝手机端：<http://m.lxiaobao.com>
-- 旅销宝桌面端：<http://c.lxiaobao.com>
-- 运营活动：<http://mkt.lxiaobao.com>
-
 
 # 贡献
 排名不分先后。
@@ -27,3 +22,8 @@
 - <img class="avatar" src="https://avatars3.githubusercontent.com/u/7506913?v=3&s=60"><a href="https://github.com/zhengxiansen" target="_blank">zhengxiansen</a>
 
 
+
+# 经验
+- 旅销宝手机端：<http://m.lxiaobao.com>
+- 旅销宝桌面端：<http://c.lxiaobao.com>
+- 运营活动：<http://mkt.lxiaobao.com>

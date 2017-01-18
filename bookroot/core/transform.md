@@ -129,7 +129,7 @@ transform.frame(divEl, 'myKeyFrameName');
 
 
 
-# More
+# Reference
 - css3 transition：<https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions>
 - css3 keyframes：<https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes>
 

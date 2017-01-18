@@ -282,6 +282,6 @@ attribute.text(divEl);
 
 
 
-# More
+# Reference
 - JS DOM 的attribute 与 property：<http://frontenddev.org/link/js-dom-attribute-and-property.html>
 
