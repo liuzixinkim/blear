@@ -165,6 +165,97 @@
       "blear.core.selector": "1.x"
     }
   },
+  "blear.core.flexible": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.core.flexible",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.core.flexible",
+    "keywords": [
+      "blear",
+      "core",
+      "flexible",
+      "rem",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "移动端 rem 动态计算",
+    "dependencies": {}
+  },
+  "blear.core.jsonp": {
+    "author": "zcl",
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.core.jsonp",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.core.jsonp",
+    "keywords": [
+      "blear",
+      "core",
+      "jsonp",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "JSONP",
+    "dependencies": {
+      "blear.utils.url": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.loader": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.random": "1.x"
+    }
+  },
+  "blear.core.keyframe": {
+    "author": "ydr.me",
+    "create": "2016-04-19 18:21",
+    "update": "2016-04-19 18:21",
+    "name": "blear.core.keyframe",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.core.keyframe",
+    "keywords": [
+      "blear",
+      "core",
+      "keyframe",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "CSS3 keyframe 生成器",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.random": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.selector": "1.x"
+    }
+  },
+  "blear.core.selector": {
+    "author": "zcl",
+    "update": "未明确",
+    "create": "未明确",
+    "name": "blear.core.selector",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.core.selector",
+    "keywords": [
+      "blear",
+      "core",
+      "selector",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 选择器",
+    "dependencies": {
+      "blear.utils.array": "1.x",
+      "blear.utils.compatible": "1.x",
+      "blear.utils.debug": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

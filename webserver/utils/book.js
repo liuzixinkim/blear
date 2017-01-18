@@ -101,13 +101,14 @@ exports.buildRouters = function (router, controller, bookroot) {
     sidebarContent = fixHref(sidebarContent);
     indexContent = fixHref(indexContent);
 
-    router.get('/', controller(object.assign({
+    router.get('/', controller({
         name: 'index',
+        path: path.relative(configs.bookroot, indexFile),
         file: indexFile,
         toc: '',
         sidebar: sidebarContent,
         content: indexContent
-    })));
+    }));
     contentFiles.forEach(function (item) {
         var name = item.name;
         var file = item.file;
@@ -124,13 +125,14 @@ exports.buildRouters = function (router, controller, bookroot) {
         var content = ret.content;
         content = fixHref(content, file);
 
-        router.get(uri, controller(object.assign({
+        router.get(uri, controller({
             name: name,
+            path: path.relative(configs.bookroot, file),
             file: file,
             sidebar: sidebarContent,
             toc: toc,
             content: content
-        })));
+        }));
     });
 };
 

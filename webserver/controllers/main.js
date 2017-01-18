@@ -127,27 +127,29 @@ var generateDependencies = function (module) {
 };
 
 
-// 生成标题
-var generateTitle = function (pageName) {
-    if (!pageName) {
-        return '';
-    }
-
-    return '<h1 class="title">' + pageName + '</h1>';
+// 生成编辑链接
+var generateEditLink = function (pageData) {
+    var url = bookData.repo + '/blob/master/bookroot/' + pageData.path;
+    return '<hr>' +
+        '<img width="16" height="16" class="favicon" src="https://f.ydr.me/https://github.com">' +
+        '<a href="' + url + '" target="_blank">' +
+        '编辑此页面' +
+        '</a>';
 };
 
 
 // book
 var buildController = function (pageData) {
+    pageData.name = 'index' === pageData.name ? '' : pageData.name;
+    pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
+    pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
+    pageData.content += generateEditLink(pageData);
+
     return function (req, res, next) {
         var data = object.assign({}, bookData, {
             page: pageData
         });
         var isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
-
-        pageData.name = 'index' === pageData.name ? '' : pageData.name;
-        pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
-        pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
 
         if (isAjax) {
             return res.json({
