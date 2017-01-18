@@ -170,6 +170,73 @@ xiaoming.speak('站着');
 
 
 
+## `.sole()`
+
+```js
+var UI = Class.extend({
+    constructor: function() {
+        this._options = {width: 100};
+    },
+    
+    getWidth: function() {
+        return this._options.width;
+    }
+});
+
+var Window = UI.extend({
+    constructor: function() {
+        this._options = {height: 200};
+    },
+    
+    getHeight: function() {
+        return this._options.height;
+    }
+});
+
+var win = new Window();
+win.getWidth();
+// => undefined
+
+win.getHeight();
+// => 200
+```
+
+由上例子可见，由于 ES5 的限制，无法实现一个绝对私有、受保护的原型、实例。
+因此，生成一个绝对不重复的字段名称，可以在一定程度上杜绝子类的原型、实例覆盖父类。
+
+改良版如下：
+
+```js
+var UI = Class.extend({
+    constructor: function() {
+        this[_UIOptions] = {width: 100};
+    },
+    
+    getWidth: function() {
+        return this[_UIOptions].width;
+    }
+});
+var _UIOptions = UI.sole();
+
+var Window = UI.extend({
+    constructor: function() {
+        this[_WindowOptions] = {height: 200};
+    },
+    
+    getHeight: function() {
+        return this[_WindowOptions].height;
+    }
+});
+var _WindowOptions = UI.sole();
+
+var win = new Window();
+win.getWidth();
+// => 100
+
+win.getHeight();
+// => 200
+```
+
 
 
 # Dependencies
@@ -180,4 +247,7 @@ xiaoming.speak('站着');
 
 
 # Reference
+- ES5 的 class：<http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html>
 - ES6 的 class：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes>
+- javascript 面向对象：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript>
+
