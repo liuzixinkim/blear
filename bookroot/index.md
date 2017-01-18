@@ -16,7 +16,7 @@
     - [blear.core.transform](/core/transform.md)
     - [blear.core.upload](/core/upload.md)
 - [classes 模块](#)
-    - [blear.classes.animation](/classes/animation.md)
+    - [blear.classes.animation](#)
     - [blear.classes.class](/classes/class.md)
     - [blear.classes.count-down](/classes/count-down.md)
     - [blear.classes.draggable](#)

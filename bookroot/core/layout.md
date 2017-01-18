@@ -12,7 +12,7 @@ var layout = require('blear.core.layout');
 静态属性、方法
 
 
-## `.width(el, [val]): number | *`
+## `.width(el, [val]): width`
 获取元素的 contentWidth
 
 ### `el`
@@ -23,12 +23,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `width`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentWidth
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentWidth`
 
 
-## `.height(el, [val]): number | *`
+## `.height(el, [val]): height`
 获取元素的 contentHeight
 
 ### `el`
@@ -39,9 +39,9 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `height`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentHeight
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentHeight`
 
 
 ## `.innerWidth(el, [val]): number | *`
@@ -57,10 +57,10 @@ var layout = require('blear.core.layout');
 
 ### `number | *`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentWidth + paddingWidth
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentWidth + paddingWidth`
 
 
-## `.innerHeight(el, [val]): number | *`
+## `.innerHeight(el, [val]): innerHeight`
 获取元素的 contentHeight + paddingHeight
 
 ### `el`
@@ -71,12 +71,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `innerHeight`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentHeight + paddingHeight
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentHeight + paddingHeight`
 
 
-## `.outerWidth(el, [val]): number | *`
+## `.outerWidth(el, [val]): outerWidth`
 获取元素的 contentWidth + paddingWidth + borderWidth
 
 ### `el`
@@ -89,10 +89,10 @@ var layout = require('blear.core.layout');
 
 ### `number | *`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentWidth + paddingWidth + borderWidth
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentWidth + paddingWidth + borderWidth`
 
 
-## `.outerHeight(el, [val]): number | *`
+## `.outerHeight(el, [val]): outerHeight`
 获取元素的 contentHeight + paddingHeight + boderHeight
 
 ### `el`
@@ -105,10 +105,10 @@ var layout = require('blear.core.layout');
 
 ### `number | *`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的contentHeight + paddingHeight + boderHeight
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `contentHeight + paddingHeight + boderHeight`
 
 
-## `.scrollLeft(el, [val]): number | *`
+## `.scrollLeft(el, [val]): scrollLeft`
 获取、设置元素的 scrollLeft
 
 ### `el`
@@ -119,12 +119,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `scrollLeft`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`的scrollLeft
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `scrollLeft`
 
 
-## `.scrollTop(el, [val]): number | *`
+## `.scrollTop(el, [val]): scrollTop`
 获取、设置元素的 scrollTop
 
 ### `el`
@@ -135,12 +135,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `scrollTop`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`scrollTop
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `scrollTop`
 
 
-## `.scrollWidth(el, [val]): number | *`
+## `.scrollWidth(el, [val]): scrollWidth`
 获取、设置元素的 scrollWidth
 
 ### `el`
@@ -151,12 +151,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `scrollWidth`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`scrollWidth
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `scrollWidth`
 
 
-## `.scrollHeight(el, [val]): number | *`
+## `.scrollHeight(el, [val]): scrollHeight`
 获取、设置元素的 scrollHeight
 
 ### `el`
@@ -167,12 +167,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `scrollHeight`
 - 类型：`Number | *`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`scrollHeight
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `scrollHeight`
 
 
-## `.offsetLeft(el, [val]): number | *`
+## `.offsetLeft(el, [val]): offsetLeft`
 获取、设置元素在文档中的左位移
 
 ### `el`
@@ -183,12 +183,12 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `offsetLeft`
 - 类型：`Number`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`offsetLeft
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `offsetLeft`
 
 
-## `.offsetTop(el, [val]): number | *`
+## `.offsetTop(el, [val]): offsetTop`
 获取、设置元素在文档中的上位移
 
 ### `el`
@@ -199,9 +199,9 @@ var layout = require('blear.core.layout');
 - 类型：`Number`
 - 说明：设置值
 
-### `number | *`
+### `offsetTop`
 - 类型：`Number`
-- 说明：如果设置了val，则返回undefined，否则返回当前`el`offsetTop
+- 说明：如果设置了 `val`，则返回 `undefined`，否则返回当前 `el` 的 `offsetTop`
 
 
 
@@ -210,8 +210,4 @@ var layout = require('blear.core.layout');
 {{ dependencies }}
 
 
-
-
-
-# More
 

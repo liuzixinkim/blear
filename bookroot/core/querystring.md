@@ -26,14 +26,14 @@ var querystring = require('blear.core.querystring');
 - 类型：`String`
 - 说明：返回解析后的字符串
 
-## `.get(key): string | array | object`
+## `.get(key): val`
 根据键名获取 query
 
 ### `key`
 - 类型：`String`
 - 说明：查询键名
 
-### `string | array | object`
+### `val`
 - 类型：`String | Array | Object`
 - 说明：返回根据键名查询的值
 
@@ -76,9 +76,4 @@ querystring.set('id', 12345);
 # Dependencies
 {{ dependencies }}
 
-
-
-
-
-# More
 

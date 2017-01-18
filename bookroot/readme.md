@@ -1,6 +1,6 @@
 
 <div class="hero text_center">
-    <div><img src="https://avatars1.githubusercontent.com/u/19313694?v=3&s=400"></div>
+    <div><img src="https://dn-fed.qbox.me/@/res/20170118182410498001069050"></div>
     <h1>BLEARJS</h1>
     <h2>blearjs 是一个遵循 COMMONJS 规范的前后端通用模块集合。</h2>  
 </div>
