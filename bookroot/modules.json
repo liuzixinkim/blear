@@ -261,7 +261,7 @@
     "update": "2016年11月26日16:39:19",
     "create": "2016年11月26日16:39:19",
     "name": "blear.core.storage",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "github": "https://github.com/blearjs/blear.core.storage",
     "keywords": [
       "blear",
@@ -294,6 +294,35 @@
     "description": "DOM 核心：触摸事件支持 fastclick",
     "dependencies": {
       "blear.core.event": "1.x"
+    }
+  },
+  "blear.core.transform": {
+    "author": "ydr.me",
+    "create": "2016-04-19 15:49",
+    "update": "2016-04-19 15:49",
+    "name": "blear.core.transform",
+    "version": "1.0.5",
+    "github": "https://github.com/blearjs/blear.core.transform",
+    "keywords": [
+      "blear",
+      "core",
+      "transform",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM CSS3 过渡动画",
+    "dependencies": {
+      "blear.utils.compatible": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.easing": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.attribute": "1.x"
     }
   },
   "blear.utils.access": {

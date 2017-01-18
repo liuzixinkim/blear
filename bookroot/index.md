@@ -13,7 +13,7 @@
     - [blear.core.selector](/core/selector.md)
     - [blear.core.storage](/core/storage.md)
     - [blear.core.touch](/core/touch.md)
-    - [blear.core.transform](#)
+    - [blear.core.transform](/core/transform.md)
     - [blear.core.ua](#)
     - [blear.core.upload](#)
     - [blear.core.url](#)
