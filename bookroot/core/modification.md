@@ -12,10 +12,10 @@ var modification = require('blear.core.modification');
 静态属性、方法
 
 
-## `.parse(htmlString): node | HTMLElement`
+## `.parse(htmlString): node`
 解析字符串为节点
 ```js
-modification.parse('&lt;div/>');
+modification.parse('<div/>');
 // => HTMLDIVElement
 ```
 
@@ -23,18 +23,20 @@ modification.parse('&lt;div/>');
 - 类型：`String`
 - 说明：htmlString
 
-### `node | HTMLElement`
+### `node`
 - 类型：`Node | HTMLElement`
 - 说明：返回解析的节点
 
 
-## `.create(nodeName, [attributes], [properties]): node | HTMLElement`
+## `.create(nodeName, [attributes], [properties]): node`
 创建节点
 ```js
 modification.create('#text', '123');
 // => textNode
+
 modification.create('#comment', '123');
 // => commentNode
+
 modification.create('div', {id:'id-123'});
 // => DIVNode
 ```
@@ -56,7 +58,7 @@ modification.create('div', {id:'id-123'});
 - 说明：返回创建的节点
 
 
-## `.insert(source, target, position): node | HTMLElement`
+## `.insert(source, target, position): node`
 将源插入到指定的目标位置，并返回指定的元素
 ```js
 // - beforebegin ------ 0
@@ -81,14 +83,15 @@ modification.insert(source, target, 'afterend');
 
 ### `position`
 - 类型：`String | Number`
-- 说明：[position="beforeend"] 插入位置，分别为：beforebegin(0)、afterbegin(1)、beforeend(2)、afterend(3)
+- 说明：插入位置，分别为：beforebegin(0)、afterbegin(1)、beforeend(2)、afterend(3)
+- 默认：`"beforeend"`
 
 ### `node | HTMLElement`
 - 类型：`Node | HTMLElement`
 - 说明：返回原始节点
 
 
-## `.importStyle(cssText, sel, append): HTMLStyleElement`
+## `.importStyle(cssText, sel, append): el`
 添加样式
 ```js
 modification.importStyle('body{padding: 10px;}');
@@ -106,7 +109,7 @@ modification.importStyle('body{padding: 10px;}');
 - 类型：`Boolean`
 - 说明：是否为追加模式
 
-### `HTMLStyleElement`
+### `el`
 - 类型：`HTMLStyleElement`
 - 说明：返回添加的HTMLStyleElement
 
@@ -141,5 +144,5 @@ modification.remove(el)
 
 
 
-# More
+
 

@@ -1,4 +1,31 @@
 {
+  "blear.classes.animation": {
+    "author": "ydr.me",
+    "create": "2016-04-20 10:41",
+    "update": "2016-04-20 10:41",
+    "name": "blear.classes.animation",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.classes.animation",
+    "keywords": [
+      "blear",
+      "classes",
+      "animation",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "单元素动画组合类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.howdo": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.core.transform": "1.x",
+      "blear.core.selector": "1.x"
+    }
+  },
   "blear.classes.class": {
     "author": "ydr.me",
     "create": "2014年10月04日15:09:02",
@@ -20,6 +47,28 @@
       "blear.utils.object": "1.x",
       "blear.utils.debug": "1.x",
       "blear.utils.random": "1.x"
+    }
+  },
+  "blear.classes.count-down": {
+    "author": "ydr.me",
+    "create": "2016年11月19日11:50:03",
+    "update": "2016年11月19日11:50:03",
+    "name": "blear.classes.count-down",
+    "version": "1.0.6",
+    "github": "https://github.com/blearjs/blear.classes.count-down",
+    "keywords": [
+      "blear",
+      "__template__",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "倒计时器类",
+    "dependencies": {
+      "blear.utils.time": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.classes.events": "1.x"
     }
   },
   "blear.classes.mvvm": {
@@ -255,6 +304,71 @@
       "blear.core.modification": "1.x",
       "blear.core.attribute": "1.x",
       "blear.core.selector": "1.x"
+    }
+  },
+  "blear.core.layout": {
+    "author": "ydr.me",
+    "create": "2016-04-15 12:06",
+    "update": "2016-04-15 12:06",
+    "name": "blear.core.layout",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.core.layout",
+    "keywords": [
+      "blear",
+      "core",
+      "layout",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 布局计算",
+    "dependencies": {
+      "blear.core.attribute": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.number": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.core.modification": {
+    "author": "ydr.me",
+    "create": "2014-09-16 17:02",
+    "update": "2016年04月19日18:03:17",
+    "name": "blear.core.modification",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.core.modification",
+    "keywords": [
+      "blear",
+      "core",
+      "modification",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 修改",
+    "dependencies": {
+      "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.json": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x"
+    }
+  },
+  "blear.core.querystring": {
+    "author": "ydr.me",
+    "create": "2016-04-09 16:35",
+    "update": "2016-04-09 16:35",
+    "name": "blear.core.querystring",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.core.querystring",
+    "keywords": [
+      "blear",
+      "core",
+      "querystring",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "location querystring",
+    "dependencies": {
+      "blear.utils.querystring": "1.x"
     }
   },
   "blear.core.selector": {
