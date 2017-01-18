@@ -48,14 +48,14 @@
       "resolved": "http://registry.npm.taobao.org/blear.classes.events/download/blear.classes.events-1.0.6.tgz"
     },
     "blear.classes.markdown": {
-      "version": "1.1.4",
+      "version": "1.1.6",
       "from": "blear.classes.markdown@latest",
-      "resolved": "https://registry.npmjs.org/blear.classes.markdown/-/blear.classes.markdown-1.1.4.tgz"
+      "resolved": "https://registry.npmjs.org/blear.classes.markdown/-/blear.classes.markdown-1.1.6.tgz"
     },
     "blear.classes.safe-markdown": {
-      "version": "1.0.12",
+      "version": "1.0.14",
       "from": "blear.classes.safe-markdown@latest",
-      "resolved": "https://registry.npmjs.org/blear.classes.safe-markdown/-/blear.classes.safe-markdown-1.0.12.tgz"
+      "resolved": "https://registry.npmjs.org/blear.classes.safe-markdown/-/blear.classes.safe-markdown-1.0.14.tgz"
     },
     "blear.classes.template": {
       "version": "1.0.33",
@@ -200,9 +200,9 @@
       "resolved": "http://registry.npm.taobao.org/blear.utils.random/download/blear.utils.random-1.0.2.tgz"
     },
     "blear.utils.string": {
-      "version": "1.0.7",
+      "version": "1.0.9",
       "from": "blear.utils.string@>=1.0.0 <2.0.0",
-      "resolved": "http://registry.npm.taobao.org/blear.utils.string/download/blear.utils.string-1.0.7.tgz"
+      "resolved": "http://registry.npm.taobao.org/blear.utils.string/download/blear.utils.string-1.0.9.tgz"
     },
     "blear.utils.time": {
       "version": "1.0.4",

@@ -124,7 +124,7 @@
     - [blear.utils.validator](/utils/validator.md)
     - [blear.utils.weixin](/utils/weixin.md)
 - [更多](#)
-    - [贡献、共享](/more/contribute.md)
+    - [捐献](/more/donate.md)
 
 
 

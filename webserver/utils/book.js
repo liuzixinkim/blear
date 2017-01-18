@@ -80,6 +80,7 @@ var getFiles = function (bookroot) {
 
 var REG_HREF = /<a([^>]*?)\shref="(.*?)">/g;
 var REG_HTTP = /^(https?:)?\/\//;
+var REG_MAIL = /^mailto:/i;
 var REG_ABSOLUTE = /^\//;
 
 
@@ -147,7 +148,7 @@ function fixHref(content, srcFile) {
     return content.replace(REG_HREF, function (source, prev, href) {
         var attr = '';
 
-        if (srcFile && !REG_HTTP.test(href) && !REG_HASH.test(href)) {
+        if (srcFile && !REG_MAIL.test(href) && !REG_HTTP.test(href) && !REG_HASH.test(href)) {
             if (!REG_ABSOLUTE.test(href)) {
                 var hrefFile = path.join(path.dirname(srcFile), href);
                 var hrefRelative = path.relative(configs.bookroot, hrefFile);
