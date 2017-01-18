@@ -79,7 +79,7 @@ var ajax = require('blear.core.ajax');
 - 说明：是否跨域，如果非跨域将添加 `x-requested-with: XMLHttpRequest` 请求头
 - 默认：`false`
 
-## `options.onSend`
+## `options.onSend(xhr, options)`
 - 类型：`Function`
 - 说明：请求发送时回调
 - 默认：`null`
@@ -97,7 +97,7 @@ var ajax = require('blear.core.ajax');
 - 说明：返回 `false` 则取消 ajax
 - 默认：`true`
 
-## `options.onSuccess`
+## `options.onSuccess(result)`
 - 类型：`Function`
 - 说明：请求响应成功回调
 - 默认：`null`
@@ -106,7 +106,7 @@ var ajax = require('blear.core.ajax');
 - 类型：`Object | String`
 - 说明：如果期望响应数据类型是 `json`，则数据类型是 `Object`，否则为 `String`
 
-## `options.onError`
+## `options.onError(err)`
 - 类型：`Function`
 - 说明：请求发送时回调
 - 默认：`null`
@@ -121,7 +121,7 @@ var ajax = require('blear.core.ajax');
     - 响应 Code 错误
     - 响应超时错误
 
-## `options.onComplete`
+## `options.onComplete(err, result)`
 - 类型：`Function`
 - 说明：请求发送时回调，最后触发
 - 默认：`null`
@@ -134,7 +134,7 @@ var ajax = require('blear.core.ajax');
 - 类型：`Object | String`
 - 说明：如果期望响应数据类型是 `json`，则数据类型是 `Object`，否则为 `String`
 
-## `options.onProgress`
+## `options.onProgress(ev)`
 - 类型：`Function`
 - 说明：请求发送时回调
 - 默认：`null`

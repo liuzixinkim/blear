@@ -71,7 +71,7 @@ var upload = require('blear.core.upload');
 - 说明：期望数据类型
 - 默认：`"json"`
 
-## `options.onProgress`
+## `options.onProgress(ev)`
 - 类型：`Function`
 - 说明：上传进度回调，不支持 `FormData` 的浏览器是没有 `onProgress` 事件的
 - 默认：`noop`
@@ -80,7 +80,7 @@ var upload = require('blear.core.upload');
 - 类型：`Event`
 - 说明：上传进度事件
 
-## `options.onSuccess`
+## `options.onSuccess(result)`
 - 类型：`Function`
 - 说明：上次成功回调
 - 默认：`noop`
@@ -89,7 +89,7 @@ var upload = require('blear.core.upload');
 - 类型：`*`
 - 说明：响应内容
 
-## `options.onError`
+## `options.onError(err)`
 - 类型：`Function`
 - 说明：上次失败回调
 - 默认：`noop`
@@ -98,7 +98,7 @@ var upload = require('blear.core.upload');
 - 类型：`Error`
 - 说明：错误对象
 
-## `options.onComplete`
+## `options.onComplete(err, result)`
 - 类型：`Function`
 - 说明：上传完成后回调，最后触发
 - 默认：`noop`
