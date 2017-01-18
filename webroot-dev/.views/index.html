@@ -64,7 +64,7 @@
 
 <script src="/static/js/common/highlight.pack.js"></script>
 <script>
-    document.querySelectorAll('pre').forEach(function (block) {
+    [].slice.call(document.querySelectorAll('pre')).forEach(function (block) {
         hljs.highlightBlock(block);
     });
 </script>
