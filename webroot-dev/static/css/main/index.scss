@@ -132,3 +132,23 @@ $small-screen-width: 750px;
   vertical-align: middle;
   margin-right: 1em;
 }
+
+.hero {
+  padding: 2em 0;
+
+  img {
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+  }
+
+  h1 {
+    font-size: 8em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
