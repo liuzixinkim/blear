@@ -11,7 +11,7 @@
     - [blear.core.modification](#)
     - [blear.core.querystring](#)
     - [blear.core.selector](/core/selector.md)
-    - [blear.core.storage](#)
+    - [blear.core.storage](/core/storage.md)
     - [blear.core.touch](/core/touch.md)
     - [blear.core.transform](#)
     - [blear.core.ua](#)

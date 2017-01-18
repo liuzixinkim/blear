@@ -256,6 +256,27 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.core.storage": {
+    "author": "ydr.me",
+    "update": "2016年11月26日16:39:19",
+    "create": "2016年11月26日16:39:19",
+    "name": "blear.core.storage",
+    "version": "1.1.1",
+    "github": "https://github.com/blearjs/blear.core.storage",
+    "keywords": [
+      "blear",
+      "core",
+      "storage",
+      "localStorage",
+      "sessionStorage",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "storage for localStorage/sessionStorage",
+    "dependencies": {
+      "blear.utils.json": "1.x"
+    }
+  },
   "blear.core.touch": {
     "author": "ydr.me",
     "create": "2016-04-22 23:10",
