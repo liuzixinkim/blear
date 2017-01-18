@@ -256,6 +256,25 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.core.touch": {
+    "author": "ydr.me",
+    "create": "2016-04-22 23:10",
+    "update": "2016-04-22 23:10",
+    "name": "blear.core.touch",
+    "version": "1.0.6",
+    "github": "https://github.com/blearjs/blear.core.touch",
+    "keywords": [
+      "blear",
+      "core",
+      "touch",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "DOM 核心：触摸事件支持 fastclick",
+    "dependencies": {
+      "blear.core.event": "1.x"
+    }
+  },
   "blear.utils.access": {
     "update": "未明确",
     "create": "未明确",

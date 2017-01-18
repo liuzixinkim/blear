@@ -12,7 +12,7 @@
     - [blear.core.querystring](#)
     - [blear.core.selector](/core/selector.md)
     - [blear.core.storage](#)
-    - [blear.core.touch](#)
+    - [blear.core.touch](/core/touch.md)
     - [blear.core.transform](#)
     - [blear.core.ua](#)
     - [blear.core.upload](#)
