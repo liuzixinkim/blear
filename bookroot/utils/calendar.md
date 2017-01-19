@@ -72,6 +72,3 @@ calendar.month(2016, 3);
 {{ dependencies }}
 
 
-# Reference
-这里写更多的额外内容，可以不写。
-

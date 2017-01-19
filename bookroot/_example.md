@@ -56,6 +56,8 @@ fn: a 表示 fn 函数的形参
 
 
 
+# Events
+## `show(arg1, arg2)`
 
 
 
