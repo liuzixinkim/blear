@@ -21,7 +21,7 @@
     - [blear.classes.count-down](/classes/count-down.md)
     - [blear.classes.draggable](#)
     - [blear.classes.error](#)
-    - [blear.classes.events](#)
+    - [blear.classes.events](/classes/events.md)
     - [blear.classes.linkage](#)
     - [blear.classes.markdown](#)
     - [blear.classes.marshal](#)
