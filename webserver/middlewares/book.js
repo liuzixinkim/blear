@@ -125,9 +125,12 @@ module.exports = function (options) {
 
         router.get(uri, function (req, res, next) {
             var cached = cache[uri];
+            var isAJAX = req.headers['requested-with'] === 'XMLHttpRequest';
 
             if (cached) {
-                return res.render(options.templateFilePath, cached);
+                return isAJAX ?
+                    res.api(cached) :
+                    res.render(options.templateFilePath, cached);
             }
 
             var markdown;
@@ -149,6 +152,10 @@ module.exports = function (options) {
 
             if (options.cache) {
                 cache[uri] = renderData;
+            }
+
+            if (isAJAX) {
+                return res.api(renderData);
             }
 
             res.render(options.templateFilePath, renderData);
