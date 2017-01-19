@@ -5,13 +5,18 @@
 # Example
 ```js
 var Validation = require('blear.class.validation');
+
+var  va = new Validation();
 ```
 
-# `.defaults`
-## `.defaults.skipInvalid`
+# Static
+## `.defaults`
+### `.defaults.skipInvalid`
 - 类型：`Boolean`
 - 说明：是否跳过非法验证继续后面的验证
 - 默认：`true`
+
+
 
 # Prototype
 原型属性、方法
@@ -28,13 +33,13 @@ var Validation = require('blear.class.validation');
 - 类型：`Function`
 - 说明：验证回调
 
-### `Switchable`
-- 类型：`Switchable`
-- 说明：支持链式调用
 
+## `#path(path, alias): va`
+指定字段。
 
-## `#path(path, alias): Validation`
-指定字段
+```js
+va.path('username', '用户名');
+```
 
 ### `path`
 - 类型：`String`
@@ -44,16 +49,42 @@ var Validation = require('blear.class.validation');
 - 类型：`String`
 - 说明：别名
 
-### `Validation`
+### `va`
 - 类型：`Validation`
 - 说明：支持链式调用
 
-## `#constrain(rule, limit, message): Validation`
-约束条件
+## `#constrain(rule, limit, [message]): validation`
+约束条件。
+```js
+va
+    .path('username')
+    .constrain('minLength', 6)
+    .constrain('maxLength', 12)
+    
+    .path('password')
+    .constrain('pattern', /^[a-z]{6,12}$/, '不符合要求')
+    
+    .path('rePassword')
+    .constrain('equal', 'password');
+```
 
 ### `rule`
 - 类型：`String`
-- 说明：规则名称
+- 说明：规则名称，内置的规则有：
+    - `required`：必填
+    - `type`：数据类型
+        - `mobile`
+        - `email`
+        - `number`
+        - `integer`
+        - `url`、`http`
+    - `min`：最小值
+    - `max`：最大值
+    - `lengtg`：等长
+    - `minLength`：最小长度
+    - `maxLength`：最大长度
+    - `pattern`：正则
+    - `equal`：等值
 
 ### `limit`
 - 类型：`*`
@@ -62,10 +93,12 @@ var Validation = require('blear.class.validation');
 ### `message`
 - 类型：`String`
 - 说明：超过规则限制的消息
+- 默认：自动生成
 
-### `Validation`
+### `validation`
 - 类型：`Validation`
 - 说明：支持链式调用
+
 
 ## `#rule(name, fn): Validation`
 自定义实例级别的验证规则
