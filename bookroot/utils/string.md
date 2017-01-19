@@ -166,15 +166,23 @@ string.padEnd(1, 2, '0');
 
 
 
-## `.escapeHTML(str): escapedStr`
+## `.escapeHTML(str, [all=false]): escapedStr`
 编码字符串为 html 实体符。
 ```js
 string.escapeHTML('<b>');
-// => "&lt;b&gt;"
+// => "&lt;br&gt;"
+
+string.escapeHTML('<b>', true);
+// => "&#60;&#98;&#114;&#62;"
 ```
 
 ### `str`
 - 类型：`String`
+
+### `all`
+- 类型：`String`
+- 说明：是否编码所有字符
+- 默认：`false`
 
 ### `escapedStr`
 - 类型：`String`

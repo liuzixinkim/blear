@@ -14,10 +14,10 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="author" content="云淡然;http://ydr.me">
-    <meta name="keywords" content="{{=keywords}}">
-    <meta name="description" content="{{=description}}">
+    <meta name="keywords" content="{{=book.keywords}}">
+    <meta name="description" content="{{=book.description}}">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>{{=page.name ? page.name + ' - ': ''}}{{=title}}</title>
+    <title>{{=page.title ? page.title + ' - ': ''}}{{=book.title}}</title>
 
     <!--coolie-->
     <link rel="stylesheet" href="/node_modules/blear.css.reset/src/index.css">
@@ -47,12 +47,12 @@
 <section class="body">
     <aside class="body-sidebar">
         <div class="sidebar">
-            <h1 class="title"><a href="/">{{=title}}</a></h1>
+            <h1 class="title"><a href="/">{{=book.title}}</a></h1>
             <nav class="sidebar-nav nav" id="nav">{{=page.sidebar}}</nav>
         </div>
     </aside>
     <main class="body-main" id="main">
-        <h1 class="title" id="title">{{=page.name}}</h1>
+        <h1 class="title" id="title">{{=page.title}}</h1>
         <div class="content typo" id="content">{{=page.content}}</div>
     </main>
 </section>

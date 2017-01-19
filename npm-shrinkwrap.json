@@ -53,9 +53,9 @@
       "resolved": "https://registry.npmjs.org/blear.classes.markdown/-/blear.classes.markdown-1.1.6.tgz"
     },
     "blear.classes.safe-markdown": {
-      "version": "1.0.14",
+      "version": "1.0.15",
       "from": "blear.classes.safe-markdown@latest",
-      "resolved": "https://registry.npmjs.org/blear.classes.safe-markdown/-/blear.classes.safe-markdown-1.0.14.tgz"
+      "resolved": "https://registry.npmjs.org/blear.classes.safe-markdown/-/blear.classes.safe-markdown-1.0.15.tgz"
     },
     "blear.classes.template": {
       "version": "1.0.33",
@@ -180,9 +180,9 @@
       "resolved": "http://registry.npm.taobao.org/blear.utils.object/download/blear.utils.object-1.0.11.tgz"
     },
     "blear.utils.path": {
-      "version": "1.0.6",
-      "from": "blear.utils.path@>=1.0.0 <2.0.0",
-      "resolved": "http://registry.npm.taobao.org/blear.utils.path/download/blear.utils.path-1.0.6.tgz"
+      "version": "1.0.8",
+      "from": "blear.utils.path@latest",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.path/download/blear.utils.path-1.0.8.tgz"
     },
     "blear.utils.plan": {
       "version": "2.0.0",

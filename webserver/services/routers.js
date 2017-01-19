@@ -48,7 +48,7 @@ module.exports = function (next, app, redis) {
 
 
     // 页面
-    app.use('/', require('../controllers/main.js'));
+    app.use(require('../controllers/main.js'));
 
 
     // 接口

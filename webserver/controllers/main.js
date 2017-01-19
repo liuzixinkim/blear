@@ -13,12 +13,10 @@ var path = require('blear.node.path');
 var object = require('blear.utils.object');
 
 var configs = require('../../configs');
-var pkg = require('../../package.json');
-var book = require('../utils/book.js');
+var midBook = require('../middlewares/book');
 
 
 var router = new Router();
-var bookData = fse.readJSONSync(path.join(configs.bookroot, 'data.json'));
 var modulesData = fse.readJSONSync(path.join(configs.bookroot, 'modules.json'));
 var introductionRE = /\{\{\s*?introduction\s*?}}/i;
 var dependenciesRE = /\{\{\s*?dependencies\s*?}}/i;
@@ -97,7 +95,7 @@ var generateDependencies = function (module) {
         return '';
     }
 
-    var html = '<ul>';
+    var markdown = '\n\n';
     var dependenciesLenth = 0;
 
     object.each(desc.dependencies, function (mod, ver) {
@@ -112,60 +110,40 @@ var generateDependencies = function (module) {
         }
 
         dependenciesLenth++;
-        html += '<li>' +
-            '<a class="j-pjax" href="' + href + '">' + mod + '@' + ver + '</a>' +
-            '</li>';
+        markdown += '- [' + mod + '](' + href + ')\n';
     });
 
     if (!dependenciesLenth) {
-        html += '<li>无依赖</li>';
+        markdown += '- 无依赖';
     }
 
-    html += '</ul>';
+    markdown += '\n\n';
 
-    return html;
+    return markdown;
 };
-
 
 // 生成编辑链接
-var generateEditLink = function (pageData) {
-    var url = bookData.repo + '/blob/master/bookroot/' + pageData.path;
-    return '<hr>' +
-        '<img width="16" height="16" class="favicon" src="https://f.ydr.me/https://github.com">' +
-        '<a href="' + url + '" target="_blank">' +
-        '编辑此页面' +
-        '</a>';
+var generateEditLink = function (renderData) {
+    var repo = renderData.book.repo;
+    var path = renderData.page.path;
+    var url = repo + '/blob/master/bookroot' + path;
+
+    return '-----\n\n' +
+        '[编辑此页面](' + url + ')\n\n';
 };
 
 
-// book
-var buildController = function (pageData) {
-    pageData.name = 'index' === pageData.name ? '' : pageData.name;
-    pageData.content = pageData.content.replace(introductionRE, generateIntroduction(pageData.name));
-    pageData.content = pageData.content.replace(dependenciesRE, generateDependencies(pageData.name));
-    pageData.content += generateEditLink(pageData);
-
-    return function (req, res, next) {
-        var data = object.assign({}, bookData, {
-            page: pageData
-        });
-        var isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
-
-        if (isAjax) {
-            return res.json({
-                title: data.title,
-                name: pageData.name,
-                toc: pageData.toc,
-                content: pageData.content
-            });
-        }
-
-        res.render('index.html', data);
-    };
-};
-
-
-book.buildRouters(router, buildController, configs.bookroot);
+router.use('/', midBook({
+    baseURL: '/',
+    rootDirname: configs.bookroot,
+    cache: configs.env !== 'local',
+    preMarkdown: function (markdown, renderData) {
+        markdown = markdown.replace(introductionRE, generateIntroduction(renderData.page.title));
+        markdown = markdown.replace(dependenciesRE, generateDependencies(renderData.page.title));
+        markdown += generateEditLink(renderData);
+        return markdown;
+    }
+}));
 
 
 module.exports = router;
