@@ -2,6 +2,56 @@
   "name": "webroot",
   "version": "0.0.1",
   "dependencies": {
+    "blear.classes.animation": {
+      "version": "1.0.3",
+      "from": "blear.classes.animation@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.classes.animation/-/blear.classes.animation-1.0.3.tgz"
+    },
+    "blear.classes.class": {
+      "version": "1.1.5",
+      "from": "blear.classes.class@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.classes.class/-/blear.classes.class-1.1.5.tgz"
+    },
+    "blear.classes.events": {
+      "version": "1.0.6",
+      "from": "blear.classes.events@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.classes.events/download/blear.classes.events-1.0.6.tgz"
+    },
+    "blear.core.attribute": {
+      "version": "1.0.11",
+      "from": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz",
+      "resolved": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz"
+    },
+    "blear.core.event": {
+      "version": "1.0.5",
+      "from": "https://registry.npmjs.org/blear.core.event/-/blear.core.event-1.0.5.tgz",
+      "resolved": "https://registry.npmjs.org/blear.core.event/-/blear.core.event-1.0.5.tgz"
+    },
+    "blear.core.layout": {
+      "version": "1.0.4",
+      "from": "blear.core.layout@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.core.layout/-/blear.core.layout-1.0.4.tgz"
+    },
+    "blear.core.modification": {
+      "version": "1.0.7",
+      "from": "blear.core.modification@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.core.modification/-/blear.core.modification-1.0.7.tgz"
+    },
+    "blear.core.selector": {
+      "version": "1.0.8",
+      "from": "https://registry.npmjs.org/blear.core.selector/-/blear.core.selector-1.0.8.tgz",
+      "resolved": "https://registry.npmjs.org/blear.core.selector/-/blear.core.selector-1.0.8.tgz"
+    },
+    "blear.core.touch": {
+      "version": "1.0.6",
+      "from": "blear.core.touch@latest",
+      "resolved": "https://registry.npmjs.org/blear.core.touch/-/blear.core.touch-1.0.6.tgz"
+    },
+    "blear.core.transform": {
+      "version": "1.0.5",
+      "from": "https://registry.npmjs.org/blear.core.transform/-/blear.core.transform-1.0.5.tgz",
+      "resolved": "https://registry.npmjs.org/blear.core.transform/-/blear.core.transform-1.0.5.tgz"
+    },
     "blear.css.function": {
       "version": "1.0.2",
       "from": "blear.css.function@>=1.0.2 <2.0.0",
@@ -11,6 +61,131 @@
       "version": "1.0.9",
       "from": "blear.css.reset@>=1.0.9 <2.0.0",
       "resolved": "http://registry.npm.taobao.org/blear.css.reset/download/blear.css.reset-1.0.9.tgz"
+    },
+    "blear.polyfills.class-list": {
+      "version": "1.0.7",
+      "from": "blear.polyfills.class-list@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.polyfills.class-list/-/blear.polyfills.class-list-1.0.7.tgz"
+    },
+    "blear.polyfills.data-set": {
+      "version": "1.0.3",
+      "from": "blear.polyfills.data-set@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.polyfills.data-set/-/blear.polyfills.data-set-1.0.3.tgz"
+    },
+    "blear.polyfills.date": {
+      "version": "1.0.3",
+      "from": "blear.polyfills.date@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.polyfills.date/download/blear.polyfills.date-1.0.3.tgz"
+    },
+    "blear.polyfills.time": {
+      "version": "1.0.3",
+      "from": "blear.polyfills.time@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.polyfills.time/download/blear.polyfills.time-1.0.3.tgz"
+    },
+    "blear.shims.bezier": {
+      "version": "1.0.0",
+      "from": "blear.shims.bezier@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.shims.bezier/-/blear.shims.bezier-1.0.0.tgz"
+    },
+    "blear.ui": {
+      "version": "1.0.4",
+      "from": "https://registry.npmjs.org/blear.ui/-/blear.ui-1.0.4.tgz",
+      "resolved": "https://registry.npmjs.org/blear.ui/-/blear.ui-1.0.4.tgz"
+    },
+    "blear.ui.mask": {
+      "version": "1.0.14",
+      "from": "blear.ui.mask@latest",
+      "resolved": "https://registry.npmjs.org/blear.ui.mask/-/blear.ui.mask-1.0.14.tgz"
+    },
+    "blear.ui.window": {
+      "version": "1.1.15",
+      "from": "blear.ui.window@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.ui.window/-/blear.ui.window-1.1.15.tgz"
+    },
+    "blear.utils.access": {
+      "version": "1.0.5",
+      "from": "blear.utils.access@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.access/-/blear.utils.access-1.0.5.tgz"
+    },
+    "blear.utils.array": {
+      "version": "1.0.12",
+      "from": "blear.utils.array@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.array/download/blear.utils.array-1.0.12.tgz"
+    },
+    "blear.utils.collection": {
+      "version": "1.0.4",
+      "from": "blear.utils.collection@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.collection/download/blear.utils.collection-1.0.4.tgz"
+    },
+    "blear.utils.compatible": {
+      "version": "1.0.6",
+      "from": "blear.utils.compatible@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.compatible/-/blear.utils.compatible-1.0.6.tgz"
+    },
+    "blear.utils.date": {
+      "version": "1.0.9",
+      "from": "blear.utils.date@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.date/-/blear.utils.date-1.0.9.tgz"
+    },
+    "blear.utils.debug": {
+      "version": "1.0.2",
+      "from": "blear.utils.debug@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.debug/download/blear.utils.debug-1.0.2.tgz"
+    },
+    "blear.utils.easing": {
+      "version": "1.0.6",
+      "from": "blear.utils.easing@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.easing/-/blear.utils.easing-1.0.6.tgz"
+    },
+    "blear.utils.function": {
+      "version": "1.0.5",
+      "from": "blear.utils.function@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.function/-/blear.utils.function-1.0.5.tgz"
+    },
+    "blear.utils.howdo": {
+      "version": "1.0.3",
+      "from": "blear.utils.howdo@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.howdo/download/blear.utils.howdo-1.0.3.tgz"
+    },
+    "blear.utils.json": {
+      "version": "1.0.5",
+      "from": "blear.utils.json@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.json/-/blear.utils.json-1.0.5.tgz"
+    },
+    "blear.utils.number": {
+      "version": "1.0.3",
+      "from": "blear.utils.number@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.number/-/blear.utils.number-1.0.3.tgz"
+    },
+    "blear.utils.object": {
+      "version": "1.0.11",
+      "from": "blear.utils.object@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.object/download/blear.utils.object-1.0.11.tgz"
+    },
+    "blear.utils.random": {
+      "version": "1.0.3",
+      "from": "blear.utils.random@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.random/-/blear.utils.random-1.0.3.tgz"
+    },
+    "blear.utils.string": {
+      "version": "1.0.9",
+      "from": "blear.utils.string@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.string/download/blear.utils.string-1.0.9.tgz"
+    },
+    "blear.utils.time": {
+      "version": "1.0.5",
+      "from": "blear.utils.time@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.time/-/blear.utils.time-1.0.5.tgz"
+    },
+    "blear.utils.typeis": {
+      "version": "1.0.3",
+      "from": "blear.utils.typeis@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.typeis/download/blear.utils.typeis-1.0.3.tgz"
+    },
+    "blear.utils.validator": {
+      "version": "1.0.4",
+      "from": "blear.utils.validator@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.validator/-/blear.utils.validator-1.0.4.tgz"
     },
     "coolie.js": {
       "version": "2.1.6",

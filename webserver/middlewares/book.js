@@ -53,6 +53,11 @@ var defaults = {
     templateFilePath: 'index.html',
 
     /**
+     * 是否输出目录
+     */
+    toc: true,
+
+    /**
      * 是否缓存
      */
     cache: false,
@@ -118,7 +123,6 @@ module.exports = function (options) {
             }
         };
 
-        console.log('get', uri);
         router.get(uri, function (req, res, next) {
             var cached = cache[uri];
 
@@ -141,6 +145,7 @@ module.exports = function (options) {
             content = postHTMLAsHref(content, options);
             content = options.postHTML(content, renderData);
             renderData.page.content = content;
+            renderData.page.toc = result.toc;
 
             if (options.cache) {
                 cache[uri] = renderData;
@@ -152,6 +157,7 @@ module.exports = function (options) {
 
     return router;
 };
+
 
 /**
  * 替换后缀

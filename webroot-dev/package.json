@@ -2,8 +2,15 @@
   "name": "webroot",
   "version": "0.0.1",
   "dependencies": {
+    "blear.core.attribute": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz",
+    "blear.core.event": "https://registry.npmjs.org/blear.core.event/-/blear.core.event-1.0.5.tgz",
+    "blear.core.selector": "https://registry.npmjs.org/blear.core.selector/-/blear.core.selector-1.0.8.tgz",
+    "blear.core.touch": "^1.0.6",
+    "blear.core.transform": "https://registry.npmjs.org/blear.core.transform/-/blear.core.transform-1.0.5.tgz",
     "blear.css.function": "^1.0.2",
     "blear.css.reset": "^1.0.9",
+    "blear.ui": "https://registry.npmjs.org/blear.ui/-/blear.ui-1.0.4.tgz",
+    "blear.ui.mask": "^1.0.14",
     "coolie.js": "^2.1.6"
   }
 }

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/static/css/common/anchor.css">
     <link rel="stylesheet" href="/static/css/common/text.css">
     <link rel="stylesheet" href="/static/css/modules/typo.css">
+    <link rel="stylesheet" href="/static/css/modules/toc.css">
     <link rel="stylesheet" href="/static/css/modules/heading.css">
     <link rel="stylesheet" href="/static/css/modules/split.css">
     <!--/coolie-->
@@ -49,13 +50,22 @@
         <div class="sidebar">
             <h1 class="title"><a href="/">{{=book.title}}</a></h1>
             <nav class="sidebar-nav nav" id="nav">{{=page.sidebar}}</nav>
+            <a id="sidebarToggle" class="sidebar-toggle">
+                <i></i>
+                <i></i>
+                <i></i>
+            </a>
         </div>
     </aside>
     <main class="body-main" id="main">
         <h1 class="title" id="title">{{=page.title}}</h1>
-        <div class="content typo" id="content">{{=page.content}}</div>
+        <div class="content" id="content">
+            <div @if="page.uri !== '/'">{{=page.toc}}</div>
+            <div class="typo">{{=page.content}}</div>
+        </div>
     </main>
 </section>
+
 
 
 <div class="none">
