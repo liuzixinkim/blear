@@ -137,6 +137,30 @@ cd.start();
 
 
 
+# Events
+
+## `start()`
+倒计时开始的时候触发。
+
+## `change(remainTime, elapsedTime)`
+倒计时计时变化的时候触发。
+
+```js
+remainTime + elapsedTime === count
+```
+
+### `remainTime`
+- 类型：`Number`
+- 说明：倒计时剩余时间
+
+### `elapsedTime`
+- 类型：`Number`
+- 说明：倒计时流逝时间
+
+## `stop()`
+倒计时结束的时候触发
+
+
 
 # Dependencies
 {{ dependencies }}
