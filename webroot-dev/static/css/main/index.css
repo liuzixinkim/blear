@@ -39,7 +39,7 @@
   .sidebar-toggle {
     display: none;
     position: fixed;
-    right: 0;
+    right: 10px;
     top: 10px;
     z-index: 3; }
     .sidebar-toggle:hover {
@@ -62,8 +62,6 @@
         left: 0;
         right: 0;
         z-index: 2; }
-        .sidebar .title a {
-          margin-right: 100px; }
       .sidebar-nav {
         position: fixed;
         z-index: 99;

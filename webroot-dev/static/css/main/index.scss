@@ -62,7 +62,7 @@ $small-screen-width: 750px;
     $space-size: 9px;
     display: none;
     position: fixed;
-    right: 0;
+    right: 10px;
     top: 10px;
     z-index: 3;
 
@@ -95,10 +95,6 @@ $small-screen-width: 750px;
       left: 0;
       right: 0;
       z-index: 2;
-
-      a {
-        margin-right: 100px;
-      }
     }
 
     &-nav {
