@@ -71,6 +71,29 @@
       "blear.classes.events": "1.x"
     }
   },
+  "blear.classes.events": {
+    "author": "ydr.me",
+    "create": "2016-04-18 13:50",
+    "update": "2016-04-18 13:50",
+    "name": "blear.classes.events",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.classes.events",
+    "keywords": [
+      "blear",
+      "classes",
+      "events",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "事件的监听与派发类",
+    "dependencies": {
+      "blear.classes.class": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.access": "1.x"
+    }
+  },
   "blear.classes.mvvm": {
     "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
@@ -107,6 +130,103 @@
       "blear.utils.string": "1.x",
       "blear.utils.time": "1.x",
       "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.classes.scrollable": {
+    "author": "ydr.me",
+    "create": "2016-04-25 17:07",
+    "update": "2016-04-25 17:07",
+    "name": "blear.classes.scrollable",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.classes.scrollable",
+    "keywords": [
+      "blear",
+      "classes",
+      "scrollable",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "可滚动的类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.layout": "1.x"
+    }
+  },
+  "blear.classes.switchable": {
+    "author": "ydr.me",
+    "create": "2016年05月26日11:31:01",
+    "update": "2016年05月26日11:31:01",
+    "name": "blear.classes.switchable",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.classes.switchable",
+    "keywords": [
+      "blear",
+      "classes",
+      "switchable",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "可切换的类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x"
+    }
+  },
+  "blear.classes.touchable": {
+    "author": "zcl 云淡然",
+    "create": "2016-04-26 14:53",
+    "update": "2016-12-16 16:06:56",
+    "name": "blear.classes.touchable",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.classes.touchable",
+    "keywords": [
+      "blear",
+      "classses",
+      "touchable",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "桌面端、手机端可触摸类",
+    "dependencies": {
+      "blear.utils.object": "1.x",
+      "blear.classes.draggable": "1.x"
+    }
+  },
+  "blear.classes.validation": {
+    "author": "ydr.me",
+    "create": "2016-08-17 10:40",
+    "update": "2016-08-17 10:40",
+    "name": "blear.classes.validation",
+    "version": "1.0.11",
+    "github": "https://github.com/blearjs/blear.classes.validation",
+    "keywords": [
+      "blear",
+      "classes",
+      "validation",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "通用的数据验证",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.core.ajax": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.howdo": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.validator": "1.x"
     }
   },
   "blear.core.ajax": {
@@ -851,7 +971,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.utils.path",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "github": "https://github.com/blearjs/blear.utils.path",
     "keywords": [
       "blear",
@@ -967,7 +1087,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.utils.string",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "github": "https://github.com/blearjs/blear.utils.string",
     "keywords": [
       "blear",
