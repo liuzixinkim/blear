@@ -13,10 +13,19 @@ var selector = require('blear.core.selector');
 var event = require('blear.core.event');
 var attribute = require('blear.core.attribute');
 var transform = require('blear.core.transform');
+var animation = require('blear.core.animation');
 var UI = require('blear.ui');
+var tips = require('blear.components.tips');
+var array = require('blear.utils.array');
+var random = require('blear.utils.random');
+var url = require('blear.utils.url');
 
 require('blear.core.touch');
 
+var api = require('../utils/api');
+var highlight = require('../common/highlight.pack');
+
+// 侧边栏
 var buildSidebar = function () {
     var mask = new Mask();
     var navEl = selector.query('#nav')[0];
@@ -54,7 +63,119 @@ var buildSidebar = function () {
     });
 };
 
+// 高亮代码
+var buildHightlightPre = function () {
+    var els = selector.query('#content pre');
+    array.each(els, function (index, el) {
+        highlight.highlightBlock(el);
+    });
+};
+
+// 进度
+var progress = (function () {
+    var progressEl = selector.query('#progress')[0];
+    var setWidth = function (percentage) {
+        attribute.style(progressEl, 'width', percentage + '%');
+    };
+    var hideTimer;
+    var percentage = 0;
+    var runTimer;
+    var run = function () {
+        var timeout = random.number(50, 500);
+
+        runTimer = setTimeout(function () {
+            percentage += random.number(1, 10);
+
+            if (percentage >= 100) {
+                percentage = 100;
+            }
+
+            setWidth(percentage);
+            run();
+        }, timeout);
+    };
+
+    return {
+        start: function () {
+            clearTimeout(hideTimer);
+            clearTimeout(runTimer);
+            percentage = 10;
+            setWidth(10);
+            run();
+            attribute.show(progressEl);
+        },
+
+        stop: function () {
+            clearTimeout(hideTimer);
+            clearTimeout(runTimer);
+            setWidth(100);
+            hideTimer = setTimeout(function () {
+                attribute.hide(progressEl);
+            }, 400);
+        }
+    };
+}());
+
+// 滚动到顶部
+var scrollTop = function () {
+    animation.animate(window, {
+        scrollTop: 0
+    })
+};
+
+// 快捷访问
+var buildQuickAccess = function () {
+    var titleEl = selector.query('#title')[0];
+    var tocEl = selector.query('#toc')[0];
+    var contentEl = selector.query('#content')[0];
+    var pagePathname = location.pathname;
+
+    var loadPage = function (href) {
+        var pathname = url.parse(href).pathname;
+
+        if (pathname === pagePathname) {
+            return;
+        }
+
+        pagePathname = pathname;
+        progress.start();
+        api({
+            url: href
+        }, function (err, ret) {
+            progress.stop();
+
+            if (err) {
+                return tips.danger(err);
+            }
+
+            var book = ret.book;
+            var page = ret.page;
+
+            document.title = (page.uri === '/' ? '' : page.title + ' - ') + book.title;
+            attribute.html(titleEl, page.title);
+            attribute.html(tocEl, page.toc);
+            attribute.html(contentEl, page.content);
+            scrollTop();
+            buildHightlightPre();
+        });
+    };
+
+    event.on(window, 'popstate', function (ev) {
+        loadPage(location.href);
+    });
+
+    event.on(document, 'click', '.jPjax', function () {
+        var href = this.href;
+
+        history.pushState(null, '', href);
+        loadPage(href);
+
+        return false;
+    });
+};
 
 // ============================================================
 buildSidebar();
+buildQuickAccess();
+buildHightlightPre();
 

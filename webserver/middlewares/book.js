@@ -125,7 +125,7 @@ module.exports = function (options) {
 
         router.get(uri, function (req, res, next) {
             var cached = cache[uri];
-            var isAJAX = req.headers['requested-with'] === 'XMLHttpRequest';
+            var isAJAX = req.headers['x-requested-with'] === 'XMLHttpRequest';
 
             if (cached) {
                 return isAJAX ?

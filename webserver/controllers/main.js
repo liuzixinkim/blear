@@ -64,7 +64,7 @@ var generateIntroduction = function (module) {
             var old = val;
             val = '' +
                 '<img width="16" height="16" class="favicon" src="https://f.ydr.me/' + old + '">' +
-                '<a href="' + old + '">' +
+                '<a href="' + old + '" target="_blank">' +
                 old +
                 '</a>';
         }
@@ -128,7 +128,7 @@ var generateEditLink = function (renderData) {
     var path = renderData.page.path;
     var url = repo + '/blob/master/bookroot' + path;
 
-    return '-----\n\n' +
+    return '\n\n-----\n\n' +
         '[编辑此页面](' + url + ')\n\n';
 };
 

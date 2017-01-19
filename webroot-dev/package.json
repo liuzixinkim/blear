@@ -2,6 +2,9 @@
   "name": "webroot",
   "version": "0.0.1",
   "dependencies": {
+    "blear.components.tips": "^1.0.3",
+    "blear.core.ajax": "^1.0.9",
+    "blear.core.animation": "^1.0.4",
     "blear.core.attribute": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz",
     "blear.core.event": "https://registry.npmjs.org/blear.core.event/-/blear.core.event-1.0.5.tgz",
     "blear.core.selector": "https://registry.npmjs.org/blear.core.selector/-/blear.core.selector-1.0.8.tgz",
@@ -11,6 +14,11 @@
     "blear.css.reset": "^1.0.9",
     "blear.ui": "https://registry.npmjs.org/blear.ui/-/blear.ui-1.0.4.tgz",
     "blear.ui.mask": "^1.0.14",
+    "blear.utils.array": "http://registry.npm.taobao.org/blear.utils.array/download/blear.utils.array-1.0.12.tgz",
+    "blear.utils.function": "https://registry.npmjs.org/blear.utils.function/-/blear.utils.function-1.0.5.tgz",
+    "blear.utils.json": "https://registry.npmjs.org/blear.utils.json/-/blear.utils.json-1.0.5.tgz",
+    "blear.utils.path": "http://registry.npm.taobao.org/blear.utils.path/download/blear.utils.path-1.0.8.tgz",
+    "blear.utils.random": "https://registry.npmjs.org/blear.utils.random/-/blear.utils.random-1.0.3.tgz",
     "coolie.js": "^2.1.6"
   }
 }

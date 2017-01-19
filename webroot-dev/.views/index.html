@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/static/css/main/index.css">
     <!--/coolie-->
 
-    <script src="https://og6593g2z.qnssl.com/fundebug.0.0.4.min.js"
+    <script @if="$configs.env !== 'local'" src="https://og6593g2z.qnssl.com/fundebug.0.0.4.min.js"
             apikey="7ec2b5c9b9d7fb85da81760f30bdc1b127a0a73321995f134706d8533af382f7"></script>
 </head>
 <body ontouchstart="">
@@ -59,9 +59,13 @@
     </aside>
     <main class="body-main" id="main">
         <h1 class="title" id="title">{{=page.title}}</h1>
-        <div class="content" id="content">
-            <div @if="page.uri !== '/'">{{=page.toc}}</div>
-            <div class="typo">{{=page.content}}</div>
+        <div class="container">
+            <div id="toc">
+                {{#if page.uri !== '/'}}
+                {{=page.toc}}
+                {{/if}}
+            </div>
+            <div class="typo" id="content">{{=page.content}}</div>
         </div>
     </main>
 </section>
@@ -72,12 +76,7 @@
     <script src="https://s11.cnzz.com/z_stat.php?id=1261147258&web_id=1261147258"></script>
 </div>
 
-<script src="/static/js/common/highlight.pack.js"></script>
-<script>
-    [].slice.call(document.querySelectorAll('pre')).forEach(function (block) {
-        hljs.highlightBlock(block);
-    });
-</script>
+
 <script coolie src="/node_modules/coolie.js/coolie.js"
         data-config="/static/js/coolie-config.js"
         data-main="index.js"></script>

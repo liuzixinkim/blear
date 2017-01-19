@@ -16,6 +16,7 @@ $small-screen-width: 750px;
   left: 0;
   width: 0;
   z-index: 3;
+  transition: all linear 100ms;
 }
 
 .body {
@@ -56,6 +57,35 @@ $small-screen-width: 750px;
   border-right: 1px solid $border-color;
   height: 100%;
 
+  &-toggle {
+    $border-size: 2px;
+    $space-size: 9px;
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    z-index: 3;
+
+    &:hover {
+      border-bottom: 0;
+    }
+
+    &:active {
+      i {
+        background: #aaa;
+      }
+    }
+
+    i {
+      display: block;
+      margin: $space-size $space-size/2;
+      background: #ddd;
+      width: 40px;
+      height: $border-size;
+      right: 0;
+    }
+  }
+
   @media (max-width: $small-screen-width) {
     border-right: 0;
 
@@ -81,33 +111,9 @@ $small-screen-width: 750px;
       box-shadow: none;
       transform: translateX(-100%);
     }
-  }
 
-  &-toggle {
-    $border-size: 2px;
-    $space-size: 9px;
-    position: fixed;
-    right: 0;
-    top: 10px;
-    z-index: 3;
-
-    &:hover {
-      border-bottom: 0;
-    }
-
-    &:active {
-      i {
-        background: #aaa;
-      }
-    }
-
-    i {
+    &-toggle {
       display: block;
-      margin: $space-size $space-size/2;
-      background: #ddd;
-      width: 40px;
-      height: $border-size;
-      right: 0;
     }
   }
 }
@@ -177,7 +183,7 @@ $small-screen-width: 750px;
   }
 }
 
-.content {
+.container {
   padding: 30px 49px;
   margin-left: auto;
   margin-right: auto;

@@ -17,6 +17,26 @@
       "from": "blear.classes.events@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npm.taobao.org/blear.classes.events/download/blear.classes.events-1.0.6.tgz"
     },
+    "blear.classes.template": {
+      "version": "1.0.33",
+      "from": "blear.classes.template@>=1.0.0 <2.0.0",
+      "resolved": "http://registry.npm.taobao.org/blear.classes.template/download/blear.classes.template-1.0.33.tgz"
+    },
+    "blear.components.tips": {
+      "version": "1.0.3",
+      "from": "blear.components.tips@latest",
+      "resolved": "https://registry.npmjs.org/blear.components.tips/-/blear.components.tips-1.0.3.tgz"
+    },
+    "blear.core.ajax": {
+      "version": "1.0.9",
+      "from": "blear.core.ajax@latest",
+      "resolved": "https://registry.npmjs.org/blear.core.ajax/-/blear.core.ajax-1.0.9.tgz"
+    },
+    "blear.core.animation": {
+      "version": "1.0.4",
+      "from": "blear.core.animation@latest",
+      "resolved": "https://registry.npmjs.org/blear.core.animation/-/blear.core.animation-1.0.4.tgz"
+    },
     "blear.core.attribute": {
       "version": "1.0.11",
       "from": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz",
@@ -97,6 +117,16 @@
       "from": "blear.ui.mask@latest",
       "resolved": "https://registry.npmjs.org/blear.ui.mask/-/blear.ui.mask-1.0.14.tgz"
     },
+    "blear.ui.popup": {
+      "version": "1.0.10",
+      "from": "blear.ui.popup@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.ui.popup/-/blear.ui.popup-1.0.10.tgz"
+    },
+    "blear.ui.tips": {
+      "version": "1.0.6",
+      "from": "blear.ui.tips@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.ui.tips/-/blear.ui.tips-1.0.6.tgz"
+    },
     "blear.ui.window": {
       "version": "1.1.15",
       "from": "blear.ui.window@>=1.0.0 <2.0.0",
@@ -109,7 +139,7 @@
     },
     "blear.utils.array": {
       "version": "1.0.12",
-      "from": "blear.utils.array@>=1.0.0 <2.0.0",
+      "from": "http://registry.npm.taobao.org/blear.utils.array/download/blear.utils.array-1.0.12.tgz",
       "resolved": "http://registry.npm.taobao.org/blear.utils.array/download/blear.utils.array-1.0.12.tgz"
     },
     "blear.utils.collection": {
@@ -139,7 +169,7 @@
     },
     "blear.utils.function": {
       "version": "1.0.5",
-      "from": "blear.utils.function@>=1.0.0 <2.0.0",
+      "from": "https://registry.npmjs.org/blear.utils.function/-/blear.utils.function-1.0.5.tgz",
       "resolved": "https://registry.npmjs.org/blear.utils.function/-/blear.utils.function-1.0.5.tgz"
     },
     "blear.utils.howdo": {
@@ -149,7 +179,7 @@
     },
     "blear.utils.json": {
       "version": "1.0.5",
-      "from": "blear.utils.json@>=1.0.0 <2.0.0",
+      "from": "https://registry.npmjs.org/blear.utils.json/-/blear.utils.json-1.0.5.tgz",
       "resolved": "https://registry.npmjs.org/blear.utils.json/-/blear.utils.json-1.0.5.tgz"
     },
     "blear.utils.number": {
@@ -162,9 +192,19 @@
       "from": "blear.utils.object@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npm.taobao.org/blear.utils.object/download/blear.utils.object-1.0.11.tgz"
     },
+    "blear.utils.path": {
+      "version": "1.0.8",
+      "from": "http://registry.npm.taobao.org/blear.utils.path/download/blear.utils.path-1.0.8.tgz",
+      "resolved": "http://registry.npm.taobao.org/blear.utils.path/download/blear.utils.path-1.0.8.tgz"
+    },
+    "blear.utils.querystring": {
+      "version": "1.0.5",
+      "from": "blear.utils.querystring@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.querystring/-/blear.utils.querystring-1.0.5.tgz"
+    },
     "blear.utils.random": {
       "version": "1.0.3",
-      "from": "blear.utils.random@>=1.0.0 <2.0.0",
+      "from": "https://registry.npmjs.org/blear.utils.random/-/blear.utils.random-1.0.3.tgz",
       "resolved": "https://registry.npmjs.org/blear.utils.random/-/blear.utils.random-1.0.3.tgz"
     },
     "blear.utils.string": {
@@ -181,6 +221,16 @@
       "version": "1.0.3",
       "from": "blear.utils.typeis@>=1.0.0 <2.0.0",
       "resolved": "http://registry.npm.taobao.org/blear.utils.typeis/download/blear.utils.typeis-1.0.3.tgz"
+    },
+    "blear.utils.uri": {
+      "version": "1.0.2",
+      "from": "blear.utils.uri@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.uri/-/blear.utils.uri-1.0.2.tgz"
+    },
+    "blear.utils.url": {
+      "version": "1.0.17",
+      "from": "blear.utils.url@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/blear.utils.url/-/blear.utils.url-1.0.17.tgz"
     },
     "blear.utils.validator": {
       "version": "1.0.4",
