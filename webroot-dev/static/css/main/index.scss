@@ -131,10 +131,6 @@ $small-screen-width: 750px;
     display: block;
     height: 100%;
     color: $text-primary-color;
-
-    &:hover {
-      border-bottom: 0;
-    }
   }
 
   @media (max-width: $small-screen-width) {

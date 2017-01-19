@@ -8,18 +8,20 @@
   margin-right: 10px;
   color: #ccc; }
 
-@media (max-width: 650px) {
-  .toc {
-    display: none; } }
-
 .toc li {
   list-style: none;
   bottom: 0;
   margin-left: 1em;
-  margin-bottom: 0.6em; }
+  margin-bottom: 0.2em; }
   .toc li ul {
-    margin-top: 0.6em; }
+    margin-top: 0.2em; }
 
-.toc li > a:link,
-.toc li > a:visited {
+.toc a {
+  border-bottom: 1px solid transparent; }
+
+.toc a:link,
+.toc a:visited {
   color: #5b5b5b; }
+
+.toc a:hover {
+  border-bottom: 1px solid; }

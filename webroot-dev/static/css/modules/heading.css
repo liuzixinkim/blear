@@ -5,11 +5,11 @@
   clear: both; }
   .heading-index {
     margin-right: 10px;
-    color: #ccc; }
+    color: #ddd; }
   .heading-text code {
     font-size: inherit;
     color: inherit;
-    background: #dcdcdc; }
+    background: #eee; }
   .heading > a {
     margin: 0;
     color: #444 !important; }
@@ -23,7 +23,8 @@
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       left: -30px;
-      opacity: 0; }
+      opacity: 0;
+      color: #888; }
     .heading > a:hover:before {
       opacity: 1; }
     .heading > a:hover {

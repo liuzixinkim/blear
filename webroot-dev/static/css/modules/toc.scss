@@ -1,3 +1,5 @@
+$margin: 0.2em;
+
 .toc {
   &-1 {
     min-width: 200px;
@@ -11,23 +13,27 @@
     color: #ccc;
   }
 
-  @media (max-width: 650px) {
-    display: none;
-  }
-
   li {
     list-style: none;
     bottom: 0;
     margin-left: 1em;
-    margin-bottom: 0.6em;
+    margin-bottom: $margin;
 
     ul {
-      margin-top: 0.6em;
+      margin-top: $margin;
     }
   }
 
-  li > a:link,
-  li > a:visited {
+  a {
+    border-bottom: 1px solid transparent;
+  }
+
+  a:link,
+  a:visited {
     color: #5b5b5b;
+  }
+
+  a:hover {
+    border-bottom: 1px solid;
   }
 }

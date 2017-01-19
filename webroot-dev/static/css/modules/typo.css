@@ -7,7 +7,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */ }
   .typo a {
-    margin: 0 3px; }
+    margin: 0 3px;
+    border-bottom: 1px solid transparent; }
+    .typo a:hover {
+      border-bottom: 1px solid; }
   .typo p, .typo pre, .typo dl, .typo form, .typo hr, .typo table, .typo blockquote {
     margin-bottom: 2em; }
   .typo ul,
@@ -95,7 +98,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     padding: 0.2em 0.4em;
     border-radius: 4px;
     color: #C7254E;
-    font-size: 0.9em;
     background: #fff5f7; }
   .typo pre {
     padding: 15px;

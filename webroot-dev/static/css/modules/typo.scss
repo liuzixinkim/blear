@@ -2,13 +2,17 @@
 // @ref https://github.com/sofish/typo.css/blob/master/typo.css
 @import "../varible";
 
-
 .typo {
   color: #666;
   line-height: 1.5;
 
   a {
     margin: 0 3px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid;
+    }
   }
 
   p, pre, dl, form, hr, table, blockquote {
@@ -145,7 +149,6 @@
     padding: 0.2em 0.4em;
     border-radius: 4px;
     color: #C7254E;
-    font-size: 0.9em;
     background: #fff5f7;
   }
 

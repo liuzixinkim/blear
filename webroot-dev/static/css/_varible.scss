@@ -4,6 +4,6 @@ $text-success-color: #2abb6f;
 $text-normal-color: #333;
 
 $text-link-normal-color: #108ee9;
-$text-link-hover-color: #49a9ee;
-$text-link-active-color: #0e77ca;
-$text-link-visited-color: #0e77ca;
+$text-link-hover-color: darken($text-link-normal-color, 10%);
+$text-link-active-color: darken($text-link-normal-color, 20%);
+$text-link-visited-color: $text-link-normal-color;

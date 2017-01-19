@@ -6,14 +6,14 @@
 
   &-index {
     margin-right: 10px;
-    color: #ccc;
+    color: #ddd;
   }
 
   &-text {
     code {
       font-size: inherit;
       color: inherit;
-      background: #dcdcdc;
+      background: #eee;
     }
   }
 
@@ -38,6 +38,7 @@
       transform: translateY(-50%);
       left: -30px;
       opacity: 0;
+      color: #888;
     }
 
     &:hover:before {

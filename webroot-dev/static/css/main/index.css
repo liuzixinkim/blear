@@ -88,8 +88,6 @@
     display: block;
     height: 100%;
     color: #d45959; }
-    .title a:hover {
-      border-bottom: 0; }
   @media (max-width: 750px) {
     .title {
       line-height: 60px;
