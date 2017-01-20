@@ -129,7 +129,7 @@ module.exports = function (options) {
 
             if (cached) {
                 return isAJAX ?
-                    res.api(cached) :
+                    res.api(returnAjaxData(cached)) :
                     res.render(options.templateFilePath, cached);
             }
 
@@ -155,7 +155,7 @@ module.exports = function (options) {
             }
 
             if (isAJAX) {
-                return res.api(renderData);
+                return res.api(returnAjaxData(renderData));
             }
 
             res.render(options.templateFilePath, renderData);
@@ -263,3 +263,14 @@ function postHTMLAsHref(content, options) {
     });
 }
 
+/**
+ * 处理为 ajaxData
+ * @param renderData
+ */
+function returnAjaxData(renderData) {
+    var ajaxData = object.assign(true, {}, renderData);
+
+    delete ajaxData.page.sidebar;
+
+    return ajaxData;
+}
