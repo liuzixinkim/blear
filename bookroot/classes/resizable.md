@@ -150,6 +150,25 @@ var resizeable = new Resizable({
 
 
 
+# Events
+事件继承于 [blear.classes.draggable](/classes/draggable.md)。
+
+## `resizeStart(meta)`
+
+### `meta.direction`
+- 类型：`String`
+- 说明：方向，`x` 为水平方向，`y` 为垂直方向
+
+拖拽尺寸开始时触发。
+
+## `resizeMove(meta)`
+拖拽尺寸中触发。继承 `resizeStart`。
+
+## `resizeEnd(meta)`
+拖拽尺寸结束后触发。继承 `resizeStart`。
+
+
+
 # Dependencies
 {{ dependencies }}
 

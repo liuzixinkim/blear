@@ -156,6 +156,18 @@ var draggable = new Draggable({
 ## `dragStart(meta)`
 拖拽开始的时候触发。
 
+### `meta.containerEl`
+- 类型：`HTMLElement`
+- 说明：容器元素
+
+### `meta.effectedEl`
+- 类型：`HTMLElement`
+- 说明：影响元素
+
+### `meta.handleEl`
+- 类型：`HTMLElement`
+- 说明：应用元素
+
 ### `meta.startX`
 - 类型：`Number`
 - 说明：拖拽开始时鼠标位置横坐标（clientX，相对于窗口）
@@ -174,7 +186,7 @@ var draggable = new Draggable({
 
 
 ## `dragMove(meta)`
-拖拽过程中触发。
+拖拽过程中触发。继承 `dragStart(meta)`。
 
 ### `meta.moveX`
 - 类型：`Number`
@@ -193,9 +205,8 @@ var draggable = new Draggable({
 - 说明：拖拽中鼠标垂直移动距离（相对于鼠标开始移动时）
 
 
-
 ## `dragEnd(meta)`
-拖拽结束时触发。
+拖拽结束时触发。继承 `dragStart(meta)`。
 
 ### `meta.endX`
 - 类型：`Number`
