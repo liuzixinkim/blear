@@ -5,63 +5,80 @@
 # Example
 ```js
 var Draggable = require('blear.class.draggable');
+
+var draggable = new Draggable({
+    containerEl: '#demo'
+});
 ```
 
-# `.defaults`
-## `.defaults.containerEl`
+# Static
+## `.defaults`
+### `.defaults.containerEl`
 - 类型：`HTMLElement | String | null`
-- 说明：容器
+- 说明：容器，不能为空
 - 默认：`null`
 
-## `.defaults.effectedSelector`
+### `.defaults.effectedSelector`
 - 类型：`HTMLElement | String | null`
 - 说明：拖拽被影响者
-- 默认：`null`
+- 默认：`containerEl`
 
-## `.defaults.handleSelector`
+### `.defaults.handleSelector`
 - 类型：`HTMLElement | String | null`
 - 说明：拖拽处理者
-- 默认：`null`
+- 默认：`effectedSelector`
 
-## `.defaults.shadow`
+三者关系：
+```html
+<ul> -------------------> container
+    <li> ---------------> effected
+        <header/> -------> handle
+        <body/>
+        <footer/>
+    </li>
+    ...
+</ul>
+```
+
+### `.defaults.shadow`
 - 类型：`Boolean`
 - 说明：是否拖拽是出现影子来代替移动
 - 默认：`true`
 
-## `.defaults.preventDefault`
+### `.defaults.preventDefault`
 - 类型：`Boolean`
 - 说明：是否取消默认
 - 默认：`true`
 
-## `.defaults.draggable`
+### `.defaults.draggable`
 - 类型：`Boolean`
 - 说明：是否可拖动，设置为 false 时让继承者去处理
 - 默认：`true`
 
-## `.defaults.axis`
+### `.defaults.axis`
 - 类型：`String`
 - 说明：坐标轴
 - 默认：`xy`
 
-## `.defaults.zIndex`
+### `.defaults.zIndex`
 - 类型：`Number`
 - 说明：层级值
 - 默认：`9999`
 
-## `.defaults.resizeAnimation(el, to, done): undefined`
+### `.defaults.resizeAnimation(el, to, done): undefined`
 - 类型：`Function`
 - 说明：位置变化动画
-- 默认：`9999`
+- 默认：`null`
 
-### `el`
+#### `el`
 - 类型：`HTMLElement | String | null`
 - 说明：元素
 
-### `to`
+#### `to`
 - 类型：`Object`
 - 说明：位置变化动画设置
 
-### `done`
+#### `done`
 - 类型：`Function`
 - 说明：动画执行完毕回调
 
@@ -69,7 +86,7 @@ var Draggable = require('blear.class.draggable');
 原型属性、方法
 
 
-## `#enable(): Draggable`
+## `#enable(): draggable`
 启用拖拽
 
 ### `Draggable`
@@ -79,21 +96,21 @@ var Draggable = require('blear.class.draggable');
 ## `#disable(): Draggable`
 禁用拖拽
 
-### `Draggable`
+### `draggable`
 - 类型：`Draggable`
 - 说明：支持链式调用
 
-## `#preventDefault(): Draggable`
+## `#preventDefault(): draggable`
 阻止默认
 
-### `Draggable`
+### `draggable`
 - 类型：`Draggable`
 - 说明：支持链式调用
 
-## `#allowDefault(): Draggable`
+## `#allowDefault(): draggable`
 允许默认
 
-### `Draggable`
+### `draggable`
 - 类型：`Draggable`
 - 说明：支持链式调用
 
@@ -141,6 +158,4 @@ var Draggable = require('blear.class.draggable');
 
 
 
-
-# More
 

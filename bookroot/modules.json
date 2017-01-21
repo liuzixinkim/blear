@@ -4,7 +4,7 @@
     "create": "2016-04-20 10:41",
     "update": "2016-04-20 10:41",
     "name": "blear.classes.animation",
-    "version": "1.0.3",
+    "version": "1.1.1",
     "github": "https://github.com/blearjs/blear.classes.animation",
     "keywords": [
       "blear",
@@ -16,14 +16,14 @@
     "description": "单元素动画组合类",
     "dependencies": {
       "blear.classes.events": "1.x",
-      "blear.utils.object": "1.x",
-      "blear.utils.howdo": "1.x",
-      "blear.utils.array": "1.x",
-      "blear.utils.function": "1.x",
-      "blear.utils.typeis": "1.x",
-      "blear.utils.date": "1.x",
+      "blear.core.selector": "1.x",
       "blear.core.transform": "1.x",
-      "blear.core.selector": "1.x"
+      "blear.utils.array": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.howdo": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.plan": "^2.0.0",
+      "blear.utils.typeis": "1.x"
     }
   },
   "blear.classes.class": {
@@ -69,6 +69,34 @@
       "blear.utils.typeis": "1.x",
       "blear.utils.date": "1.x",
       "blear.classes.events": "1.x"
+    }
+  },
+  "blear.classes.draggable": {
+    "author": "ydr.me",
+    "create": "2016-04-25 11:27",
+    "update": "2016-04-25 11:27",
+    "name": "blear.classes.draggable",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.classes.draggable",
+    "keywords": [
+      "blear",
+      "classes",
+      "draggable",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "可拖拽的类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.layout": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.number": "1.x"
     }
   },
   "blear.classes.events": {
@@ -130,6 +158,31 @@
       "blear.utils.string": "1.x",
       "blear.utils.time": "1.x",
       "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.classes.resizable": {
+    "author": "ydr.me",
+    "create": "2016年08月18日18:21:36",
+    "update": "2016年08月18日18:21:36",
+    "name": "blear.classes.resizable",
+    "version": "1.0.6",
+    "github": "https://github.com/blearjs/blear.classes.resizable",
+    "keywords": [
+      "blear",
+      "classes",
+      "resizable",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "拖拽改变尺寸类",
+    "dependencies": {
+      "blear.classes.draggable": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.layout": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.number": "1.x"
     }
   },
   "blear.classes.scrollable": {
@@ -362,7 +415,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.core.flexible",
-    "version": "1.0.7",
+    "version": "2.0.0",
     "github": "https://github.com/blearjs/blear.core.flexible",
     "keywords": [
       "blear",
@@ -372,7 +425,7 @@
       "cloudcome",
       "ydr.me"
     ],
-    "description": "移动端 rem 动态计算",
+    "description": "移动端 rem 动态计算、动态缩放",
     "dependencies": {}
   },
   "blear.core.jsonp": {
@@ -558,7 +611,7 @@
     "create": "2016-04-19 15:49",
     "update": "2016-04-19 15:49",
     "name": "blear.core.transform",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "github": "https://github.com/blearjs/blear.core.transform",
     "keywords": [
       "blear",
@@ -569,17 +622,17 @@
     ],
     "description": "DOM CSS3 过渡动画",
     "dependencies": {
-      "blear.utils.compatible": "1.x",
-      "blear.utils.access": "1.x",
-      "blear.utils.typeis": "1.x",
-      "blear.utils.object": "1.x",
-      "blear.utils.array": "1.x",
-      "blear.utils.time": "1.x",
-      "blear.utils.easing": "1.x",
-      "blear.utils.function": "1.x",
-      "blear.utils.string": "1.x",
+      "blear.core.attribute": "1.x",
       "blear.core.event": "1.x",
-      "blear.core.attribute": "1.x"
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.compatible": "1.x",
+      "blear.utils.easing": "1.x",
+      "blear.utils.function": "^1.0.5",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.typeis": "1.x"
     }
   },
   "blear.core.upload": {
@@ -764,7 +817,7 @@
     "create": "2016年5月18日13:45:44",
     "update": "2016年11月26日14:29:44",
     "name": "blear.utils.date",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "github": "https://github.com/blearjs/blear.utils.date",
     "keywords": [
       "blear",
@@ -955,7 +1008,7 @@
     "update": "2016年11月26日15:47:34",
     "create": "2016年11月26日15:47:34",
     "name": "blear.utils.object",
-    "version": "1.0.11",
+    "version": "1.0.14",
     "github": "https://github.com/blearjs/blear.utils.object",
     "keywords": [
       "cloudcome",
