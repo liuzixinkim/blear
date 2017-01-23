@@ -27,27 +27,42 @@ plan
         });
     })
     // 同步任务
-    .taskSync(function(one) {
-        // 1 + 2 = 3
-        return one + 2;
+    .taskSync(function(prev) {
+        // 2 + 1
+        return 2 + prev;
     })
-    // 循环异步
-    .each([1, 2], function(index, val, next, prev) {
-        setTimeout(function() {
-            // 第 1 次：3 + 1
-            // 第 2 次：4 + 2
-            next(null, prev + val);
+    // 许诺任务
+    .taskPromise(function(prev) {
+        return new Promise(function(resolve) {
+            // 3 + 3
+            resolve(3 + prev);
         });
     })
-    // 循环同步
-    .eachSync([3, 4], function(index, val, prev) {
-        // 第 1 次：6 + 3
-        // 第 2 次：9 + 4
-        return prev + val;
+    // 循环异步任务
+    .each([4, 5], function(index, val, next, prev) {
+        setTimeout(function() {
+            // 第 1 次：4 + 6
+            // 第 2 次：5 + 10
+            next(null, val + prev);
+        });
+    })
+    // 循环同步任务
+    .eachSync([6, 7], function(index, val, prev) {
+        // 第 1 次：6 + 15
+        // 第 2 次：7 + 21
+        return val + prev;
+    })
+    // 循环许诺任务
+    .eachPromise([8, 9], function(index, val, prev) {
+        return new Promise(function(resolve) {
+            // 第 1 次：8 + 28
+            // 第 2 次：9 + 36
+            resolve(val + prev);
+        });
     })
     .serial()
     .try(function (ret) {
-        // ret === 13
+        // ret === 45
     });
 ```
 
@@ -67,28 +82,46 @@ plan
         // 第 2 个结果：2
         return 2;
     })
-    // 循环异步
-    .each([1, 2], function(index, val, next) {
+    // 许诺任务
+    .taskPromise(function() {
+        // 第 3 个结果：3
+        return new Promise(function(resolve) {
+            resolve(3);
+        });
+    })
+    // 循环异步任务
+    .each([4, 5], function(index, val, next) {
         setTimeout(function() {
-            // 第 3 个结果：1
-            // 第 4 个结果：2
+            // 第 4 个结果：4
+            // 第 5 个结果：5
             next(null, val);
         });
     })
-    // 循环同步
-    .eachSync([3, 4], function(index, val) {
-        // 第 5 个结果：3
-        // 第 6 个结果：4
+    // 循环同步任务
+    .eachSync([6, 7], function(index, val) {
+        // 第 6 个结果：6
+        // 第 7 个结果：7
         return val;
     })
+    // 循环许诺任务
+    .eachPromise([8, 9], function(index, val) {
+        return new Promise(function(resolve) {
+            // 第 8 个结果：8
+            // 第 9 个结果：9
+            resolve(val);
+        });
+    })
     .parallel()
-    .try(function (ret1, ret2, ret3, ret4, ret5, ret6) {
+    .try(function (ret1, ret2, ret3, ret4, ret5, ret6, ret7, ret8, ret9) {
         // ret1 === 1
         // ret2 === 2
-        // ret3 === 1
-        // ret4 === 2
-        // ret5 === 3
-        // ret6 === 4
+        // ret3 === 3
+        // ret4 === 4
+        // ret5 === 5
+        // ret6 === 6
+        // ret7 === 7
+        // ret8 === 8
+        // ret9 === 9
     });
 ```
 
@@ -152,6 +185,30 @@ plan.taskSync(function syncTask(prev) {
 - 说明：同步任务执行结果，如果执行错误，返回 `Error` 实例
 
 
+## `#taskPromise(promiseTask(prev): promise): plan`
+定义一个许诺任务，链式调用返回 `plan`。
+```js
+plan.taskPromise(function syncTask(prev) {
+    // 返回一个 promise
+    return new Promise(function(resolve) {
+        resolve(1 + prev);
+    });
+});
+```
+
+### `promiseTask`
+- 类型：`Function`
+- 说明：任务处理，如果是串行，则将返回值传给下一个任务，否则传到终点
+
+#### `promiseTask: prev`
+- 类型：`*`
+- 说明：上一个任务结果，如果是串行的话
+
+#### `promiseTask(): promise`
+- 类型：`Promise`
+- 说明：许诺任务返回一个 `Promise` 实例
+
+
 
 ## `#each(list, asyncTasker(index, val, next(err, result)), prev): plan`
 循环处理异步任务，链式调用返回 `plan`。
@@ -199,7 +256,7 @@ plan.each(['a', 'b'], function(index, val, next, prev) {
 
 
 
-## `#eachSync(list, syncTasker(keyIndex, val, prev)): plan`
+## `#eachSync(list, syncTasker(keyIndex, val, prev): result): plan`
 循环处理异步任务，链式调用返回 `plan`。
 ```js
 plan.eachSync(['a', 'b'], function(index, val, prev) {
@@ -234,6 +291,44 @@ plan.eachSync(['a', 'b'], function(index, val, prev) {
 #### `syncTasker(): result`
 - 类型：`Error || *`
 - 说明：如果错误的话为 `Error` 实例，否则为任务执行结果
+
+
+
+## `#eachPromise(list, promiseTasker(keyIndex, val, prev): promise): plan`
+循环处理许诺任务，链式调用返回 `plan`。
+```js
+plan.eachPromise(['a', 'b'], function(index, val, prev) {
+    // 返回一个 promise
+    return new Promise()
+});
+```
+
+### `list`
+- 类型：`Array | Object`
+- 说明：集合，数组、类数组或对象
+
+### `promiseTasker`
+- 类型：`Function`
+- 说明：任务处理，如果是串行，则将返回值传给下一个任务，否则传到终点
+
+#### `promiseTasker: this`
+- 类型：`null`
+
+#### `promiseTasker: keyIndex`
+- 类型：`Number | String`
+- 说明：如果是对象，则为 `String`，否则为 `Number`
+
+#### `promiseTasker: val`
+- 类型：`*`
+- 说明：遍历的集合值
+
+#### `promiseTasker: prev`
+- 类型：`*`
+- 说明：上一个任务结果，如果是串行的话
+
+#### `promiseTasker(): promise`
+- 类型：`Promise`
+- 说明：返回一个 `Promise` 实例
 
 
 

@@ -1076,7 +1076,7 @@
     "create": "2017-01-08 14:16",
     "update": "2017-01-08 14:16",
     "name": "blear.utils.plan",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "github": "https://github.com/blearjs/blear.utils.plan",
     "keywords": [
       "blear",
