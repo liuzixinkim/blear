@@ -10,7 +10,7 @@
 var plan = require('blear.utils.plan');
 ```
 
-plan 是一个同、异步任务串、并行流程处理工具。
+plan 是一个同、异步、promise 任务的串、并行流程处理工具。
 plan 是自动实例化的，虽然他是一个 class。
 
 ![](https://dn-fed.qbox.me/@/res/20170115231040606109648578 =1297x1104)
