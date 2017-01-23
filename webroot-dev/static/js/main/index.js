@@ -132,7 +132,7 @@ var scrollTo = function () {
 
     animation.animate(win, {
         scrollTop: st
-    })
+    });
 };
 
 // 快捷访问
