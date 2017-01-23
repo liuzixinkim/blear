@@ -3,7 +3,7 @@
     "main": [
       {
         "src": "../webroot-dev/static/js/main/index.js",
-        "dest": "/static/js/main/bb2864e5bce0097289009e09d5e8b04e.js",
+        "dest": "/static/js/main/34635a811decb4db5ab564235e1ec1be.js",
         "deps": [
           "../webroot-dev/node_modules/blear.ui.mask/src/index.js",
           "../webroot-dev/node_modules/blear.utils.object/src/index.js",
