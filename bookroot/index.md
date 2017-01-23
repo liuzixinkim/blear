@@ -29,7 +29,7 @@
     - [blear.classes.qrcode](#)
     - [blear.classes.redis](#)
     - [blear.classes.resizable](/classes/resizable.md)
-    - [blear.classes.router](#)
+    - [blear.classes.router](/classes/router.md)
     - [blear.classes.safe-markdown](#)
     - [blear.classes.scrollable](/classes/scrollable.md)
     - [blear.classes.social-share](#)

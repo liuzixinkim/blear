@@ -7,6 +7,7 @@
     "blear.core.animation": "^1.0.4",
     "blear.core.attribute": "https://registry.npmjs.org/blear.core.attribute/-/blear.core.attribute-1.0.11.tgz",
     "blear.core.event": "https://registry.npmjs.org/blear.core.event/-/blear.core.event-1.0.5.tgz",
+    "blear.core.layout": "https://registry.npmjs.org/blear.core.layout/-/blear.core.layout-1.0.4.tgz",
     "blear.core.selector": "https://registry.npmjs.org/blear.core.selector/-/blear.core.selector-1.0.8.tgz",
     "blear.core.touch": "^1.0.6",
     "blear.core.transform": "https://registry.npmjs.org/blear.core.transform/-/blear.core.transform-1.0.5.tgz",

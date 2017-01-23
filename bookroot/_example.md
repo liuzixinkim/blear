@@ -13,6 +13,13 @@ var example = require('blear.classes.example');
 
 
 
+# Static
+静态属性、方法
+
+
+## `.bala`
+
+
 # `new Example(...)`
 本身是一个方法
 
@@ -59,13 +66,6 @@ fn: a 表示 fn 函数的形参
 # Events
 ## `show(arg1, arg2)`
 
-
-
-# Static
-静态属性、方法
-
-
-## `.bala`
 
 
 

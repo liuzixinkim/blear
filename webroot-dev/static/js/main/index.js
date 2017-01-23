@@ -14,6 +14,7 @@ var event = require('blear.core.event');
 var attribute = require('blear.core.attribute');
 var transform = require('blear.core.transform');
 var animation = require('blear.core.animation');
+var layout = require('blear.core.layout');
 var UI = require('blear.ui');
 var tips = require('blear.components.tips');
 var array = require('blear.utils.array');
@@ -24,6 +25,8 @@ require('blear.core.touch');
 
 var api = require('../utils/api');
 var highlight = require('../common/highlight.pack');
+
+var win = window;
 
 // 侧边栏
 var buildSidebar = function () {
@@ -116,10 +119,19 @@ var progress = (function () {
     };
 }());
 
-// 滚动到顶部
-var scrollTop = function () {
-    animation.animate(window, {
-        scrollTop: 0
+// 滚动到指定位置
+var scrollTo = function () {
+    var st = 0;
+    var hash = location.hash;
+    // 默认目标为 hash 值对应点
+    var targetEl = selector.query(hash)[0];
+
+    if (targetEl) {
+        st = layout.offsetTop(targetEl) - 20;
+    }
+
+    animation.animate(win, {
+        scrollTop: st
     })
 };
 
@@ -155,7 +167,7 @@ var buildQuickAccess = function () {
             attribute.html(titleEl, page.title);
             attribute.html(tocEl, page.toc);
             attribute.html(contentEl, page.content);
-            scrollTop();
+            scrollTo();
             buildHightlightPre();
         });
     };
