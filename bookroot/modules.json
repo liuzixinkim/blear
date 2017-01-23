@@ -1090,7 +1090,7 @@
       "cloudcome",
       "ydr.me"
     ],
-    "description": "（同步、异步、promise）任务计划（流程控制）",
+    "description": "（同步、异步、promise）任务的串、并行计划（流程控制）",
     "dependencies": {
       "blear.classes.class": "1.x",
       "blear.classes.events": "1.x",
