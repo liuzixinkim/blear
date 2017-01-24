@@ -10,6 +10,9 @@ blear.core.flexible 不是一个 commonjs 规范的模块，需要使用 `script
 
 ```html
 <head>
+    <!-- 需要先写 viewport -->
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,minimal-ui">
+    
     <!-- 需要在 head 标签里将 flexible 内联引入 -->
     <!-- 或者内嵌引入 -->
     <script src="/node_modules/blear.core.flexible/src/index.js"></script>
