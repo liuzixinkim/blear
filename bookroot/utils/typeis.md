@@ -141,7 +141,7 @@ typeis.Function(function(){});
 判断是否为 `null`
 
 ```js
-typeis.Function(null);
+typeis.Null(null);
 // => true
 ```
 
