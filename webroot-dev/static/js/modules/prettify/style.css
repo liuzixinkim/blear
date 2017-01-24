@@ -1,0 +1,53 @@
+.prettify {
+  /*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
+  /* Specify class=linenums on a pre to get line numbering */
+  /* string content */
+  /* keyword */
+  /* comment */
+  /* type name */
+  /* literal value */
+  /* punctuation */
+  /* lisp open bracket */
+  /* lisp close bracket */
+  /* markup tag name */
+  /* markup attribute name */
+  /* markup attribute value */
+  /* declaration */
+  /* variable name */
+  /* function name */ }
+  .prettify-pln {
+    color: #0086b3; }
+  .prettify ol.prettify-linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #cccccc; }
+  .prettify-L0, .prettify-L1, .prettify-L2, .prettify-L3, .prettify-L4, .prettify-L5, .prettify-L6, .prettify-L7, .prettify-L8, .prettify-L9 {
+    list-style-type: decimal; }
+  .prettify-str {
+    color: #183691; }
+  .prettify-kwd {
+    color: #a71d5d; }
+  .prettify-com {
+    color: #969896; }
+  .prettify-typ {
+    color: #0086b3; }
+  .prettify-lit {
+    color: #0086b3; }
+  .prettify-pun {
+    color: #333; }
+  .prettify-opn {
+    color: #333; }
+  .prettify-clo {
+    color: #333; }
+  .prettify-tag {
+    color: #000080; }
+  .prettify-atn {
+    color: #795da3; }
+  .prettify-atv {
+    color: #183691; }
+  .prettify-dec {
+    color: #333; }
+  .prettify-var {
+    color: #008080; }
+  .prettify-fun {
+    color: #900; }

@@ -110,9 +110,6 @@
     margin-bottom: 2em; }
   .nav li ul {
     margin-left: 2em; }
-  .nav li.active > a {
-    background: #0e90d2;
-    color: #fff; }
 
 .container {
   padding: 30px 49px;

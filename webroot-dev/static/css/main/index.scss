@@ -142,7 +142,18 @@ $small-screen-width: 750px;
     display: block;
     padding: 0 16px;
     line-height: $nav-line-height;
+    //color: $text-primary-color;
+    //
+    //&:hover,
+    //&:active {
+    //  background: lighten($text-primary-color, 35%);
+    //}
   }
+  //
+  //.active a {
+  //  background: $text-primary-color;
+  //  color: #fff;
+  //}
 
   li a[href="#"] {
     color: $text-normal-color;
@@ -164,13 +175,6 @@ $small-screen-width: 750px;
   li {
     ul {
       margin-left: 2em;
-    }
-
-    &.active {
-      & > a {
-        background: #0e90d2;
-        color: #fff;
-      }
     }
   }
 }

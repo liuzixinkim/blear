@@ -188,11 +188,9 @@ plan.taskSync(function syncTask(prev) {
 ## `#taskPromise(promiseTask(prev): promise): plan`
 定义一个许诺任务，链式调用返回 `plan`。
 ```js
-plan.taskPromise(function syncTask(prev) {
+plan.taskPromise(function promiseTask(prev) {
     // 返回一个 promise
-    return new Promise(function(resolve) {
-        resolve(1 + prev);
-    });
+    return new Promise();
 });
 ```
 
@@ -299,7 +297,7 @@ plan.eachSync(['a', 'b'], function(index, val, prev) {
 ```js
 plan.eachPromise(['a', 'b'], function(index, val, prev) {
     // 返回一个 promise
-    return new Promise()
+    return new Promise();
 });
 ```
 

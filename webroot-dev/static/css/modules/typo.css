@@ -1,14 +1,6 @@
 .typo {
   color: #666;
-  line-height: 1.5;
-  /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-  /* Tomorrow Comment */
-  /* Tomorrow Red */
-  /* Tomorrow Orange */
-  /* Tomorrow Yellow */
-  /* Tomorrow Green */
-  /* Tomorrow Blue */
-  /* Tomorrow Purple */ }
+  line-height: 1.5; }
   .typo a {
     margin: 0 3px;
     border-bottom: 1px solid transparent; }
@@ -95,67 +87,28 @@
     -webkit-box-sizing: content-box;
     box-sizing: content-box; }
   .typo code, .typo pre {
-    font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   .typo code {
+    display: inline-block;
     margin: 0 2px;
     padding: 0.2em 0.4em;
     border-radius: 4px;
-    color: #C7254E;
-    background: #fff5f7; }
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #eee; }
   .typo pre {
     padding: 15px;
     word-wrap: normal;
     overflow: auto;
-    line-height: 1.4;
+    line-height: 1.5;
     tab-size: 4;
-    border: 1px solid #eee; }
+    background: #f7f7f7;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
   .typo pre code {
     background: transparent;
     margin: 0;
     padding: 0;
     border-radius: 0;
-    color: #426373; }
-  .typo .hljs-comment,
-  .typo .hljs-quote {
-    color: #8e908c; }
-  .typo .hljs-variable,
-  .typo .hljs-template-variable,
-  .typo .hljs-tag,
-  .typo .hljs-name,
-  .typo .hljs-selector-id,
-  .typo .hljs-selector-class,
-  .typo .hljs-regexp,
-  .typo .hljs-deletion {
-    color: #c82829; }
-  .typo .hljs-number,
-  .typo .hljs-built_in,
-  .typo .hljs-builtin-name,
-  .typo .hljs-literal,
-  .typo .hljs-type,
-  .typo .hljs-params,
-  .typo .hljs-meta,
-  .typo .hljs-link {
-    color: #f5871f; }
-  .typo .hljs-attribute {
-    color: #eab700; }
-  .typo .hljs-string,
-  .typo .hljs-symbol,
-  .typo .hljs-bullet,
-  .typo .hljs-addition {
-    color: #718c00; }
-  .typo .hljs-title,
-  .typo .hljs-section {
-    color: #4271ae; }
-  .typo .hljs-keyword,
-  .typo .hljs-selector-tag {
-    color: #8959a8; }
-  .typo .hljs {
-    display: block;
-    overflow-x: auto;
-    background: white;
-    color: #4d4d4c;
-    padding: 0.5em; }
-  .typo .hljs-emphasis {
-    font-style: italic; }
-  .typo .hljs-strong {
-    font-weight: bold; }
+    color: #333;
+    border: 0; }

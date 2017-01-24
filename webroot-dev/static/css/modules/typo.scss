@@ -141,24 +141,28 @@
   }
 
   code, pre {
-    font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;;
   }
 
   code {
+    display: inline-block;
     margin: 0 2px;
     padding: 0.2em 0.4em;
     border-radius: 4px;
-    color: #C7254E;
-    background: #fff5f7;
+    color: #333;
+    background: #f9f9f9;
+    border: 1px solid #eee;
   }
 
   pre {
     padding: 15px;
     word-wrap: normal;
     overflow: auto;
-    line-height: 1.4;
+    line-height: 1.5;
     tab-size: 4;
-    border: 1px solid #eee;
+    background: #f7f7f7;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
   }
 
   pre code {
@@ -166,16 +170,9 @@
     margin: 0;
     padding: 0;
     border-radius: 0;
-    color: #426373;
+    color: #333;
+    border: 0;
   }
-
-    //  hightlight
-    // @link http://jmblog.github.io/color-themes-for-highlightjs/
-    //@import "highlight/arduino-light";
-    //@import "highlight/qtcreator_light";
-    //@import "highlight/solarized-light";
-    @import "highlight/tomorrow";
-    //@import "highlight/material-dark";
 }
 
 

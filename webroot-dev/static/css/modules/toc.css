@@ -1,9 +1,3 @@
-.toc-1 {
-  min-width: 200px;
-  display: inline-block;
-  padding: 16px 10px;
-  border: 1px solid #eee; }
-
 .toc-index {
   margin-right: 10px;
   color: #ccc; }
@@ -12,16 +6,6 @@
   list-style: none;
   bottom: 0;
   margin-left: 1em;
-  margin-bottom: 0.2em; }
+  margin-bottom: 0.3em; }
   .toc li ul {
-    margin-top: 0.2em; }
-
-.toc a {
-  border-bottom: 1px solid transparent; }
-
-.toc a:link,
-.toc a:visited {
-  color: #5b5b5b; }
-
-.toc a:hover {
-  border-bottom: 1px solid; }
+    margin-top: 0.3em; }

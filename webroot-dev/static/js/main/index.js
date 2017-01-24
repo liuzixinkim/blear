@@ -24,7 +24,7 @@ var url = require('blear.utils.url');
 require('blear.core.touch');
 
 var api = require('../utils/api');
-var highlight = require('../common/highlight.pack');
+var prettify = require('../modules/prettify/index');
 
 var win = window;
 
@@ -70,7 +70,7 @@ var buildSidebar = function () {
 var buildHightlightPre = function () {
     var els = selector.query('#content pre');
     array.each(els, function (index, el) {
-        highlight.highlightBlock(el);
+        prettify(el);
     });
 };
 

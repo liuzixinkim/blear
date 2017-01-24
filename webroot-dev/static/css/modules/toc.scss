@@ -1,11 +1,10 @@
-$margin: 0.2em;
+$margin: 0.3em;
 
 .toc {
   &-1 {
-    min-width: 200px;
-    display: inline-block;
-    padding: 16px 10px;
-    border: 1px solid #eee;
+    //display: inline-block;
+    //padding: 16px 10px;
+    //border: 1px solid #eee;
   }
 
   &-index {
@@ -24,16 +23,16 @@ $margin: 0.2em;
     }
   }
 
-  a {
-    border-bottom: 1px solid transparent;
-  }
-
-  a:link,
-  a:visited {
-    color: #5b5b5b;
-  }
-
-  a:hover {
-    border-bottom: 1px solid;
-  }
+  //a {
+  //  border-bottom: 1px solid transparent;
+  //}
+  //
+  //a:link,
+  //a:visited {
+  //  color: #5b5b5b;
+  //}
+  //
+  //a:hover {
+  //  border-bottom: 1px solid;
+  //}
 }
