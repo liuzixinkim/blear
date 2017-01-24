@@ -3,7 +3,7 @@
     "main": [
       {
         "src": "../webroot-dev/static/js/main/index.js",
-        "dest": "/static/js/main/34635a811decb4db5ab564235e1ec1be.js",
+        "dest": "/static/js/main/fa71c64d5f10ec4fd8a7808d760b2e39.js",
         "deps": [
           "../webroot-dev/node_modules/blear.ui.mask/src/index.js",
           "../webroot-dev/node_modules/blear.utils.object/src/index.js",
@@ -78,7 +78,9 @@
           "../webroot-dev/node_modules/blear.core.touch/src/_fastclick.js",
           "../webroot-dev/static/js/utils/api.js",
           "../webroot-dev/node_modules/blear.core.ajax/src/index.js",
-          "../webroot-dev/static/js/common/highlight.pack.js"
+          "../webroot-dev/static/js/modules/prettify/index.js",
+          "../webroot-dev/static/js/modules/prettify/prettify.js",
+          "../webroot-dev/static/js/modules/prettify/style.css"
         ]
       }
     ],
@@ -92,7 +94,7 @@
     ],
     "css": [
       {
-        "dest": "/static/css/132429762b1aa04db787462dae4a5c9e.css",
+        "dest": "/static/css/2fbc00e2b53de793350dc432ffea21e0.css",
         "deps": [
           {
             "src": "../webroot-dev/node_modules/blear.css.reset/src/index.css",
@@ -105,7 +107,7 @@
         ]
       },
       {
-        "dest": "/static/css/1196c36507c8dbbe33fa4fb565ce1127.css",
+        "dest": "/static/css/d5d3bc93c6df828740989ac30568de37.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/common/base.css",
@@ -138,7 +140,7 @@
         ]
       },
       {
-        "dest": "/static/css/fb4739c0d6c036a8baaa4e135864d081.css",
+        "dest": "/static/css/90780783778e633ac8a9c6596d2bdc10.css",
         "deps": [
           {
             "src": "../webroot-dev/static/css/main/index.css",
