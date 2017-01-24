@@ -8,6 +8,19 @@
 # Example
 ```js
 var ajax = require('blear.core.ajax');
+
+ajax({
+    url: '/path/to/ajax',
+    method: 'post',
+    query: {
+        a: 1,
+        b: 2
+    },
+    body: {
+        c: 3,
+        d: 4
+    }
+});
 ```
 
 
@@ -58,6 +71,11 @@ var ajax = require('blear.core.ajax');
 - 类型：`String`
 - 说明：url 鉴权密码
 - 默认：`null`
+
+## `options.contentType`
+- 类型：`String`
+- 说明：请求的数据类型，不建议修改，支持的有 `json`，如果请求的数据类型为 `formData`，则会自动转换为 `formData` 的请求头
+- 默认：`"application/json"`
 
 ## `options.dataType`
 - 类型：`String`
