@@ -107,6 +107,7 @@ module.exports = function (options) {
     indexFiles.unshift({
         title: '',
         uri: '/',
+        path: '/' + options.readmeFileName,
         file: path.join(rootDirname, options.readmeFileName)
     });
     indexFiles.forEach(function (meta) {
