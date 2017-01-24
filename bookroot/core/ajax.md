@@ -8,7 +8,14 @@
 # Example
 ```js
 var ajax = require('blear.core.ajax');
+```
 
+
+
+
+# `ajax(options): undefined`
+发起 ajax 请求。
+```js
 ajax({
     url: '/path/to/ajax',
     method: 'post',
@@ -22,11 +29,6 @@ ajax({
     }
 });
 ```
-
-
-
-
-# `ajax(options): undefined`
 ## `options`
 - 类型：`Object`
 - 说明：配置 

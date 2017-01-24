@@ -58,7 +58,7 @@ modification.create('div', {id:'id-123'});
 - 说明：返回创建的节点
 
 
-## `.insert(source, target, position): node`
+## `.insert(source, target, [position]): node`
 将源插入到指定的目标位置，并返回指定的元素
 ```js
 // - beforebegin ------ 0

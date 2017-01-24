@@ -17,7 +17,7 @@ var jsonp = require('blear.core.jsonp');
 发起 JSONP 请求。
 ```js
 jsonp({
-    url: 'http://example.com/'
+    url: 'http://example.com/path/to/jsonp'
 }, function(err, result) {
     // ...
 });
