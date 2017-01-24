@@ -1,11 +1,14 @@
 .typo {
   color: #666;
   line-height: 1.5;
-  /*
-
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
-*/ }
+  /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+  /* Tomorrow Comment */
+  /* Tomorrow Red */
+  /* Tomorrow Orange */
+  /* Tomorrow Yellow */
+  /* Tomorrow Green */
+  /* Tomorrow Blue */
+  /* Tomorrow Purple */ }
   .typo a {
     margin: 0 3px;
     border-bottom: 1px solid transparent; }
@@ -105,69 +108,53 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     overflow: auto;
     line-height: 1.4;
     tab-size: 4;
-    border-left: 1px solid #ffeb3b; }
+    border: 1px solid #eee; }
   .typo pre code {
     background: transparent;
     margin: 0;
     padding: 0;
     border-radius: 0;
-    color: #4e4e4e; }
+    color: #426373; }
+  .typo .hljs-comment,
+  .typo .hljs-quote {
+    color: #8e908c; }
+  .typo .hljs-variable,
+  .typo .hljs-template-variable,
+  .typo .hljs-tag,
+  .typo .hljs-name,
+  .typo .hljs-selector-id,
+  .typo .hljs-selector-class,
+  .typo .hljs-regexp,
+  .typo .hljs-deletion {
+    color: #c82829; }
+  .typo .hljs-number,
+  .typo .hljs-built_in,
+  .typo .hljs-builtin-name,
+  .typo .hljs-literal,
+  .typo .hljs-type,
+  .typo .hljs-params,
+  .typo .hljs-meta,
+  .typo .hljs-link {
+    color: #f5871f; }
+  .typo .hljs-attribute {
+    color: #eab700; }
+  .typo .hljs-string,
+  .typo .hljs-symbol,
+  .typo .hljs-bullet,
+  .typo .hljs-addition {
+    color: #718c00; }
+  .typo .hljs-title,
+  .typo .hljs-section {
+    color: #4271ae; }
+  .typo .hljs-keyword,
+  .typo .hljs-selector-tag {
+    color: #8959a8; }
   .typo .hljs {
     display: block;
     overflow-x: auto;
-    padding: 1.2em .8em;
-    color: #333;
-    background: #f8f8f8; }
-  .typo .hljs-comment,
-  .typo .hljs-quote {
-    color: #998;
-    font-style: italic; }
-  .typo .hljs-keyword,
-  .typo .hljs-selector-tag,
-  .typo .hljs-subst {
-    color: #333;
-    font-weight: bold; }
-  .typo .hljs-number,
-  .typo .hljs-literal,
-  .typo .hljs-variable,
-  .typo .hljs-template-variable,
-  .typo .hljs-tag .hljs-attr {
-    color: #008080; }
-  .typo .hljs-string,
-  .typo .hljs-doctag {
-    color: #d14; }
-  .typo .hljs-title,
-  .typo .hljs-section,
-  .typo .hljs-selector-id {
-    color: #900;
-    font-weight: bold; }
-  .typo .hljs-subst {
-    font-weight: normal; }
-  .typo .hljs-type,
-  .typo .hljs-class .hljs-title {
-    color: #458;
-    font-weight: bold; }
-  .typo .hljs-tag,
-  .typo .hljs-name,
-  .typo .hljs-attribute {
-    color: #000080;
-    font-weight: normal; }
-  .typo .hljs-regexp,
-  .typo .hljs-link {
-    color: #009926; }
-  .typo .hljs-symbol,
-  .typo .hljs-bullet {
-    color: #990073; }
-  .typo .hljs-built_in,
-  .typo .hljs-builtin-name {
-    color: #0086b3; }
-  .typo .hljs-meta {
-    color: #999;
-    font-weight: bold; }
-  .typo .hljs-deletion {
-    background: #fdd; }
-  .typo .hljs-addition {
-    background: #dfd; }
+    background: white;
+    color: #4d4d4c;
+    padding: 0.5em; }
   .typo .hljs-emphasis {
     font-style: italic; }
   .typo .hljs-strong {
