@@ -102,7 +102,7 @@ event.un(divEl, 'click', callback);
 
 
 
-## `.length(el, eventType): length`
+## `.length(el, [eventType]): length`
 获取 DOM 上绑定事件的数量。
 
 ### `el`
