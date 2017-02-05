@@ -240,6 +240,46 @@ win.getHeight();
 ```
 
 
+## `.ify(conctructor): conctructor`
+将普通的构造函数转换为 Class 扩展类，使其具有 extend 方法。
+```js
+var A = function() {
+    this.a = 123;  
+};
+
+Class.ify(A);
+
+var B = A.extend(function() {
+  
+});
+
+var b = new B();
+
+b.a;
+// => 123
+```
+
+### `conctructor`
+- 类型：`Function`
+- 说明：构造函数，返回该构造函数
+
+
+## `.is(constructor): bool`
+判断该构造函数是否为 Class 扩展类。
+```js
+Class.is(function() {
+  
+});
+// => false
+```
+
+### `conctructor`
+- 类型：`Function`
+- 说明：构造函数
+
+### `bool`
+- 类型：`Boolean`
+
 
 # Dependencies
 {{ dependencies }}
