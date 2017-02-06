@@ -31,7 +31,7 @@
     "create": "2014年10月04日15:09:02",
     "update": "2016年11月23日11:23:54",
     "name": "blear.classes.class",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "github": "https://github.com/blearjs/blear.classes.class",
     "keywords": [
       "blear",
@@ -99,6 +99,30 @@
       "blear.utils.number": "1.x"
     }
   },
+  "blear.classes.error": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.classes.error",
+    "version": "1.0.3",
+    "github": "https://github.com/blearjs/blear.classes.error",
+    "keywords": [
+      "blear",
+      "classes",
+      "error",
+      "customer",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "自定义错误类",
+    "dependencies": {
+      "blear.classes.class": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.object": "1.x"
+    }
+  },
   "blear.classes.events": {
     "author": "ydr.me",
     "create": "2016-04-18 13:50",
@@ -120,6 +144,53 @@
       "blear.utils.array": "1.x",
       "blear.utils.object": "1.x",
       "blear.utils.access": "1.x"
+    }
+  },
+  "blear.classes.linkage": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.classes.linkage",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.classes.linkage",
+    "keywords": [
+      "blear",
+      "classes",
+      "linkage",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "数据联动类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.howdo": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.object": "1.x"
+    }
+  },
+  "blear.classes.markdown": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.classes.markdown",
+    "version": "1.1.6",
+    "github": "https://github.com/blearjs/blear.classes.markdown",
+    "keywords": [
+      "blear",
+      "classes",
+      "markdown",
+      "marked",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "markdown 解析与渲染",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x"
     }
   },
   "blear.classes.mvvm": {
@@ -319,7 +390,7 @@
     "create": "2016-04-12 14:39",
     "update": "2017年01月17日10:34:48",
     "name": "blear.core.ajax",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "github": "https://github.com/blearjs/blear.core.ajax",
     "keywords": [
       "blear",
@@ -447,7 +518,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.core.flexible",
-    "version": "2.0.0",
+    "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.core.flexible",
     "keywords": [
       "blear",
@@ -457,7 +528,7 @@
       "cloudcome",
       "ydr.me"
     ],
-    "description": "移动端 rem 动态计算、动态缩放",
+    "description": "移动端 rem 动态计算",
     "dependencies": {}
   },
   "blear.core.jsonp": {

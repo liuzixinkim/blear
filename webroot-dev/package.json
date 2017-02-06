@@ -12,7 +12,7 @@
     "blear.core.touch": "^1.0.6",
     "blear.core.transform": "https://registry.npmjs.org/blear.core.transform/-/blear.core.transform-1.0.5.tgz",
     "blear.css.function": "^1.0.2",
-    "blear.css.reset": "^1.0.10",
+    "blear.css.reset": "^1.0.11",
     "blear.ui": "https://registry.npmjs.org/blear.ui/-/blear.ui-1.0.4.tgz",
     "blear.ui.mask": "^1.0.14",
     "blear.utils.array": "http://registry.npm.taobao.org/blear.utils.array/download/blear.utils.array-1.0.12.tgz",
