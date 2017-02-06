@@ -48,7 +48,7 @@ var Redis = require('blear.classes.redis');
 ## `#expressSessionStorage(expressSession, prefix)`
 创建一个 [express-session](https://github.com/expressjs/session) storage。
 ```js
-var session = require('express-session')
+var session = require('express-session');
 
 redis.expressSessionStorage(session);
 ```
