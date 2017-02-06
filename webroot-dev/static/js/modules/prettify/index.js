@@ -14,7 +14,7 @@ var object = require('blear.utils.object');
 var prettify = require('./prettify');
 
 var defaults = {
-    lineNumber: true,
+    lineNumber: false,
     startLine: 1
 };
 
