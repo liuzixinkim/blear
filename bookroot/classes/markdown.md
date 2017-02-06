@@ -337,5 +337,5 @@ md.renderer('code', function(code, lang, escaped) {
 
 
 # Reference
-- marked：<https://github.com/chjj/marked>
-
+- marked - markdown 渲染：<https://github.com/chjj/marked>
+- github-flavored-markdown：<https://help.github.com/articles/github-flavored-markdown>
