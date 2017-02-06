@@ -7,65 +7,136 @@
 
 # Example
 ```js
-var example = require('blear.classes.example');
+var Redis = require('blear.classes.redis');
 ```
 
 
 
 
 # Static
-静态属性、方法
+## `.defaults`
+默认配置。
+### `.defaults.url`
+- 类型：`String`
+- 说明：redis 地址
+- 默认：`""`
 
+### `.defaults.pass`
+- 类型：`String`
+- 说明：redis 密码
+- 默认：`""`
 
-## `.bala`
+### `.defaults.db`
+- 类型：`String`
+- 说明：redis 分片
+- 默认：`0`
 
+### `.defaults.expires`
+- 类型：`Number`
+- 说明：有效期，单位 ms
+- 默认：1 天
 
-# `new Example(...)`
-本身是一个方法
+# `new Redis(options)`
+实例化一个 redis 访问类。
 
-
-语法规则
-```text
-# 代表原型方法、属性
-. 代表静态方法、属性
-[] 代表可选
-() 代表函数，里面填参数
-(): 函数末尾的表示函数的返回值
-fn: a 表示 fn 函数的形参 
-
-标题需抽象写明方法的形参，如
-# `#getUserInfo(userName, [options], callback(err, userInfo)): someReturn`
-
-在说明各个参数，分别都要写明，甚至包括函数的 this
-
-## `userName`
 ## `options`
-### `options.key1`
-### `options.key2`
-## `callback`
-### `callback: this`
-### `callback: err`
-### `callback: userInfo`
-## `someReturn`
-```
-
+配置，参考 `defaults`。
 
 
 
 # Prototype
-原型属性、方法
+## `#expressSessionStorage(expressSession, prefix)`
+创建一个 [express-session](https://github.com/expressjs/session) storage。
+```js
+var session = require('express-session')
 
-## `#bala(arg)`
+redis.expressSessionStorage(session);
+```
 
-### `arg`
+### `expressSession`
 - 类型：`Object`
-- 说明：巴拉巴拉
+- 说明：express session 实例
+
+### `prefix`
+- 类型：`String`
+- 说明：session 前缀
+- 默认：`"sess:"`
+
+
+
+## `#get(key, callback(err, val))`
+从 redis 获取值。
+### `key`
+- 类型：`String`
+- 说明：键名
+
+### `callback`
+- 类型：`Function`
+
+### `callback: err`
+- 类型：`Error | null`
+- 说明：是否获取出错
+
+### `callback: val`
+- 类型：`*`
+- 说明：获取值
+
+
+## `#set(key, val, [expires], [callback](err))`
+向 redis 里设置数据。
+### `key`
+- 类型：`String`
+- 说明：键名
+
+### `val`
+- 类型：`*`
+- 说明：键值
+
+### `[expires]`
+- 类型：`Number | Date`
+- 说明：过期时间，可以是有效期长度或日期
+- 默认：继承于配置
+
+### `[callback]`
+- 类型：`Function`
+- 说明：回调
+
+### `[callback]: err`
+- 类型：`Error | null`
+- 说明：是否设置出错
+
+
+## `#remove(key, [callback](err))`
+从 redis 中删除数据。
+### `key`
+- 类型：`String`
+- 说明：键名
+
+### `[callback]`
+- 类型：`Function`
+- 说明：回调
+
+### `[callback]: err`
+- 类型：`Error | null`
+- 说明：是否设置出错
+
+
+
+## `#destroy()`
+销毁实例，断开连接。
+
 
 
 
 # Events
-## `show(arg1, arg2)`
+## `connect()`
+连接到 redis 成功时触发。
 
+## `disconnect(err)`
+连接到 redis 失败时触发。
+
+### `err`
+- 类型：`Error`
 
 
 
@@ -79,5 +150,5 @@ fn: a 表示 fn 函数的形参
 
 
 # Reference
-这里写参考内容。
+- express-session：<https://github.com/expressjs/session>
 
