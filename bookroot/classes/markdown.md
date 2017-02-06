@@ -323,7 +323,6 @@ md.renderer('code', function(code, lang, escaped) {
 
 
 
-# Events
 
 
 
