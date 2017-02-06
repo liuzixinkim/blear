@@ -3,7 +3,7 @@
     "main": [
       {
         "src": "../webroot-dev/static/js/main/index.js",
-        "dest": "/static/js/main/fa71c64d5f10ec4fd8a7808d760b2e39.js",
+        "dest": "/static/js/main/9c462549597dbfa1e750bdba021b1958.js",
         "deps": [
           "../webroot-dev/node_modules/blear.ui.mask/src/index.js",
           "../webroot-dev/node_modules/blear.utils.object/src/index.js",
@@ -94,7 +94,7 @@
     ],
     "css": [
       {
-        "dest": "/static/css/2fbc00e2b53de793350dc432ffea21e0.css",
+        "dest": "/static/css/ecf6ba638ca589bcf8f815d1f2bc1b7b.css",
         "deps": [
           {
             "src": "../webroot-dev/node_modules/blear.css.reset/src/index.css",
