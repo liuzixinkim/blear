@@ -22,7 +22,7 @@
     - [blear.classes.draggable](/classes/draggable.md)
     - [blear.classes.error](/classes/error.md)
     - [blear.classes.events](/classes/events.md)
-    - [blear.classes.linkage](#)
+    - [blear.classes.linkage](/classes/linkage.md)
     - [blear.classes.markdown](#)
     - [blear.classes.marshal](#)
     - [blear.classes.mvvm](/classes/mvvm.md)
