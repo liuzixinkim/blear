@@ -229,61 +229,22 @@ url.removeQuery('/?a=1&b=2', ['a', 'b']);
 
 
 ## `.qrcode(options): url`
-根据参数生成二维码 URL 地址。
+根据参数生成二维码 URL 地址。使用的是百度网盘服务(`https://pan.baidu.com/share/qrcode`)。
 
 ### `options`
 - 类型：`String | Object`
 - 说明：需要转换为二维码地址的文本或描述配置
 
-### `options.bg`
-- 类型：`String`
-- 说明：背景色
-- 默认：`#fff`
 
-### `options.fg`
+### `options.size`
 - 类型：`String`
-- 说明：前景色
-- 默认：`#000`
-
-### `options.gc`
-- 类型：`String`
-- 说明：渐变色
-- 默认：`#000`
-
-### `options.pt`
-- 类型：`String`
-- 说明：定位点外框颜色
-- 默认：`#000`
-
-### `options.ipt`
-- 类型：`String`
-- 说明：定位点内部验收
-- 默认：`#000`
-
-### `options.el`
-- 类型：`String`
-- 说明：纠错等级，有`h`、`q`、`m` 和 `l` 四级
-- 默认：`m`
-
-### `options.w`
-- 类型：`String`
-- 说明：内容尺寸
+- 说明：内容尺寸，单位 px
 - 默认：`300`
-
-### `options.m`
-- 类型：`String`
-- 说明：边框尺寸
-- 默认：`0`
-
-### `options.logo`
-- 类型：`String`
-- 说明：LOGO 地址
-- 默认：``
 
 ### `options.text`
 - 类型：`String`
 - 说明：文本
-- 默认：``
+- 默认：`""`
 
 ### `url`
 - 类型：`String`
