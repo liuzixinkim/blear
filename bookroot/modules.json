@@ -198,7 +198,7 @@
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.classes.mvvm",
-    "version": "1.0.0",
+    "version": "1.0.5",
     "github": "https://github.com/blearjs/blear.classes.mvvm",
     "keywords": [
       "blear",
@@ -218,13 +218,12 @@
       "blear.core.event": "1.x",
       "blear.core.modification": "1.x",
       "blear.core.selector": "1.x",
-      "blear.shims.lexer": "1.x",
       "blear.utils.access": "1.x",
       "blear.utils.array": "1.x",
       "blear.utils.collection": "1.x",
       "blear.utils.function": "1.x",
       "blear.utils.number": "1.x",
-      "blear.utils.object": "^1.x",
+      "blear.utils.object": "1.x",
       "blear.utils.random": "1.x",
       "blear.utils.string": "1.x",
       "blear.utils.time": "1.x",
@@ -310,7 +309,7 @@
     "create": "2016-04-26 14:15",
     "update": "2016-04-26 14:15",
     "name": "blear.classes.router",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "github": "https://github.com/blearjs/blear.classes.router",
     "keywords": [
       "blear",
@@ -904,7 +903,7 @@
     "create": "2016-04-20 14:49",
     "update": "2016-04-20 14:49",
     "name": "blear.ui.window",
-    "version": "1.1.19",
+    "version": "1.1.21",
     "github": "https://github.com/blearjs/blear.ui.window",
     "keywords": [
       "blear",
@@ -1312,7 +1311,7 @@
     "create": "2017-01-08 14:16",
     "update": "2017-01-08 14:16",
     "name": "blear.utils.plan",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "github": "https://github.com/blearjs/blear.utils.plan",
     "keywords": [
       "blear",
@@ -1505,7 +1504,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.utils.url",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "github": "https://github.com/blearjs/blear.utils.url",
     "keywords": [
       "blear",
@@ -1566,6 +1565,25 @@
       "blear.utils.time": "1.x",
       "blear.utils.array": "1.x",
       "blear.classes.class": "1.x"
+    }
+  },
+  "blear.ui": {
+    "author": "ydr.me",
+    "create": "2016-04-19 11:08",
+    "update": "2016-04-19 11:08",
+    "name": "blear.ui",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.ui",
+    "keywords": [
+      "blear",
+      "ui",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "UI 基类",
+    "dependencies": {
+      "blear.classes.events": "1.x",
+      "blear.utils.object": "^1.0.14"
     }
   }
 }

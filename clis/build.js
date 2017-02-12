@@ -39,10 +39,11 @@ plan
         var lineRE = /^@([^\s]+)\s*(.*)$/;
         var modulesData = {};
 
+        files.push('ui.md');
         array.each(files, function (index, file) {
             var dirname = path.basename(path.dirname(file));
             var basename = path.basename(file, '.md');
-            var moduleName = ['blear', dirname, basename].join('.');
+            var moduleName = ['blear', dirname, basename].join('.').replace(/\.+/g, '.');
             var indexFile = dirname === 'css' || dirname === 'scss' ? 'index.scss' : 'index.js';
             var pkgFile = path.join(githubBlearjsDirname, moduleName, 'package.json');
             var moduleFile = path.join(githubBlearjsDirname, moduleName, 'src', indexFile);
@@ -94,7 +95,7 @@ plan
             json.description = pkg.description;
             json.dependencies = pkg.dependencies;
             modulesData[moduleName] = json;
-            console.info('[build]', moduleName);
+            console.info('√', moduleName);
         });
 
         return modulesData;
