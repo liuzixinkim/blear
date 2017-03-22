@@ -59,11 +59,11 @@ var Dialog = require('blear.ui.dialog');
 - 说明：打开窗口的动画
 - 默认：`透明度为0、缩放70%至透明度为1、缩放100&动画效果`
 
-### `.defaults.openAnimation：to
+### `.defaults.openAnimation：to`
 - 类型：`Object `
 - 说明：设置动画
 
-### `.defaults.openAnimation：done
+### `.defaults.openAnimation：done`
 - 类型：`Function `
 - 说明：动画执行完成回调
 
@@ -72,11 +72,11 @@ var Dialog = require('blear.ui.dialog');
 - 说明：窗口尺寸改变的动画
 - 默认：`透明度为0、缩放70%至透明度为1、缩放100&动画效果`
 
-### `.defaults.openAnimation：to
+### `.defaults.openAnimation：to`
 - 类型：`Object `
 - 说明：设置动画
 
-### `.defaults.openAnimation：done
+### `.defaults.openAnimation：done`
 - 类型：`Function `
 - 说明：动画执行完成回调
 
@@ -85,11 +85,11 @@ var Dialog = require('blear.ui.dialog');
 - 说明：关闭窗口的动画
 - 默认：`透明度为1至透明度为0`
 
-### `.defaults.openAnimation：to
+### `.defaults.openAnimation：to`
 - 类型：`Object `
 - 说明：设置动画
 
-### `.defaults.openAnimation：done
+### `.defaults.openAnimation：done`
 - 类型：`Function `
 - 说明：动画执行完成回调
 

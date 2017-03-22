@@ -43,7 +43,7 @@
     - [blear.ui](/ui.md)
     - [blear.ui.actions](#)
     - [blear.ui.alert](#)
-    - [blear.ui.application](#)
+    - [blear.ui.application](/ui/application.md)
     - [blear.ui.confirm](#)
     - [blear.ui.date-select](#)
     - [blear.ui.date-time-picker](#)
