@@ -10,7 +10,6 @@
 var Alert = require('blear.ui.alert');
 
 var alert = new Alert({
-    title: '提醒',
     message: '注意啊，这是一个警告对话框'
 });
 

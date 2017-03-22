@@ -44,7 +44,7 @@
     - [blear.ui.actions](/ui/actions.md)
     - [blear.ui.alert](/ui/alert.md)
     - [blear.ui.application](/ui/application.md)
-    - [blear.ui.confirm](#)
+    - [blear.ui.confirm](/ui/confirm.md)
     - [blear.ui.date-select](#)
     - [blear.ui.date-time-picker](#)
     - [blear.ui.dialog](/ui/dialog.md)
