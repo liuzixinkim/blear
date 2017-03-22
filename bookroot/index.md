@@ -41,7 +41,7 @@
     - [blear.classes.watcher](/classes/watcher.md)
 - [ui 模块](#)
     - [blear.ui](/ui.md)
-    - [blear.ui.actions](#)
+    - [blear.ui.actions](/ui/actions.md)
     - [blear.ui.alert](#)
     - [blear.ui.application](/ui/application.md)
     - [blear.ui.confirm](#)
