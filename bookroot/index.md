@@ -42,7 +42,7 @@
 - [ui 模块](#)
     - [blear.ui](/ui.md)
     - [blear.ui.actions](/ui/actions.md)
-    - [blear.ui.alert](#)
+    - [blear.ui.alert](/ui/alert.md)
     - [blear.ui.application](/ui/application.md)
     - [blear.ui.confirm](#)
     - [blear.ui.date-select](#)
