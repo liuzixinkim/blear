@@ -46,7 +46,7 @@
     - [blear.ui.application](/ui/application.md)
     - [blear.ui.confirm](/ui/confirm.md)
     - [blear.ui.date-select](/ui/date-select.md)
-    - [blear.ui.date-time-picker](#)
+    - [blear.ui.date-time-picker](/ui/date-time-picker.md)
     - [blear.ui.dialog](/ui/dialog.md)
     - [blear.ui.img-clip](#)
     - [blear.ui.img-preview](#)
