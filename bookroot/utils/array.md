@@ -166,7 +166,7 @@ array.remove(["a", "b", "c"], [0, 2]);
 
 
 ## `.delete(arr, item, [deep=false]): originArray`
-根据索引值从数组中删除，返回原数组。
+根据数组元素从数组中删除，返回原数组。
 ```js
 array.delete(["a", "b", "c", "a", "b", "c"], "a");
 // => ["b", "c", "a", "b", "c"]

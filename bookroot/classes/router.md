@@ -77,7 +77,7 @@ router
 ### `rule`
 - 类型：`String`
 - 说明：路由规则，支持以下路由规则
-    - `:param`：路由路径参数，如：`/page/:pageId` 匹配 `/page/123`，那么 `route.pageId === "123"`
+    - `:param`：路由路径参数，如：`/page/:pageId` 匹配 `/page/123`，那么 `route.params.pageId === "123"`
     - `*`：单级路由，如：`/user/*` 匹配 `/user/cloudcome`
     - `**`：多级路由，如：`/user/**` 匹配 `/user/a`、`/user/a/b`、`/user/a/b/c`、`/user/a/b/c/d`
 
