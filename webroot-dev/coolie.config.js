@@ -79,9 +79,7 @@ module.exports = function (coolie) {
         },
 
         // 原样复制文件，相对于当前文件
-        copy: [
-            "favicon.ico"
-        ]
+        copy: []
     });
 
     // 使用 coolie 中间件
