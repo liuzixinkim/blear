@@ -64,6 +64,11 @@ ajax({
 - 说明：是否异步请求
 - 默认：`true`
 
+## `options.httpMethodOverride`
+- 类型：`Boolean`
+- 说明：是否重写请求方法，如果设置为 true，则会在请求头里添加 `x-http-method-override` 字段，标记了原始的请求方法
+- 默认：`false`
+
 ## `options.username`
 - 类型：`String`
 - 说明：url 鉴权用户名
