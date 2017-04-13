@@ -91,6 +91,7 @@
     - [blear.node.template](#)
     - [blear.node.weixin](#)
 - [express 模块](#)
+    - [blear.express.http-method-override](#)
     - [blear.express.res-api](#)
 - [utils 模块](#)
     - [blear.utils.access](/utils/access.md)
