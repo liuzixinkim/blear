@@ -66,7 +66,7 @@ ajax({
 
 ## `options.httpMethodOverride`
 - 类型：`Boolean`
-- 说明：是否重写请求方法，如果设置为 true，则会在请求头里添加 `x-http-method-override` 字段，标记了原始的请求方法
+- 说明：是否重写请求方法，如果设置为 true，则会在非 GET 请求的请求头里添加 `x-http-method-override` 字段，标记了原始的请求方法
 - 默认：`false`
 
 ## `options.username`
