@@ -86,7 +86,16 @@ new Pagination({
 
 
 # Prototype
-无。
+## `#change(page): this`
+主动改变页码。
+
+### `page`
+- 类型：`Number`
+- 说明：页码
+
+
+## `#destroy()`
+销毁实例。
 
 
 
