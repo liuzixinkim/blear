@@ -63,6 +63,19 @@ new Pagination({
 - 说明：省略文本
 - 默认：`"..."`
 
+### `.defaults.onChange(page, next)`
+- 类型：`Function`
+- 说明：页码改变之后
+- 默认：`function onChange(page, next) { next(); }`
+
+#### `.defaults.onChange: page`
+- 类型：`Number`
+- 说明：页码
+
+#### `.defaults.onChange: next`
+- 类型：`Function`
+- 说明：页码处理完毕之后回调
+
 
 
 
@@ -78,20 +91,12 @@ new Pagination({
 
 
 # Events
-## `change(page, callback(options))`
+## `change(page)`
 分页点击变化后触发。
 
 ### `page`
 - 类型：`Number`
 - 说明：当前点击的分页值
-
-### `callback`
-- 类型：`Function`
-- 说明：分页信息处理完毕后回调
-
-### `callback: options`
-- 类型：`Object`
-- 说明：处理参数，需要包含 `{page: Number, total: Number}` 等信息
 
 
 
