@@ -50,7 +50,7 @@
     - [blear.ui.date-select](/ui/date-select.md)
     - [blear.ui.date-time-picker](/ui/date-time-picker.md)
     - [blear.ui.dialog](/ui/dialog.md)
-    - [blear.ui.img-clip](#)
+    - [blear.ui.img-clip](/ui/img-clip.md)
     - [blear.ui.img-preview](#)
     - [blear.ui.img-preview-clip-upload](#)
     - [blear.ui.lazy-load](#)
