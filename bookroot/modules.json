@@ -634,6 +634,29 @@
     "description": "移动端 rem 动态计算",
     "dependencies": {}
   },
+  "blear.core.hashbang": {
+    "author": "ydr.me",
+    "create": "2016-04-09 18:20",
+    "update": "2016-04-09 18:20",
+    "name": "blear.core.hashbang",
+    "version": "1.1.3",
+    "github": "https://github.com/blearjs/blear.core.hashbang",
+    "keywords": [
+      "blear",
+      "core",
+      "hashbang",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "hashbang",
+    "dependencies": {
+      "blear.utils.hashbang": "1.x",
+      "blear.utils.url": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.typeis": "1.x",
+      "blear.utils.object": "1.x"
+    }
+  },
   "blear.core.jsonp": {
     "author": "zcl",
     "update": "未明确",
@@ -947,6 +970,24 @@
       "blear.core.event": "1.x",
       "blear.core.layout": "1.x",
       "blear.core.attribute": "1.x"
+    }
+  },
+  "blear.ui.chart": {
+    "author": "ydr.me",
+    "create": "2017年04月26日11:33:15",
+    "update": "2017年04月26日11:33:15",
+    "name": "blear.ui.chart",
+    "version": "1.0.0",
+    "github": "https://github.com/blearjs/blear.ui.chart",
+    "keywords": [
+      "blear",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "JS 图表，基于百度的 ECharts v3.5.3 + Zrender v3.4.3",
+    "dependencies": {
+      "blear.core.selector": "^1.0.8",
+      "blear.ui": "^1.0.8"
     }
   },
   "blear.ui.confirm": {
