@@ -1102,6 +1102,93 @@
       "blear.utils.typeis": "1.x"
     }
   },
+  "blear.ui.img-clip": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.ui.img-clip",
+    "version": "1.0.5",
+    "github": "https://github.com/blearjs/blear.ui.img-clip",
+    "keywords": [
+      "blear",
+      "ui",
+      "img",
+      "clip",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "图片裁剪 UI",
+    "dependencies": {
+      "blear.ui": "1.x",
+      "blear.utils.loader": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.layout": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.classes.resizable": "1.x",
+      "blear.classes.draggable": "1.x"
+    }
+  },
+  "blear.ui.img-preview-clip-upload": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.ui.img-preview-clip-upload",
+    "version": "1.0.11",
+    "github": "https://github.com/blearjs/blear.ui.img-preview-clip-upload",
+    "keywords": [
+      "blear",
+      "ui",
+      "img",
+      "preview",
+      "clip",
+      "upload",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "图片预览裁剪上传 UI",
+    "dependencies": {
+      "blear.ui.upload": "1.x",
+      "blear.ui.img-preview": "1.x",
+      "blear.ui.img-clip": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.canvas-img": "1.x",
+      "blear.utils.canvas-content": "1.x",
+      "blear.core.event": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.modification": "1.x"
+    }
+  },
+  "blear.ui.img-preview": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.ui.img-preview",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.ui.img-preview",
+    "keywords": [
+      "blear",
+      "ui",
+      "img",
+      "preview",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "图片预览 UI 组件",
+    "dependencies": {
+      "blear.utils.compatible": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.loader": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.modification": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.ui": "1.x"
+    }
+  },
   "blear.ui.loading": {
     "author": "ydr.me",
     "create": "2016-04-22 22:47",

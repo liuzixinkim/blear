@@ -21,8 +21,8 @@ new ImgClip(options);
 
 ## `.defaults`
 ### `.defaults.el`
-- 类型：`Element`
-- 说明：待裁剪的图片
+- 类型：`Element | String`
+- 说明：待裁剪的图片元素
 
 ### `.defaults.auto`
 - 类型：`Boolean`
