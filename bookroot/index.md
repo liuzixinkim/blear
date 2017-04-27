@@ -60,7 +60,7 @@
     - [blear.ui.mobile-picker](#)
     - [blear.ui.pagination](/ui/pagination.md)
     - [blear.ui.popover](/ui/popover.md)
-    - [blear.ui.popup](#)
+    - [blear.ui.popup](/ui/popup.md)
     - [blear.ui.prompt](#)
     - [blear.ui.pull-loading](#)
     - [blear.ui.qrcode](#)
