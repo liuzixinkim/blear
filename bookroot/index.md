@@ -65,7 +65,7 @@
     - [blear.ui.pull-loading](#)
     - [blear.ui.qrcode](/ui/qrcode.md)
     - [blear.ui.rich-editor](/ui/rich-editor.md)
-    - [blear.ui.slider](#)
+    - [blear.ui.slider](/ui/slider.md)
     - [blear.ui.sticky](#)
     - [blear.ui.tips](#)
     - [blear.ui.upload](#)
