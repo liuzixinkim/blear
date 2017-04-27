@@ -67,7 +67,7 @@
     - [blear.ui.rich-editor](/ui/rich-editor.md)
     - [blear.ui.slider](/ui/slider.md)
     - [blear.ui.sticky](/ui/sticky.md)
-    - [blear.ui.tips](#)
+    - [blear.ui.tips](/ui/tips.md)
     - [blear.ui.upload](#)
     - [blear.ui.window](/ui/window.md)
 - [components 模块](#)

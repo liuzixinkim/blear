@@ -1329,7 +1329,7 @@
     "create": "2016-04-28 18:07",
     "update": "2017年02月21日10:26:22",
     "name": "blear.ui.popup",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "github": "https://github.com/blearjs/blear.ui.popup",
     "keywords": [
       "blear",
@@ -1462,7 +1462,7 @@
     "create": "2016-05-12 18:33",
     "update": "2017年02月16日14:07:36",
     "name": "blear.ui.sticky",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "github": "https://github.com/blearjs/blear.ui.sticky",
     "keywords": [
       "blear",
@@ -1481,6 +1481,29 @@
       "blear.utils.compatible": "1.x",
       "blear.utils.object": "1.x",
       "blear.ui": "1.x"
+    }
+  },
+  "blear.ui.tips": {
+    "author": "ydr.me",
+    "create": "2016-04-26 19:20",
+    "update": "2017年02月11日11:06:57",
+    "name": "blear.ui.tips",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.ui.tips",
+    "keywords": [
+      "blear",
+      "ui",
+      "tips",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "顶部提示 UI",
+    "dependencies": {
+      "blear.ui.popup": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.classes.animation": "1.x",
+      "blear.classes.template": "1.x",
+      "blear.core.attribute": "1.x"
     }
   },
   "blear.ui.window": {
