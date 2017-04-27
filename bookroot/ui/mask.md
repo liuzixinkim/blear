@@ -69,11 +69,11 @@ var Mask = require('blear.ui.mask');
 - 说明：打开遮罩的动画
 - 默认：`透明度为0、缩放70%至透明度为1、缩放100&动画效果`
 
-### `.defaults.openAnimation：to
+### `.defaults.openAnimation：to`
 - 类型：`Object `
 - 说明：设置动画
 
-### `.defaults.openAnimation：done
+### `.defaults.openAnimation：done`
 - 类型：`Function `
 - 说明：动画执行完成回调
 
@@ -82,11 +82,11 @@ var Mask = require('blear.ui.mask');
 - 说明：关闭遮罩的动画
 - 默认：`透明度为1至透明度为0`
 
-### `.defaults.openAnimation：to
+### `.defaults.openAnimation：to`
 - 类型：`Object `
 - 说明：设置动画
 
-### `.defaults.openAnimation：done
+### `.defaults.openAnimation：done`
 - 类型：`Function `
 - 说明：动画执行完成回调
 
@@ -94,38 +94,39 @@ var Mask = require('blear.ui.mask');
 # Prototype
 原型属性、方法
 
-## `#getOptions(key): *`
-获取配置
+## `#getOptions([path]): options`
 
+### `path`
+- 类型：`String`
+- 说明：配置路径
+- 默认：空
+
+### `options`
+- 类型：`Object | *`
+- 说明：配置值
+
+## `#setOptions(path, val): this`
 ### `key`
 - 类型：`String`
-- 说明：键
-
-### `*`
-- 类型：`*`
-- 说明：任意值
-
-
-## `#setOptions(key, val): *`
-设置配置
-
-### `key`
-- 类型：`String`
-- 说明：键
+- 说明：配置路径
+- 默认：空
 
 ### `val`
-- 类型：`String`
-- 说明：值
-
-### `*`
 - 类型：`*`
-- 说明：任意值
+- 说明：配置值
 
 
 
-## `#destroy(): undefined`
-销毁实例
+## `#destroy()`
+销毁实例。
+
+
 
 # Dependencies
 {{ dependencies }}
+
+
+
+# Reference
+无。
 
