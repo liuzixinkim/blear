@@ -12,7 +12,7 @@ var Popover = require('blear.ui.popover');
 var popover = new Popover();
 ```
 
-![](https://ww1.sinaimg.cn/large/006tNbRwgy1ff11mpvebvj30h80bcglw.jpg =620x428)
+![](https://ww1.sinaimg.cn/large/006tNbRwgy1ff11mpvebvj30h80bcglw.jpg =620x408)
 
 
 
