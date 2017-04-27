@@ -53,7 +53,7 @@
     - [blear.ui.img-clip](/ui/img-clip.md)
     - [blear.ui.img-preview](/ui/img-preview.md)
     - [blear.ui.img-preview-clip-upload](/ui/img-preview-clip-upload.md)
-    - [blear.ui.lazy-load](#)
+    - [blear.ui.lazy-load](/ui/lazy-load.md)
     - [blear.ui.linkage](#)
     - [blear.ui.loading](/ui/loading.md)
     - [blear.ui.mask](/ui/mask.md)
