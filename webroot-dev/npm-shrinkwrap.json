@@ -78,9 +78,9 @@
       "resolved": "http://registry.npm.taobao.org/blear.css.function/download/blear.css.function-1.0.2.tgz"
     },
     "blear.css.reset": {
-      "version": "1.0.11",
+      "version": "1.0.12",
       "from": "blear.css.reset@latest",
-      "resolved": "https://registry.npmjs.org/blear.css.reset/-/blear.css.reset-1.0.11.tgz"
+      "resolved": "http://registry.npm.taobao.org/blear.css.reset/download/blear.css.reset-1.0.12.tgz"
     },
     "blear.polyfills.class-list": {
       "version": "1.0.7",

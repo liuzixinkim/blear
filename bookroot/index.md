@@ -64,7 +64,7 @@
     - [blear.ui.prompt](/ui/prompt.md)
     - [blear.ui.pull-loading](#)
     - [blear.ui.qrcode](/ui/qrcode.md)
-    - [blear.ui.rich-editor](#)
+    - [blear.ui.rich-editor](/ui/rich-editor.md)
     - [blear.ui.slider](#)
     - [blear.ui.sticky](#)
     - [blear.ui.tips](#)

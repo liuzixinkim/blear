@@ -14,14 +14,14 @@ var example = require('blear.ui.example');
 
 
 # Static
-静态属性、方法
+## `.defaults`
+- 类型：`Object`
+- 说明：默认配置
 
 
-## `.bala`
 
-
-# `new Example(...)`
-本身是一个方法
+# `new Example(options)`
+实例化一个 xxx，`options` 为入参，默认值为 `.defaults`。
 
 
 语法规则
@@ -53,7 +53,6 @@ fn: a 表示 fn 函数的形参
 
 
 # Prototype
-原型属性、方法
 
 ## `#bala(arg)`
 
@@ -61,6 +60,9 @@ fn: a 表示 fn 函数的形参
 - 类型：`Object`
 - 说明：巴拉巴拉
 
+
+## `#destroy()`
+销毁实例。
 
 
 # Events
