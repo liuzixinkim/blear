@@ -68,7 +68,7 @@
     - [blear.ui.slider](/ui/slider.md)
     - [blear.ui.sticky](/ui/sticky.md)
     - [blear.ui.tips](/ui/tips.md)
-    - [blear.ui.upload](#)
+    - [blear.ui.upload](/ui/upload.md)
     - [blear.ui.window](/ui/window.md)
 - [components 模块](#)
     - [blear.components.alert](#)

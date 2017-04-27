@@ -1506,6 +1506,30 @@
       "blear.core.attribute": "1.x"
     }
   },
+  "blear.ui.upload": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.ui.upload",
+    "version": "1.0.12",
+    "github": "https://github.com/blearjs/blear.ui.upload",
+    "keywords": [
+      "blear",
+      "ui",
+      "upload",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "上传对话框 UI",
+    "dependencies": {
+      "blear.ui.dialog": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.classes.template": "1.x",
+      "blear.core.selector": "1.x",
+      "blear.core.attribute": "1.x",
+      "blear.core.modification": "1.x"
+    }
+  },
   "blear.ui.window": {
     "author": "ydr.me",
     "create": "2016-04-20 14:49",
