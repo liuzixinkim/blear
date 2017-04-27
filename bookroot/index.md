@@ -59,7 +59,7 @@
     - [blear.ui.mask](/ui/mask.md)
     - [blear.ui.mobile-picker](#)
     - [blear.ui.pagination](/ui/pagination.md)
-    - [blear.ui.popover](#)
+    - [blear.ui.popover](/ui/popover.md)
     - [blear.ui.popup](#)
     - [blear.ui.prompt](#)
     - [blear.ui.pull-loading](#)
