@@ -9,7 +9,7 @@
 ```js
 var LazyLoad = require('blear.ui.lazy-load');
 
-new LazyLoad(options);
+new LazyLoad();
 ```
 
 
