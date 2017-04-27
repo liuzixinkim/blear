@@ -28,6 +28,10 @@ popup.open();
 - 类型：`Element | String`
 - 说明：弹出元素
 
+## `.defaults.template`
+- 类型：`String`
+- 说明：指定弹出内容
+
 ## `.defaults.maskOptions`
 - 类型：`Object`
 - 说明：遮罩配置 [blear.ui.mask](/ui/mask.md)

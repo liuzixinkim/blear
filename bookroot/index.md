@@ -61,7 +61,7 @@
     - [blear.ui.pagination](/ui/pagination.md)
     - [blear.ui.popover](/ui/popover.md)
     - [blear.ui.popup](/ui/popup.md)
-    - [blear.ui.prompt](#)
+    - [blear.ui.prompt](/ui/prompt.md)
     - [blear.ui.pull-loading](#)
     - [blear.ui.qrcode](#)
     - [blear.ui.rich-editor](#)
