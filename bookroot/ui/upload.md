@@ -22,17 +22,7 @@ new Upload({
 });
 ```
 
-dialog: {
-    width: 800,
-    title: '上传文件'
-},
-tips: '点击选择文件并上传',
-name: 'file',
-accept: null,
-multiple: false,
-onUpload: function (fileInputEl, done) {
-    done(new Error('未配置上传'));
-}
+![](http://ww3.sinaimg.cn/large/006tNbRwgy1ff1clpmnd7j319g0qsjsr.jpg)
 
 
 # Static
