@@ -44,7 +44,10 @@ plan
             var dirname = path.basename(path.dirname(file));
             var basename = path.basename(file, '.md');
             var moduleName = ['blear', dirname, basename].join('.').replace(/\.+/g, '.');
-            var indexFile = dirname === 'css' || dirname === 'scss' ? 'index.scss' : 'index.js';
+            var indexFile = {
+                css: 'index.scss',
+                scss: '_index.scss'
+            }[dirname] || 'index.js';
             var pkgFile = path.join(githubBlearjsDirname, moduleName, 'package.json');
             var moduleFile = path.join(githubBlearjsDirname, moduleName, 'src', indexFile);
             var moduleData = fse.readFileSync(moduleFile, 'utf8');

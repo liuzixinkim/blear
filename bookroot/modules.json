@@ -933,6 +933,78 @@
       "blear.utils.json": "1.x"
     }
   },
+  "blear.scss.clearfix": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.scss.clearfix",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.scss.clearfix",
+    "keywords": [
+      "blear",
+      "scss",
+      "flexible",
+      "mixin",
+      "rem",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "SCSS：mixin clearfix",
+    "dependencies": {}
+  },
+  "blear.scss.flex": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.scss.flex",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.scss.flex",
+    "keywords": [
+      "blear",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "scss flex mixin",
+    "dependencies": {}
+  },
+  "blear.scss.flexible": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.scss.flexible",
+    "version": "1.0.2",
+    "github": "https://github.com/blearjs/blear.scss.flexible",
+    "keywords": [
+      "blear",
+      "scss",
+      "flexible",
+      "mixin",
+      "rem",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "SCSS：function flexible",
+    "dependencies": {}
+  },
+  "blear.scss.hairline": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.scss.hairline",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.scss.hairline",
+    "keywords": [
+      "blear",
+      "scss",
+      "hairline",
+      "1px",
+      "device-ratio",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "发丝线，适应不同设备的一像素边框，支持圆角",
+    "dependencies": {}
+  },
   "blear.ui.actions": {
     "author": "ydr.me",
     "create": "2016-04-28 13:08",
