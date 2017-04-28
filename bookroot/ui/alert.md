@@ -28,16 +28,16 @@ alert.on('sure', function() {
 - 说明：警告框宽度
 - 默认：`300`
 
-## `.defalts.sure`
+## `.defaults.sure`
 - 类型：`Object`
 - 说明：确认按钮配置
 
-## `.defalts.sure.text`
+## `.defaults.sure.text`
 - 类型：`String`
 - 说明：确认按钮文本
 - 默认：`"好"`
 
-## `.defalts.sure.type`
+## `.defaults.sure.type`
 - 类型：`String`
 - 说明：确认按钮类型
 - 默认：`"primary"`
