@@ -93,6 +93,21 @@ new Pagination({
 - 类型：`Number`
 - 说明：页码
 
+## `#render(configs): this`
+主动渲染分页器。
+
+### `configs`
+- 类型：`Object`
+- 说明：分页配置
+
+### `configs.page`
+- 类型：`Number`
+- 说明：当前页码
+
+### `configs.total`
+- 类型：`Number`
+- 说明：总页数
+
 
 ## `#destroy()`
 销毁实例。
