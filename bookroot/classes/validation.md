@@ -34,7 +34,7 @@ var  va = new Validation();
 - 说明：验证回调
 
 
-## `#path(path, alias): va`
+## `#path(path, alias): this`
 指定字段。
 
 ```js
@@ -49,11 +49,8 @@ va.path('username', '用户名');
 - 类型：`String`
 - 说明：别名
 
-### `va`
-- 类型：`Validation`
-- 说明：支持链式调用
 
-## `#constrain(rule, limit, [message]): validation`
+## `#constrain(rule, limit, [message]): this`
 约束条件。
 ```js
 va
@@ -95,13 +92,18 @@ va
 - 说明：超过规则限制的消息
 - 默认：自动生成
 
-### `validation`
-- 类型：`Validation`
-- 说明：支持链式调用
 
-
-## `#rule(name, fn): Validation`
+## `#rule(name, [fn(value, next([message]))]): this`
 自定义实例级别的验证规则
+```javascript
+va.rule('is myRule', function(value, next) {
+    if(value === 'myRule') {
+        return next();
+    }
+    
+    next('必须等于 `myRule`');
+});
+```
 
 ### `name`
 - 类型：`String`
@@ -111,11 +113,61 @@ va
 - 类型：`Function`
 - 说明：规则验证方法
 
-### `Validation`
-- 类型：`Validation`
-- 说明：支持链式调用
+### `fn: value`
+- 类型：`*`
+- 说明：字段值
+
+### `fn: next`
+- 类型：`Function`
+- 说明：异步验证回调
+
+### `fn: next: message`
+- 类型：`String`
+- 说明：异步验证消息，可选，为空时表示验证通过
 
 
+## `#useful(bool)`
+标记某个验证是否有效。
+```javascript
+// a 字段必须验证
+va.path('a').constrain('required', true).useful(true);
+
+// b 字段忽略验证
+va.path('b').constrain('required', true).useful(false);
+```
+### `bool`
+- 类型：`Boolean`
+- 说明：验证规则是否生效
+
+
+## `#useful(fn(value): bool)`
+标记某个验证是否有效。
+```javascript
+// a 字段必须验证
+va.path('a').constrain('required', function(value) {
+    return true;
+}).useful(true);
+
+// b 字段忽略验证
+va.path('b').constrain('required', function(value) {
+    return false;
+}).useful(false);
+```
+
+### `fn`
+标记方法，返回布尔值
+- 类型：`Function`
+- 说明：处理函数
+
+
+### `fn: value`
+- 类型：`*`
+- 说明：字段值
+
+
+### `fn: bool`
+- 类型：`Boolean`
+- 说明：验证规则是否生效
 
 
 # Dependencies
@@ -124,6 +176,4 @@ va
 
 
 
-
-# More
 

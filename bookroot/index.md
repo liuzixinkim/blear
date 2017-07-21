@@ -89,6 +89,7 @@
     - [blear.node.log](#)
     - [blear.node.mime](#)
     - [blear.node.path](#)
+    - [blear.node.qiniu](#)
     - [blear.node.request](#)
     - [blear.node.system](#)
     - [blear.node.template](#)
