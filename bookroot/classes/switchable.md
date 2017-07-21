@@ -53,7 +53,7 @@ var switchable = new Switchable({
 原型属性、方法
 
 
-## `#change(index): switchable`
+## `#change(index): this`
 改变索引值
 
 ```js
@@ -64,16 +64,20 @@ Switchable.change(1);
 - 类型：`Number`
 - 说明：索引值
 
-### `switchable`
-- 类型：`Switchable`
-- 说明：支持链式调用
+
+## `#getIndex(): index`
+获取当前索引值
+
+### `index`
+- 类型：`Number`
+- 说明：当前索引值
 
 
 ## `#destroy(): undefined`
 销毁实例
 
 ```js
-Switchable.destroy();
+switchable.destroy();
 ```
 
 
