@@ -58,6 +58,11 @@ new RichEditor({
 - 说明：选择图片的显示名称
 - 默认：`"请选择图片"`
 
+## `.defaults.elementPath`
+- 类型：`Boolean`
+- 说明：是否显示节点的路径信息
+- 默认：`true`
+
 
 # `new RichEditor(options)`
 实例化一个富文本编辑器，`options` 为入参，默认值为 `.defaults`。
