@@ -118,7 +118,12 @@ new RichEditor({
 - 类型：`String | Object`
 - 说明：图片上传后的路径或描述
 
+## `wordCount(count)`
+文本内容字数变化触发。
 
+### `count`
+- 类型：`Number`
+- 说明：字数数量
 
 
 
