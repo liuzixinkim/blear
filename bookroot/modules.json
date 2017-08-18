@@ -950,6 +950,23 @@
     "description": "CSS：功能类",
     "dependencies": {}
   },
+  "blear.css.reset": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.css.reset",
+    "version": "1.0.12",
+    "github": "https://github.com/blearjs/blear.css.reset",
+    "keywords": [
+      "blear",
+      "css",
+      "reset",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "CSS 重置",
+    "dependencies": {}
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",
