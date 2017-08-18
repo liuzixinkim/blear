@@ -54,7 +54,7 @@
     "create": "2016年11月19日11:50:03",
     "update": "2016年11月19日11:50:03",
     "name": "blear.classes.count-down",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.classes.count-down",
     "keywords": [
       "blear",
@@ -104,7 +104,7 @@
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.classes.error",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "github": "https://github.com/blearjs/blear.classes.error",
     "keywords": [
       "blear",
@@ -199,7 +199,7 @@
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.classes.mvvm",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "github": "https://github.com/blearjs/blear.classes.mvvm",
     "keywords": [
       "blear",
@@ -234,9 +234,9 @@
   "blear.classes.qrcode": {
     "author": "ydr.me",
     "create": "2016年06月04日14:09:36",
-    "update": "2016年06月04日14:09:36",
+    "update": "2017年07月21日15:21:55",
     "name": "blear.classes.qrcode",
-    "version": "1.0.5",
+    "version": "2.0.0",
     "github": "https://github.com/blearjs/blear.classes.qrcode",
     "keywords": [
       "blear",
@@ -366,7 +366,7 @@
     "create": "2016年05月26日11:31:01",
     "update": "2016年05月26日11:31:01",
     "name": "blear.classes.switchable",
-    "version": "1.0.8",
+    "version": "1.0.10",
     "github": "https://github.com/blearjs/blear.classes.switchable",
     "keywords": [
       "blear",
@@ -438,7 +438,7 @@
     "create": "2016-08-17 10:40",
     "update": "2016-08-17 10:40",
     "name": "blear.classes.validation",
-    "version": "1.0.11",
+    "version": "1.1.2",
     "github": "https://github.com/blearjs/blear.classes.validation",
     "keywords": [
       "blear",
@@ -451,13 +451,13 @@
     "dependencies": {
       "blear.classes.events": "1.x",
       "blear.core.ajax": "1.x",
-      "blear.utils.typeis": "1.x",
-      "blear.utils.array": "1.x",
-      "blear.utils.howdo": "1.x",
-      "blear.utils.object": "1.x",
-      "blear.utils.string": "1.x",
       "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
       "blear.utils.function": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.plan": "^2.1.2",
+      "blear.utils.string": "1.x",
+      "blear.utils.typeis": "1.x",
       "blear.utils.validator": "1.x"
     }
   },
@@ -933,6 +933,23 @@
       "blear.utils.json": "1.x"
     }
   },
+  "blear.css.function": {
+    "update": "未明确",
+    "create": "未明确",
+    "author": "#云淡然",
+    "name": "blear.css.function",
+    "version": "1.1.0",
+    "github": "https://github.com/blearjs/blear.css.function",
+    "keywords": [
+      "blear",
+      "css",
+      "function",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "CSS：功能类",
+    "dependencies": {}
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",
@@ -1061,7 +1078,7 @@
     "create": "2016-04-29 10:24",
     "update": "2016-04-29 10:24",
     "name": "blear.ui.application",
-    "version": "1.0.52",
+    "version": "1.0.53",
     "github": "https://github.com/blearjs/blear.ui.application",
     "keywords": [
       "blear",
@@ -1091,7 +1108,7 @@
     "create": "2017年04月26日11:33:15",
     "update": "2017年04月26日11:33:15",
     "name": "blear.ui.chart",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "github": "https://github.com/blearjs/blear.ui.chart",
     "keywords": [
       "blear",
@@ -1361,7 +1378,7 @@
     "create": "2016-04-20 16:56",
     "update": "2016-04-20 16:56",
     "name": "blear.ui.mask",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "github": "https://github.com/blearjs/blear.ui.mask",
     "keywords": [
       "blear",
@@ -1389,7 +1406,7 @@
     "create": "2016-05-09 17:55",
     "update": "2016-05-09 17:55",
     "name": "blear.ui.pagination",
-    "version": "2.1.1",
+    "version": "2.1.3",
     "github": "https://github.com/blearjs/blear.ui.pagination",
     "keywords": [
       "blear",
@@ -1497,21 +1514,20 @@
     "create": "2016年06月04日14:09:36",
     "update": "2017年04月27日15:06:04",
     "name": "blear.ui.qrcode",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "github": "https://github.com/blearjs/blear.ui.qrcode",
     "keywords": [
       "blear",
-      "__template__",
-      "cloudcome",
-      "ydr.me"
+      "ui",
+      "qrcode"
     ],
     "description": "二维码 UI 生成器",
     "dependencies": {
-      "blear.core.selector": "1.x",
+      "blear.classes.qrcode": "^2.0.0",
       "blear.core.modification": "1.x",
+      "blear.core.selector": "1.x",
       "blear.ui": "1.x",
-      "blear.utils.object": "1.x",
-      "blear.classes.qrcode": "1.x"
+      "blear.utils.object": "1.x"
     }
   },
   "blear.ui.rich-editor": {
@@ -1519,7 +1535,7 @@
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.ui.rich-editor",
-    "version": "1.1.7",
+    "version": "1.1.9",
     "github": "https://github.com/blearjs/blear.ui.rich-editor",
     "keywords": [
       "blear",
@@ -1649,7 +1665,7 @@
     "create": "2016-04-20 14:49",
     "update": "2016-04-20 14:49",
     "name": "blear.ui.window",
-    "version": "1.1.23",
+    "version": "1.1.25",
     "github": "https://github.com/blearjs/blear.ui.window",
     "keywords": [
       "blear",
@@ -1810,7 +1826,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.utils.compatible",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "github": "https://github.com/blearjs/blear.utils.compatible",
     "keywords": [
       "blear",
@@ -2275,7 +2291,7 @@
     "create": "未明确",
     "author": "#云淡然",
     "name": "blear.utils.validator",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "github": "https://github.com/blearjs/blear.utils.validator",
     "keywords": [
       "blear",
