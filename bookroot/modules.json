@@ -967,6 +967,32 @@
     "description": "CSS 重置",
     "dependencies": {}
   },
+  "blear.node.aliyun": {
+    "author": "ydr.me",
+    "create": "2014-11-27 21:47",
+    "update": "2017年07月05日14:58:15",
+    "name": "blear.node.aliyun",
+    "version": "1.0.2",
+    "github": "https://github.com/blearjs/blear.node.aliyun",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "阿里云 nodeJS 接口封装",
+    "dependencies": {
+      "blear.node.mime": "^1.0.1",
+      "blear.node.path": "^1.0.8",
+      "blear.utils.access": "^1.0.5",
+      "blear.utils.object": "^1.0.14",
+      "blear.utils.random": "^1.0.3",
+      "blear.utils.typeis": "^1.0.3",
+      "blear.utils.url": "^1.0.18"
+    }
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",

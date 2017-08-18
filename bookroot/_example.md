@@ -7,7 +7,7 @@
 
 # Example
 ```js
-var example = require('blear.components.example');
+var example = require('blear.node.example');
 ```
 
 
