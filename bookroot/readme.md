@@ -26,4 +26,7 @@
 # 经验
 - 旅销宝手机端：<http://m.lxiaobao.com>
 - 旅销宝桌面端：<http://c.lxiaobao.com>
-- 运营活动：<http://mkt.lxiaobao.com/neimenggu>
+- 旅销宝运营活动：<http://mkt.lxiaobao.com/neimenggu>
+- 旅销宝法务：<http://mkt.lv-xiaobao.cn/law>
+- 微融手机端：<https://m.weyrong.com>
+- 微融桌面端：<https://weyrong.com>
