@@ -993,6 +993,30 @@
       "blear.utils.url": "^1.0.18"
     }
   },
+  "blear.node.console": {
+    "author": "ydr.me",
+    "create": "2015-12-10 21:35",
+    "update": "2015-12-10 21:35",
+    "name": "blear.node.console",
+    "version": "1.0.8",
+    "github": "https://github.com/blearjs/blear.node.template",
+    "keywords": [
+      "blear",
+      "node",
+      "console",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "Node 控制台",
+    "dependencies": {
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",

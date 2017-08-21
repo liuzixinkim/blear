@@ -83,7 +83,7 @@
     - [blear.css.reset](/css/reset.md)
 - [node 模块](#)
     - [blear.node.aliyun](/node/aliyun.md)
-    - [blear.node.console](#)
+    - [blear.node.console](/node/console.md)
     - [blear.node.debug](#)
     - [blear.node.encryption](#)
     - [blear.node.http-status](#)
