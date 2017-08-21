@@ -1091,6 +1091,55 @@
     "description": "NODE http 状态码",
     "dependencies": {}
   },
+  "blear.node.log": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.node.log",
+    "version": "1.0.9",
+    "github": "https://github.com/blearjs/blear.node.log",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "Node 日志管理",
+    "dependencies": {
+      "blear.node.console": "1.x",
+      "blear.node.system": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.number": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.typeis": "1.x",
+      "fs-extra": "^0.30.0",
+      "glob": "^7.0.4",
+      "later": "^1.2.0"
+    }
+  },
+  "blear.node.mime": {
+    "author": "ydr.me",
+    "create": "2014-11-21 09:41",
+    "update": "2014-11-21 09:41",
+    "name": "blear.node.mime",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.node.template",
+    "keywords": [
+      "blear",
+      "node",
+      "mime",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "Node mime(Multipurpose Internet Mail Extensions)",
+    "dependencies": {}
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",

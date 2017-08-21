@@ -95,7 +95,7 @@ httpStatus.get('0000', 'what');
 ```
 
 ## `.set(statusCode, status): map`
-根据状态码获取状态值。
+根据状态码设置状态值。
 ```js
 httpStatus.set(900, 'yyy');
 // => {map}

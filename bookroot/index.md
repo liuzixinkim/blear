@@ -88,7 +88,7 @@
     - [blear.node.encryption](/node/encryption.md)
     - [blear.node.http-status](/node/http-status.md)
     - [blear.node.log](/node/log.md)
-    - [blear.node.mime](#)
+    - [blear.node.mime](/node/mime.md)
     - [blear.node.path](#)
     - [blear.node.qiniu](#)
     - [blear.node.request](#)
