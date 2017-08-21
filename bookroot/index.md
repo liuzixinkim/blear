@@ -86,7 +86,7 @@
     - [blear.node.console](/node/console.md)
     - [blear.node.debug](/node/debug.md)
     - [blear.node.encryption](/node/encryption.md)
-    - [blear.node.http-status](#)
+    - [blear.node.http-status](/node/http-status.md)
     - [blear.node.log](#)
     - [blear.node.mime](#)
     - [blear.node.path](#)
