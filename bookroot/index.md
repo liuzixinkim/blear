@@ -89,7 +89,7 @@
     - [blear.node.http-status](/node/http-status.md)
     - [blear.node.log](/node/log.md)
     - [blear.node.mime](/node/mime.md)
-    - [blear.node.path](#)
+    - [blear.node.path](/node/path.md)
     - [blear.node.qiniu](#)
     - [blear.node.request](#)
     - [blear.node.system](#)
