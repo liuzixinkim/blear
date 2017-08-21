@@ -171,6 +171,33 @@ defaults = {
 }
 ```
 
+## `.point(str): undefined`
+打点。
+### `str`
+- 类型：`String`
+- 说明：点
+- 默认：`"."`
+
+```js
+var points = ['-', '=', '>', '|', '<', '='];
+var times = 0;
+var time = setInterval(function () {
+    var index = times % (points.length - 1);
+    console.point(points[index]);
+
+    if (times === 30) {
+        clearInterval(time);
+        console.pointEnd();
+    }
+
+    times++;
+}, 300);
+```
+
+![](https://ws3.sinaimg.cn/large/006tNc79gy1fir6r91lytg30m80a84qp.gif =800x368)
+
+## `.pointEnd(): undefined`
+结束打点。
 
 
 ## `.lineStart(): undefined`

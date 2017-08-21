@@ -998,7 +998,7 @@
     "create": "2015-12-10 21:35",
     "update": "2015-12-10 21:35",
     "name": "blear.node.console",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "github": "https://github.com/blearjs/blear.node.template",
     "keywords": [
       "blear",
@@ -1014,6 +1014,32 @@
       "blear.utils.collection": "1.x",
       "blear.utils.date": "1.x",
       "blear.utils.object": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
+  "blear.node.debug": {
+    "author": "ydr.me",
+    "create": "2015-10-22 10:21",
+    "update": "2015-10-22 10:21",
+    "name": "blear.node.debug",
+    "version": "1.0.4",
+    "github": "https://github.com/blearjs/blear.node.template",
+    "keywords": [
+      "blear",
+      "node",
+      "debug",
+      "console",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "Node 调试消息打印",
+    "dependencies": {
+      "blear.node.console": "1.x",
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.string": "1.x",
       "blear.utils.typeis": "1.x"
     }
   },

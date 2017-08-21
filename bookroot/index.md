@@ -84,7 +84,7 @@
 - [node 模块](#)
     - [blear.node.aliyun](/node/aliyun.md)
     - [blear.node.console](/node/console.md)
-    - [blear.node.debug](#)
+    - [blear.node.debug](/node/debug.md)
     - [blear.node.encryption](#)
     - [blear.node.http-status](#)
     - [blear.node.log](#)
