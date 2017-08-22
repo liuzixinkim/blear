@@ -115,29 +115,29 @@ request({
 - 类型：`Function`
 - 说明：响应回调
 
-### `callback: err`
+#### `callback: err`
 - 类型：`Error | Null`
 - 说明：错误，如果没有，则为 `null`
 
-### `callback: body`
+#### `callback: body`
 - 类型：`Object | String`
 - 说明：响应内容，如果是 `HEAD` 请求，则返回响应头对象（`Object`），否则返回响应内容（`String`）
 
-### `callback: res`
+#### `callback: res`
 - 类型：`Object`
 - 说明：响应对象
 
-### `callback: res.headers`
+##### `callback: res.headers`
 - 类型：`Object`
 - 说明：响应头
 
-### `callback: res.statusCode`
+##### `callback: res.statusCode`
 - 类型：`Number`
 - 说明：响应编码，如 `200`
 
-### `callback: res.cookies`
+##### `callback: res.cookies`
 - 类型：`Object`
-- 说明：响应需要设置的 cookie
+- 说明：响应的 cookie（来源于 `set-cookie` 响应头）
 
 
 
