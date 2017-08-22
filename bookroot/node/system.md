@@ -112,31 +112,31 @@ var system = require('blear.node.system');
 - 类型：`Function`
 - 说明：查询结果回调
 
-### `callback: info`
+#### `callback: info`
 - 类型：`Object`
 - 说明：查询结果
 
-### `callback: info.ip`
+##### `callback: info.ip`
 - 类型：`String`
 - 说明：查询的 IP
 
-### `callback: info.area`
+##### `callback: info.area`
 - 类型：`String`
 - 说明：该 IP 所在区域，如 `华东`
 
-### `callback: info.country`
+##### `callback: info.country`
 - 类型：`String`
 - 说明：该 IP 所在国家
 
-### `callback: info.province`
+##### `callback: info.province`
 - 类型：`String`
 - 说明：该 IP 所在省份
 
-### `callback: info.city`
+##### `callback: info.city`
 - 类型：`String`
 - 说明：该 IP 所在城市
 
-### `callback: info.isp`
+##### `callback: info.isp`
 - 类型：`String`
 - 说明：该 IP 所在运营商，如 `电信`
 
