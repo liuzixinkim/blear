@@ -1164,6 +1164,30 @@
       "glob": "^7.0.3"
     }
   },
+  "blear.node.qiniu": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.node.qiniu",
+    "version": "1.0.1",
+    "github": "https://github.com/blearjs/blear.node.qiniu",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "七牛 API",
+    "dependencies": {
+      "blear.node.path": "^1.0.8",
+      "blear.utils.access": "^1.0.5",
+      "blear.utils.object": "^1.0.14",
+      "blear.utils.random": "^1.0.3",
+      "blear.utils.url": "^1.0.17"
+    }
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",

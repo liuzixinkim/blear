@@ -90,7 +90,7 @@
     - [blear.node.log](/node/log.md)
     - [blear.node.mime](/node/mime.md)
     - [blear.node.path](/node/path.md)
-    - [blear.node.qiniu](#)
+    - [blear.node.qiniu](/node/qiniu.md)
     - [blear.node.request](#)
     - [blear.node.system](#)
     - [blear.node.template](#)
