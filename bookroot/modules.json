@@ -1169,7 +1169,7 @@
     "create": "2016年06月04日14:09:36",
     "update": "2016年06月04日14:09:36",
     "name": "blear.node.qiniu",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "github": "https://github.com/blearjs/blear.node.qiniu",
     "keywords": [
       "blear",
@@ -1186,6 +1186,33 @@
       "blear.utils.object": "^1.0.14",
       "blear.utils.random": "^1.0.3",
       "blear.utils.url": "^1.0.17"
+    }
+  },
+  "blear.node.request": {
+    "author": "ydr.me",
+    "create": "2017-04-07 16:24",
+    "update": "2017-04-07 16:24",
+    "name": "blear.node.request",
+    "version": "2.0.5",
+    "github": "https://github.com/blearjs/blear.node.template",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "Node 端请求工具",
+    "dependencies": {
+      "blear.classes.class": "^1.1.6",
+      "blear.node.console": "^1.0.7",
+      "blear.node.debug": "^1.0.4",
+      "blear.utils.access": "^1.0.5",
+      "blear.utils.function": "^1.0.5",
+      "blear.utils.object": "^1.0.14",
+      "blear.utils.typeis": "^1.0.3",
+      "request": "2.81.0"
     }
   },
   "blear.scss.clearfix": {
