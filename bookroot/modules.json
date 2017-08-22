@@ -1245,6 +1245,41 @@
       "blear.utils.typeis": "^1.0.3"
     }
   },
+  "blear.node.weixin": {
+    "author": "ydr.me",
+    "create": "2015-12-08 11:08",
+    "update": "2017年07月07日23:09:53",
+    "name": "blear.node.weixin",
+    "version": "3.0.0",
+    "github": "https://github.com/blearjs/blear.node.weixin",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "微信授权登录、JSSDK",
+    "dependencies": {
+      "blear.classes.class": "1.x",
+      "blear.classes.events": "1.x",
+      "blear.node.encryption": "1.x",
+      "blear.node.request": "^2.0.3",
+      "blear.utils.access": "1.x",
+      "blear.utils.array": "1.x",
+      "blear.utils.collection": "1.x",
+      "blear.utils.date": "1.x",
+      "blear.utils.function": "1.x",
+      "blear.utils.number": "1.x",
+      "blear.utils.object": "1.x",
+      "blear.utils.plan": "^2.1.2",
+      "blear.utils.random": "1.x",
+      "blear.utils.string": "1.x",
+      "blear.utils.time": "1.x",
+      "blear.utils.typeis": "1.x"
+    }
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",
