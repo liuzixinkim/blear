@@ -20,6 +20,7 @@ var router = new Router();
 var modulesData = fse.readJSONSync(path.join(configs.bookroot, 'modules.json'));
 var introductionRE = /\{\{\s*?introduction\s*?}}/i;
 var dependenciesRE = /\{\{\s*?dependencies\s*?}}/i;
+var blearModuleRE = /^blear\./i;
 
 var buildTravisBadge = function (module) {
     return '<a target="_blank" rel="nofollow" href="https://travis-ci.org/blearjs/' + module + '">' +
@@ -99,14 +100,23 @@ var generateDependencies = function (module) {
     var dependenciesLenth = 0;
 
     object.each(desc.dependencies, function (mod, ver) {
-        var arr = mod.split('.');
-        var parent = arr[1];
-        var name = arr[2];
-        var href = ['', parent, name].join('/');
+        mod = mod.toLowerCase();
+        var href = '';
 
-        // 忽略补丁模块
-        if (/\.polyfills|shims\./.test(mod)) {
-            return;
+        // blear 模块
+        if (blearModuleRE.test(mod)) {
+            var arr = mod.split('.');
+            var parent = arr[1];
+            var name = arr[2];
+
+            // 忽略补丁模块
+            if (parent === 'polyfills' || parent === 'shims') {
+                return;
+            }
+
+            href = ['', parent, name].join('/');
+        } else {
+            href = 'https://www.npmjs.com/package/' + mod;
         }
 
         dependenciesLenth++;

@@ -1215,6 +1215,36 @@
       "request": "2.81.0"
     }
   },
+  "blear.node.system": {
+    "author": "ydr.me",
+    "create": "2016年06月04日14:09:36",
+    "update": "2016年06月04日14:09:36",
+    "name": "blear.node.system",
+    "version": "1.0.7",
+    "github": "https://github.com/blearjs/blear.node.system",
+    "keywords": [
+      "blear",
+      "node",
+      "template",
+      "express",
+      "cloudcome",
+      "ydr.me"
+    ],
+    "description": "node 系统信息",
+    "dependencies": {
+      "blear.node.request": "^2.0.3",
+      "blear.utils.access": "^1.0.5",
+      "blear.utils.array": "^1.0.12",
+      "blear.utils.collection": "^1.0.4",
+      "blear.utils.date": "^1.0.10",
+      "blear.utils.number": "^1.0.3",
+      "blear.utils.object": "^1.0.14",
+      "blear.utils.plan": "^2.1.2",
+      "blear.utils.string": "^1.0.9",
+      "blear.utils.time": "^1.0.5",
+      "blear.utils.typeis": "^1.0.3"
+    }
+  },
   "blear.scss.clearfix": {
     "update": "未明确",
     "create": "未明确",

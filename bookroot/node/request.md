@@ -98,13 +98,16 @@ browser = {
 
 
 # `request(options, callback(err, body, res))`
-实现一个请求。
+实现一个请求。同时该模块也是继承于 Stream 模块，因此可以适应 `pipe` 方法进行数据流传递。
+
 ```js
 request({
     url: 'https://www.baidu.com/'
 }, function(err, body, res) {
     // ....      
 });
+
+fromStream.pipe(request({url: 'https://www.baidu.com/'})).pipe(toStream);
 ```
 
 ### `options`
@@ -144,13 +147,6 @@ request({
 
 
 
-
-
-
-
-
-
-
 # Dependencies
 {{ dependencies }}
 
@@ -159,5 +155,4 @@ request({
 
 
 # Reference
-- [request NPM 模块](https://www.npmjs.com/package/request)
 - [四种数据提交方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
