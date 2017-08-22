@@ -14,68 +14,58 @@ var qiniu = require('blear.node.qiniu');
 
 
 # Static
+## `.defaults`
+- 类型：`Object`
+- 说明：默认配置
+
+### `.defaults.accessKey`
+- 类型：`String`
+- 说明：访问令牌
+- 默认：`""`
+
+### `.defaults.secretKey`
+- 类型：`String`
+- 说明：访问密钥
+- 默认：`""`
+
+### `.defaults.bucket`
+- 类型：`String`
+- 说明：访问仓库
+- 默认：`""`
+
+### `.defaults.host`
+- 类型：`String`
+- 说明：绑定域名
+- 默认：`"/"`
+
+### `.defaults.dirname`
+- 类型：`String`
+- 说明：访问目录
+- 默认：`"/"`
+
+### `.defaults.filename`
+- 类型：`String`
+- 说明：上传文件
+- 默认：`"/"`
+
+### `.defaults.expires`
+- 类型：`Number`
+- 说明：签名有效期（单位：毫秒）
+- 默认：`10 * 60 * 1000`（10分钟）
+
+### `.defaults.mimeLimit`
+- 类型：`String`
+- 说明：MIME 限制
+- 默认：`"image/*"`
+
+### `.defaults.absolutely`
+- 类型：`String`
+- 说明：是否绝对路径，是：转换后的 url 包含 @ 符号，即 http://qiniu.cdn.com/@/path/to/file.png，或者两个斜杆表示 http://qiniu.cdn.com//path/to/file.png，否：转换后的 url 不含 @ 符号，即 http://qiniu.cdn.com/path/to/file.png
+- 默认：`"image/*"`
+
+
 ## `.config(key, val): ret`
-配置默认值。默认配置为：
-```js
-默认配置 = {
-    /**
-     * @type String
-     * @desc 访问令牌
-     */
-    accessKey: '',
-
-    /**
-     * @type String
-     * @desc 访问密钥
-     */
-    secretKey: '',
-
-    /**
-     * @type String
-     * @desc 访问仓库
-     */
-    bucket: '',
-
-    /**
-     * @type String
-     * @desc 绑定域名
-     */
-    host: '/',
-
-    /**
-     * @type String
-     * @desc 访问目录
-     */
-    dirname: '/',
-
-    /**
-     * @type String
-     * @desc 上传文件
-     */
-    filename: null,
-
-    /**
-     * @type Number
-     * @desc 签名有效期，单位毫秒
-     */
-    expires: 10 * 60 * 1000,
-
-    /**
-     * @type String
-     * @desc MIME 限制
-     */
-    mimeLimit: 'image/*',
-
-    /**
-     * @type Boolean
-     * @desc 是否绝对路径
-     * 是：转换后的 url 包含 @ 符号，即 http://qiniu.cdn.com/@/path/to/file.png，
-     * 或者两个斜杆表示 http://qiniu.cdn.com//path/to/file.png
-     * 否：转换后的 url 不含 @ 符号，即 http://qiniu.cdn.com/path/to/file.png
-     */
-    absolutely: false
-};
-```
+配置默认值。
 
 ### `key`
 - 类型：`String`

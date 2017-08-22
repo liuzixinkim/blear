@@ -91,7 +91,7 @@
     - [blear.node.mime](/node/mime.md)
     - [blear.node.path](/node/path.md)
     - [blear.node.qiniu](/node/qiniu.md)
-    - [blear.node.request](#)
+    - [blear.node.request](/node/request.md)
     - [blear.node.system](#)
     - [blear.node.template](#)
     - [blear.node.weixin](#)
