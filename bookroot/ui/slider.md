@@ -74,6 +74,11 @@ new SLider({
 - 说明：自动切换间隔时间，单位 ms
 - 默认：`5000`
 
+## `.defaults.active`
+- 类型：`Number`
+- 说明：初始化激活的索引值
+- 默认：`0`
+
 ## `.defaults.slideAnimation`
 - 类型：`Number`
 - 说明：切换动画
@@ -92,8 +97,12 @@ function slideAnimation(el, to, done) {
 
 
 # Prototype
-## `#update(): this`
+## `#update([index]): this`
 轮播图列表发生变化后，手动更新。
+### `index`
+- 类型：`Number`
+- 说明：显示指定轮播图序号，从 0 开始
+- 默认：上一次的序号
 
 ## `#prev(): this`
 切换到上一个项目。
